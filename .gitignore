@@ -8,3 +8,13 @@ build/
 Thumbs.db
 
 .vercel
+
+# Internal agent and brainstorm files
+.agents/
+.claude/
+brainstorms/
+AGENTS.md
+CLAUDE.md
+sync-skills.*
+start.bat
+render.yaml

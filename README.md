@@ -5,10 +5,11 @@ Ushbu loyiha **"Ozuqa-don"** brendi uchun yaratilgan zamonaviy, tezkor va to'liq
 ## Loyiha tarkibi
 
 - [`index.html`](./index.html) — Asosiy veb-sahifa (HTML5 + Tailwind CSS + JavaScript).
+- [`admin.html`](./admin.html) — Mahsulotlarni boshqarish paneli.
+- [`server.js`](./server.js) — Express server va Telegram bot integratsiyasi.
+- [`products.json`](./products.json) — Mahsulotlar ro'yxati va ma'lumotlari.
+- [`vercel.json`](./vercel.json) — Vercel Serverless va hosting konfiguratsiyasi.
 - [`images/`](./images/) — Mahsulot rasmlari (Kanareka, Amadinka, Kokil, Bedana va b.).
-- [`brainstorms/`](./brainstorms/) — `grill-me-n30` ko'nikmasi orqali yozilgan tahlil va rejalashtirish qaydlari.
-- [`AGENTS.md`](./AGENTS.md) — Antigravity, Codex va Claude Code uchun qoidalar to'plami.
-- [`.agents/skills/grill-me-n30/`](./.agents/skills/grill-me-n30/) — Maxsus Antigravity ko'nikmasi.
 
 ## Bo'limlar
 
