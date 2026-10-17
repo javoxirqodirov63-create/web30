@@ -231,7 +231,15 @@
 
   <!-- ==================== 1-BO'LIM: HERO / KOMPANIYA HAQIDA ==================== -->
   <section id="about" class="relative overflow-hidden hero-mesh pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-stone-200/70">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Decorative Leaves / Foliage Background (Tepadagi Shox va Barglar) -->
+    <div class="absolute -top-6 -left-10 w-48 sm:w-64 h-48 sm:h-64 pointer-events-none opacity-20 sm:opacity-30 z-0">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-full h-full text-brand-600 fill-current">
+        <path d="M42.8,11.2C55.4,24.1,63.1,41.9,64.3,60.8C65.5,79.7,60.3,99.8,48.7,112.9C37.1,126,19.2,132.2,2.2,136.4C-14.8,140.6,-30.8,142.8,-43.8,134.1C-56.7,125.4,-66.6,105.8,-71.4,86.2C-76.3,66.6,-76.1,47,-68.8,31.4C-61.5,15.7,-47.1,3.9,-32.8,-7.4C-18.4,-18.8,-4.2,-29.7,10.6,-30.8C25.3,-31.9,30.3,-2.7,42.8,11.2Z" transform="translate(100 100)"/>
+      </svg>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="grid lg:grid-cols-12 gap-12 lg:gap-14 items-center">
         
         <!-- Left Content -->
@@ -284,17 +292,21 @@
           </div>
         </div>
 
-        <!-- Right Visual Showcase -->
+        <!-- Right Visual Showcase: Parrot on Branch with Foliage (Shoxda o'tirgan to'tiqush va barglar) -->
         <div class="lg:col-span-5 relative">
           <div class="relative mx-auto max-w-md lg:max-w-none">
             
             <!-- Ambient Glow -->
-            <div class="absolute -top-8 -right-8 w-64 h-64 bg-amberBrand-200 rounded-full filter blur-3xl opacity-60"></div>
-            <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-brand-300 rounded-full filter blur-3xl opacity-50"></div>
+            <div class="absolute -top-8 -right-8 w-64 h-64 bg-emerald-200/60 rounded-full filter blur-3xl opacity-60"></div>
+            <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-amberBrand-200/50 rounded-full filter blur-3xl opacity-50"></div>
             
-            <!-- Image Card Container -->
-            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-white">
-              <img src="images/kanareka-don.jpg" alt="Sara qushlar doni" class="w-full h-80 sm:h-96 object-cover object-center transform hover:scale-105 transition-transform duration-700">
+            <!-- Image Card Container: Qush va shox barglari -->
+            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-b from-emerald-50/50 to-white group">
+              <img 
+                src="images/hero-parrot-branch.jpg" 
+                alt="Shoxda o'tirgan to'tiqush va yashil barglar" 
+                class="w-full h-80 sm:h-[420px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+              >
               
               <!-- Floating Top Badge -->
               <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-stone-200/80 shadow-md flex items-center gap-2">
@@ -303,13 +315,13 @@
               </div>
 
               <!-- Floating Bottom Guarantee Box -->
-              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-stone-200/80 shadow-lg flex items-center gap-4">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-amberBrand-500 to-amberBrand-400 text-white flex items-center justify-center text-xl shrink-0 font-bold shadow-sm">
-                  🌾
+              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-stone-200/80 shadow-lg flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-500 text-white flex items-center justify-center text-xl shrink-0 font-bold shadow-xs">
+                  🦜
                 </div>
                 <div>
-                  <h4 class="font-extrabold text-stone-900 text-sm">Ozuqa-don Kafolati</h4>
-                  <p class="text-xs text-stone-500">Mijozlar va qush ixlosmandlari tanlagan №1 toza ozuqa</p>
+                  <h4 class="font-extrabold text-stone-900 text-xs sm:text-sm">Qushlar Salomatligi Uchun</h4>
+                  <p class="text-[11px] text-stone-500">Sayroqi qushlar va to'tilar uchun tozalangan 1-navli ozuqa</p>
                 </div>
               </div>
             </div>
