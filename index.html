@@ -429,15 +429,35 @@
           </button>
         </div>
 
-        <!-- Live Search Input -->
-        <div class="max-w-md mx-auto relative">
+        <!-- Live Search Input with Voice Search (Ovozli qidiruv) -->
+        <div class="max-w-md mx-auto relative flex items-center">
           <span class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-stone-400">
             <i class="fa-solid fa-magnifying-glass"></i>
           </span>
-          <input type="text" id="productSearchInput" oninput="handleSearchProducts(this.value)" placeholder="Mahsulot nomi yoki tarkibi bo'yicha qidirish..." class="w-full pl-11 pr-10 py-3 rounded-2xl bg-white border border-stone-200 text-stone-800 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-xs">
-          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden absolute inset-y-0 right-0 pr-4 flex items-center text-stone-400 hover:text-stone-600">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
+          <input 
+            type="text" 
+            id="productSearchInput" 
+            oninput="handleSearchProducts(this.value)" 
+            placeholder="Mahsulot nomi yoki tarkibi bo'yicha qidirish..." 
+            class="w-full pl-11 pr-20 py-3 rounded-2xl bg-white border border-stone-200 text-stone-800 text-xs sm:text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-500 shadow-xs transition-all"
+          >
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center gap-1.5">
+            <!-- Clear Search Button -->
+            <button id="clearSearchBtn" onclick="clearSearch()" class="hidden p-1.5 text-stone-400 hover:text-stone-600 transition" title="Tozalash">
+              <i class="fa-solid fa-xmark text-sm"></i>
+            </button>
+            
+            <!-- Voice Search Microphone Button (Ovoz qismi) -->
+            <button 
+              id="voiceSearchBtn" 
+              onclick="startVoiceSearch()" 
+              type="button" 
+              class="w-8 h-8 rounded-full flex items-center justify-center text-stone-500 hover:text-brand-600 hover:bg-stone-100 transition-all focus:outline-none" 
+              title="Ovoz orqali qidirish"
+            >
+              <i class="fa-solid fa-microphone text-sm"></i>
+            </button>
+          </div>
         </div>
 
       </div>
@@ -1268,6 +1288,131 @@
       const clearBtn = document.getElementById('clearSearchBtn');
       if (clearBtn) clearBtn.classList.add('hidden');
       renderStoreProducts();
+    }
+
+    // ==================== OVOZLI QIDIRUV (VOICE SEARCH) ====================
+    let voiceRecognition = null;
+    let isVoiceListening = false;
+
+    function initVoiceSearch() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+      if (!SpeechRecognition) {
+        return null;
+      }
+
+      const recognition = new SpeechRecognition();
+      recognition.continuous = false;
+      recognition.interimResults = false;
+      // O'zbek tili va qulay tanish
+      recognition.lang = 'uz-UZ';
+
+      recognition.onstart = function() {
+        isVoiceListening = true;
+        const btn = document.getElementById('voiceSearchBtn');
+        const input = document.getElementById('productSearchInput');
+        if (btn) {
+          btn.className = "w-8 h-8 rounded-full flex items-center justify-center bg-red-500 text-white animate-pulse ring-4 ring-red-200 transition-all focus:outline-none";
+        }
+        if (input) {
+          input.placeholder = "🎙️ Gapiring, sizni tinglayapman...";
+          input.focus();
+        }
+        showVoiceToast("🎙️ Mahsulot nomini ayting (masalan: <i>Kanareka</i>, <i>Tariq</i>, <i>Bedana</i>)...");
+      };
+
+      recognition.onresult = function(event) {
+        const transcript = event.results[0][0].transcript;
+        console.log("Ovoz tanildi:", transcript);
+        const input = document.getElementById('productSearchInput');
+        if (input) {
+          input.value = transcript;
+        }
+        // Agar biror toifa tanlangan bo'lsa, barcha mahsulotlar orasidan qidirish
+        if (typeof setCategoryFilter === 'function') {
+          setCategoryFilter('ALL');
+        }
+        handleSearchProducts(transcript);
+        showVoiceToast(`✅ Ovoz tanildi: "<b>${transcript}</b>"`);
+      };
+
+      recognition.onerror = function(event) {
+        console.warn("Ovoz tanish xatosi:", event.error);
+        if (event.error === 'not-allowed') {
+          showVoiceToast("⚠️ Mikrofonga ruxsat berilmadi. Iltimos, brauzer sozlamalarida mikrofonga ruxsat bering.");
+        } else if (event.error === 'no-speech') {
+          showVoiceToast("Ovoz eshitilmadi. Iltimos, qaytadan urinib ko'ring.");
+        } else {
+          showVoiceToast("Ovozni aniqlab bo'lmadi.");
+        }
+        stopVoiceSearchUI();
+      };
+
+      recognition.onend = function() {
+        stopVoiceSearchUI();
+      };
+
+      return recognition;
+    }
+
+    function startVoiceSearch() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition;
+      if (!SpeechRecognition) {
+        alert("Kechirasiz, sizning brauzeringiz ovozli qidiruvni qo'llab-quvvatlamaydi. Chrome, Edge yoki Safari brauzeridan foydalanishingiz mumkin.");
+        return;
+      }
+
+      if (isVoiceListening) {
+        if (voiceRecognition) {
+          try { voiceRecognition.stop(); } catch(e){}
+        }
+        stopVoiceSearchUI();
+        return;
+      }
+
+      if (!voiceRecognition) {
+        voiceRecognition = initVoiceSearch();
+      }
+
+      try {
+        voiceRecognition.start();
+      } catch (err) {
+        console.warn("Voice search start error:", err);
+        // Agar avvalgi sessiya to'xtatilmagan bo'lsa
+        try {
+          voiceRecognition.stop();
+          setTimeout(() => voiceRecognition.start(), 200);
+        } catch(e) {
+          stopVoiceSearchUI();
+        }
+      }
+    }
+
+    function stopVoiceSearchUI() {
+      isVoiceListening = false;
+      const btn = document.getElementById('voiceSearchBtn');
+      const input = document.getElementById('productSearchInput');
+      if (btn) {
+        btn.className = "w-8 h-8 rounded-full flex items-center justify-center text-stone-500 hover:text-brand-600 hover:bg-stone-100 transition-all focus:outline-none";
+      }
+      if (input) {
+        input.placeholder = "Mahsulot nomi yoki tarkibi bo'yicha qidirish...";
+      }
+    }
+
+    function showVoiceToast(htmlMsg) {
+      const existing = document.getElementById('voiceToastNotification');
+      if (existing) existing.remove();
+
+      const toast = document.createElement('div');
+      toast.id = 'voiceToastNotification';
+      toast.className = 'fixed top-24 left-1/2 transform -translate-x-1/2 bg-stone-900/95 backdrop-blur-md text-white px-5 py-2.5 rounded-full text-xs font-semibold shadow-2xl z-50 transition-all duration-300 flex items-center gap-2 border border-stone-700';
+      toast.innerHTML = htmlMsg;
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 400);
+      }, 3500);
     }
 
     // Filter products logic
