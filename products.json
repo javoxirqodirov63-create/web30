@@ -121,6 +121,28 @@
     "composition": "Sariq tariq, oq tariq, qizil tariq, kanareyka urug'i (scagliola), qobiqsiz tozalangan suli (avena), kanop urug'i (canapuccia). 100% tabiiy va changdan xoli."
   },
   {
+    "id": "prod-19",
+    "name": "Raggio di Sole Fly Stick Parrocchetti (Arachidi e Miele)",
+    "price": 45000,
+    "unit": "150 gr (2 dona)",
+    "image": "images/raggio-fly-stick-arachidi.jpg",
+    "tag": "Asal & Yeryong'oq 🥜",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan to'tiqushlar (korella, kokil, ajralmas/lovebirds, o'rta va katta to'tilar) uchun qafasga ilinadigan maxsus to'yimli shirin tayoqcha (Stick). Tabiiy asal va xushbo'y yeryong'oq bo'laklari bilan boyitilgan bo'lib, to'tilarning tabiiy oziqlanish instinktini rivojlantiradi va tumshug'ini charxlaydi. Qutida 2 dona tayoqcha.",
+    "composition": "Saralangan sara donlar va urug'lar, maydalangan sifatli yeryong'oq (arachidi), tabiiy asal (miele), pechene va non mahsulotlari, tozalangan o'simlik yog'lari, minerallar va vitaminlar majmuasi."
+  },
+  {
+    "id": "prod-20",
+    "name": "Raggio di Sole Fly Stick Parrocchetti (Fruit Mix)",
+    "price": 45000,
+    "unit": "150 gr (2 dona)",
+    "image": "images/raggio-fly-stick-fruit.jpg",
+    "tag": "Mevali Stick 🍎",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan to'tiqushlar (korella, ajralmas to'tilar, katta to'tilar) uchun qafasga ilinadigan vitaminli mevali tayoqcha (Stick). Sara quritilgan mevalar (olma, banan, anjir) va tabiiy asal bilan tayyorlangan. Qushlarni zerikishdan xalos qilib, ularga vitamin va ko'tarinki kayfiyat bag'ishlaydi. Qutida 2 dona tayoqcha.",
+    "composition": "Saralangan sara donlar va urug'lar, sara quritilgan mevalar bo'laklari (frutta disidratata: olma, banan, anjir va rezavorlar), tabiiy asal, biskvit yormasi, tozalangan yog'lar, tabiiy minerallar, vitaminlar (A, C, D3, E)."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
