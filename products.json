@@ -77,6 +77,17 @@
     "composition": "12% tabiiy hasharotlar va qurtlar (Tenebrio molitor un qurti lichinkalari, Acheta domesticus chigirtkalari, pilla/g'umbaklar, gammarus), oliy navli biskvit yormasi, o'simlik oqsillari ekstrakti, baliq yog'i va tozalangan tabiiy yog'lar, minerallar, vitaminlar (A, D3, E) va aminokislotalar."
   },
   {
+    "id": "prod-15",
+    "name": "Raggio di Sole Fly Hb Carioca (Pastoncino Giallo Morbido)",
+    "price": 200000,
+    "unit": "2 kg",
+    "image": "images/raggio-fly-hb-carioca.png",
+    "tag": "Asalli & Mevali 🍯",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan barcha donxo'r va sayroqi qushlar (kanareyka, amadina, kichik to'tiqushlar) uchun sariq yumshoq tuxumli va mevali to'yimli ozuqa (pastoncino giallo morbido). Tabiiy asal, quritilgan mevalar va tuxum oqsili bilan to'yintirilgan. Naslchilik, tuxum bosish, polaponlarni boqish va pat almashtirish (tullash) davrlarida qushlar uchun ajoyib quvvat manbai.",
+    "composition": "Oliy navli pechene biskviti, sara boshoqli donlar, tozalangan tabiiy o'simlik yog'lari, tabiiy asal va qandlar, tuxum va tuxum mahsulotlari, saralangan quritilgan mevalar, o'simlik oqsillari ekstrakti, sara urug'lar, vitamin-mineral premiksi (A, D3, E vitaminlari, kalsiy, fosfor, lizin, metionin aminokislotalari)."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
