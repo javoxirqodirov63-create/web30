@@ -33,6 +33,17 @@
     "composition": "Kungaboqar pistasi (25%), Tozalangan suli (20%), Sariq/oq tariq (25%), Quritilgan mevalar (15%), Yong'oq (15%)"
   },
   {
+    "id": "prod-11",
+    "name": "Raggio di Sole Fly Th Indios (Pastoncino Bianco)",
+    "price": 200000,
+    "unit": "1.5 kg",
+    "image": "images/raggio-fly-th-indios.jpg",
+    "tag": "Italiya 🇮🇹",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning mashhur 'Raggio di Sole' brendidan sa'va (schegol), kanareyka, amadina va barcha sayroqi qushlar uchun professional oq yumshoq ozuqa (pastoncino). Ko'payish, bola boqish va tullash (pat almashtirish) davrida qushlar immuniteti va quvvatini oshiradi. Tarkibida bo'yoqlar bo'lmagani sababli patlarning tabiiy rangini o'zgartirmaydi.",
+    "composition": "Oliy navli maxsus pechene biskviti, yovvoyi va o'tloq urug'lari (chia, oq perilla va boshqalar), tabiiy hasharotlar, mollyuskalar va qisqichbaqasimonlar ekstrakti (tabiiy hayvoniy oqsil), o'simlik oqsillari ekstrakti, tozalangan tabiiy yog'lar, minerallar, vitaminlar majmuasi (A, D3, E) va maxsus prebiotiklar."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
