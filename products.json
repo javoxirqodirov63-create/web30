@@ -165,6 +165,28 @@
     "composition": "Saralangan sara donlar va urug'lar, sara quritilgan mevalar bo'laklari (frutta disidratata), tabiiy toza asal, non va biskvit mahsulotlari, minerallar va A, C vitaminlari majmuasi."
   },
   {
+    "id": "prod-23",
+    "name": "Raggio di Sole Fly Stick Canarini (Fruit Mix)",
+    "price": 40000,
+    "unit": "80 gr (2 dona)",
+    "image": "images/raggio-fly-stick-canarini-fruit.jpg",
+    "tag": "Mevali Stick 🍎",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan sayroqi kanareykalar uchun qafasga ilinadigan maxsus vitaminli mevali tayoqcha (Stick). Sara quritilgan mevalar (olma, banan, anjir, kivi) va tabiiy asal bilan boyitilgan. Qushlarning ovozini jarangdor qilishga, patlarining sog'lom yaltirashiga yordam beradi. Qutida 2 dona tayoqcha.",
+    "composition": "Saralangan sara urug'lar (kanareyka urug'i, raps, suli), sara quritilgan mevalar bo'laklari (frutta disidratata), tabiiy asal, biskvit yormasi, tozalangan yog'lar, tabiiy minerallar, vitaminlar (A, C, D3, E)."
+  },
+  {
+    "id": "prod-24",
+    "name": "Raggio di Sole Fly Stick Canarini (Uova e Miele)",
+    "price": 40000,
+    "unit": "80 gr (2 dona)",
+    "image": "images/raggio-fly-stick-canarini-uova.jpg",
+    "tag": "Tuxum & Asal 🍯",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan sayroqi kanareykalar uchun qafasga ilinadigan maxsus to'yimli oqsil va asalli tayoqcha (Stick). To'yimli tuxum oqsili va tabiiy asal bilan qoplangan bo'lib, kanareykalarning faolligini oshiradi, ko'payish va tullash davrida muhim energiya beradi. Qutida 2 dona tayoqcha.",
+    "composition": "Saralangan sara urug'lar (kanareyka urug'i, qora/qizil raps, tozalangan suli, nug urug'i), tuxum va tuxum mahsulotlari (uova e derivati), tabiiy toza asal (miele), pechene biskviti, tozalangan o'simlik yog'lari, minerallar va vitaminlar."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
