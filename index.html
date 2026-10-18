@@ -1421,6 +1421,39 @@
         composition: "Saralangan sara urug'lar (kanareyka urug'i, qora/qizil raps, tozalangan suli, nug urug'i), tuxum va tuxum mahsulotlari (uova e derivati), tabiiy toza asal (miele), pechene biskviti, tozalangan o'simlik yog'lari, minerallar va vitaminlar."
       },
       {
+        id: 'prod-25',
+        name: "Raggio di Sole Fly Pastoncino Rosso (Uccelli Granivori)",
+        price: 45000,
+        unit: "300 gr",
+        image: "images/raggio-fly-pastoncino-rosso.jpg",
+        tag: "Qizil rang beruvchi 🔴",
+        category: "Qushlar ozuqasi",
+        description: "Italiyaning 'Raggio di Sole' brendidan qizil faktorli kanareykalar va rang-barang donxo'r qushlar uchun maxsus qizil pigmentli yumshoq tuxumli ozuqa (Pastoncino Rosso). Qushlarning patlari yorqin, bir tekis va boy to'q qizil rangga kirishi uchun tabiiy karotinoid va kantaksantin bilan to'yintirilgan. Ayniqsa tullash (pat almashtirish) va ko'rgazmalarga tayyorlanish davrida zarur.",
+        composition: "Tuxum va asal, oliy navli biskvit va non mahsulotlari, tabiiy qizil pigmentlar (kantaksantin / karotinoidlar), o'simlik oqsillari konsentrati, tozalangan o'simlik yog'lari, minerallar, A, D3, E vitaminlari majmuasi."
+      },
+      {
+        id: 'prod-26',
+        name: "Raggio di Sole Fly Herbal Patè (Pastoncino Universale)",
+        price: 160000,
+        unit: "2 kg",
+        image: "images/raggio-fly-herbal-pate.jpg",
+        tag: "Dorivor o'tlar & Urug'lar 🌿",
+        category: "Qushlar ozuqasi",
+        description: "Italiyaning 'Raggio di Sole' brendidan barcha donxo'r va sayroqi qushlar (kanareyka, amadina, to'tiqushlar, sa'valar) uchun tabiiy dorivor xushbo'y o'tlar va yovvoyi o'tloq urug'lari bilan boyitilgan universal yumshoq ozuqa (Herbal Patè). Hazm qilish a'zolari faoliyatini normallashtiradi, immunitetni kuchaytiradi va qushlarni doimiy faol ushlab turadi.",
+        composition: "Oliy navli biskvit yormasi, dorivor va xushbo'y o'tlar ekstrakti (aromatic herbs), yovvoyi o'tloq urug'lari (chia, o't urug'lari), tozalangan tabiiy o'simlik yog'lari, o'simlik oqsillari, minerallar va vitamin-mineral premiksi."
+      },
+      {
+        id: 'prod-27',
+        name: "Raggio di Sole Fly Granulato Maine (Insettivori)",
+        price: 80000,
+        unit: "1 kg",
+        image: "images/raggio-fly-granulato-maine.jpg",
+        tag: "Maynalar & Hasharotxo'rlar 🐦",
+        category: "Qushlar ozuqasi",
+        description: "Italiyaning 'Raggio di Sole' brendidan mayna (Hind maynasi / Gracula religiosa), qorabosh, bulbul va barcha hasharotxo'r/sayroqi qushlar uchun granulalangan maxsus qora yem (Granulato Maine). Tarkibida 3.5% o'simlik faollashtirilgan ko'miri (carbone vegetale) bo'lib, maynalarning nozik oshqozon-ichak yo'llari tozaligini va to'liq hazmni ta'minlaydi.",
+        composition: "Boshoqli donlar, o'simlik ekstraktlari va oqsillari, 3.5% o'simlik ko'miri (carbone vegetale), quritilgan mevalar, o'simlik yog'lari, minerallar va vitaminlar kompleksi."
+      },
+      {
         id: 'prod-4',
         name: "Bedanalar uchun maxsus sara don",
         price: 16000,
@@ -1545,7 +1578,7 @@
         try {
           let parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            ['prod-11', 'prod-12', 'prod-13', 'prod-14', 'prod-15', 'prod-16', 'prod-17', 'prod-18', 'prod-19', 'prod-20', 'prod-21', 'prod-22', 'prod-23', 'prod-24'].forEach(newId => {
+            ['prod-11', 'prod-12', 'prod-13', 'prod-14', 'prod-15', 'prod-16', 'prod-17', 'prod-18', 'prod-19', 'prod-20', 'prod-21', 'prod-22', 'prod-23', 'prod-24', 'prod-25', 'prod-26', 'prod-27'].forEach(newId => {
               if (!parsed.some(item => item.id === newId)) {
                 const defP = DEFAULT_PRODUCTS.find(x => x.id === newId);
                 if (defP) parsed.push(defP);
