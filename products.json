@@ -143,6 +143,28 @@
     "composition": "Saralangan sara donlar va urug'lar, sara quritilgan mevalar bo'laklari (frutta disidratata: olma, banan, anjir va rezavorlar), tabiiy asal, biskvit yormasi, tozalangan yog'lar, tabiiy minerallar, vitaminlar (A, C, D3, E)."
   },
   {
+    "id": "prod-21",
+    "name": "Raggio di Sole Fly Stick Cocorite & Esotici (Uova e Miele)",
+    "price": 40000,
+    "unit": "80 gr (2 dona)",
+    "image": "images/raggio-fly-stick-cocorite-uova.jpg",
+    "tag": "Tuxum & Asal 🍯",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan to'lqinsimon to'tilar va mayda ekzotik qushlar (amadinalar) uchun qafasga ilinadigan maxsus to'yimli tayoqcha (Stick). To'yimli tuxum oqsili va tabiiy asal bilan tayyorlangan bo'lib, qushlarning chaqqonligi va ovoz jarangdorligini oshiradi, tumshug'ini tabiiy charxlaydi. Qutida 2 dona tayoqcha.",
+    "composition": "Saralangan donlar va urug'lar (sariq va qizil tariq, kanareyka urug'i, tozalangan suli), tuxum va tuxum mahsulotlari (uova e derivati), tabiiy asal (miele), biskvit yormasi, tozalangan o'simlik yog'lari, minerallar va vitaminlar."
+  },
+  {
+    "id": "prod-22",
+    "name": "Raggio di Sole Fly Stick Cocorite & Esotici (Fruit Mix)",
+    "price": 40000,
+    "unit": "80 gr (2 dona)",
+    "image": "images/raggio-fly-stick-cocorite-fruit.jpg",
+    "tag": "Mevali Stick 🍌",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan to'lqinsimon to'tilar va amadinalar uchun qafasga ilinadigan mevali vitaminli tayoqcha (Stick). Quritilgan meva bo'laklari (olma, banan, anjir, sitrus) va tabiiy asal bilan boyitilgan. Qushlarning immunitetini ko'taradi va ularni qafasda zerikishdan asraydi. Qutida 2 dona tayoqcha.",
+    "composition": "Saralangan sara donlar va urug'lar, sara quritilgan mevalar bo'laklari (frutta disidratata), tabiiy toza asal, non va biskvit mahsulotlari, minerallar va A, C vitaminlari majmuasi."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
