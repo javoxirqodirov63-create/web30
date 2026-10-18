@@ -292,38 +292,76 @@
           </div>
         </div>
 
-        <!-- Right Visual Showcase: Parrot on Branch with Foliage (Shoxda o'tirgan to'tiqush va barglar) -->
-        <div class="lg:col-span-5 relative">
+        <!-- Right Visual Showcase: Animated Bird Slider (Ketma-ket harakatlanib turuvchi qushlar) -->
+        <div class="lg:col-span-5 relative" id="heroBirdShowcase" onmouseenter="pauseBirdSlider()" onmouseleave="resumeBirdSlider()">
           <div class="relative mx-auto max-w-md lg:max-w-none">
             
             <!-- Ambient Glow -->
             <div class="absolute -top-8 -right-8 w-64 h-64 bg-emerald-200/60 rounded-full filter blur-3xl opacity-60"></div>
             <div class="absolute -bottom-8 -left-8 w-64 h-64 bg-amberBrand-200/50 rounded-full filter blur-3xl opacity-50"></div>
             
-            <!-- Image Card Container: Qush va shox barglari -->
-            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-b from-emerald-50/50 to-white group">
-              <img 
-                src="images/hero-parrot-branch.jpg" 
-                alt="Shoxda o'tirgan to'tiqush va yashil barglar" 
-                class="w-full h-80 sm:h-[420px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
-              >
+            <!-- Main Slider Container -->
+            <div class="relative rounded-3xl overflow-hidden border-4 border-white shadow-2xl bg-gradient-to-b from-emerald-50/50 to-white h-80 sm:h-[430px] group select-none">
               
-              <!-- Floating Top Badge -->
-              <div class="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-stone-200/80 shadow-md flex items-center gap-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-brand-600 animate-pulse"></span>
-                <span class="text-xs font-black text-stone-900">Sara va Toza Don</span>
+              <!-- Slide 1: Kanareyka -->
+              <div class="bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-100 scale-100 z-10" data-index="0">
+                <img src="images/bird-canary.jpg" alt="Kanareyka qushi" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700">
               </div>
 
-              <!-- Floating Bottom Guarantee Box -->
-              <div class="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-stone-200/80 shadow-lg flex items-center gap-3.5">
-                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-500 text-white flex items-center justify-center text-xl shrink-0 font-bold shadow-xs">
-                  🦜
+              <!-- Slide 2: Amadinka -->
+              <div class="bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 scale-105 pointer-events-none z-0" data-index="1">
+                <img src="images/bird-finch.jpg" alt="Amadinka qushi" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700">
+              </div>
+
+              <!-- Slide 3: To'tiqush (Ara / Kokil) -->
+              <div class="bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 scale-105 pointer-events-none z-0" data-index="2">
+                <img src="images/hero-parrot-branch.jpg" alt="To'tiqush va shox barglari" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700">
+              </div>
+
+              <!-- Slide 4: Bedana -->
+              <div class="bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 scale-105 pointer-events-none z-0" data-index="3">
+                <img src="images/bird-quail.jpg" alt="Bedana" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700">
+              </div>
+
+              <!-- Slide 5: Kokil & Korella -->
+              <div class="bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 scale-105 pointer-events-none z-0" data-index="4">
+                <img src="images/kokil-don.jpg" alt="Kokil va Korella" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700">
+              </div>
+
+              <!-- Floating Top Badge (Dinamik o'zgaradi) -->
+              <div class="absolute top-4 left-4 z-20 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-stone-200/80 shadow-md flex items-center gap-2 transition-all">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-600 animate-pulse"></span>
+                <span id="heroBirdBadge" class="text-xs font-black text-stone-900">🐤 Kanareyka uchun sara don</span>
+              </div>
+
+              <!-- Navigation Arrows -->
+              <button onclick="prevBirdSlide()" aria-label="Oldingi qush" class="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-stone-800 backdrop-blur-sm flex items-center justify-center shadow-md transition opacity-0 group-hover:opacity-100">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button onclick="nextBirdSlide()" aria-label="Keyingi qush" class="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-white/80 hover:bg-white text-stone-800 backdrop-blur-sm flex items-center justify-center shadow-md transition opacity-0 group-hover:opacity-100">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
+
+              <!-- Floating Bottom Info Box (Dinamik o'zgaradi) -->
+              <div class="absolute bottom-4 left-4 right-4 z-20 bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-stone-200/80 shadow-lg flex items-center gap-3.5 transition-all">
+                <div id="heroBirdIconBox" class="w-11 h-11 rounded-xl bg-gradient-to-tr from-amberBrand-500 to-amberBrand-400 text-white flex items-center justify-center text-xl shrink-0 font-bold shadow-xs">
+                  🐤
                 </div>
-                <div>
-                  <h4 class="font-extrabold text-stone-900 text-xs sm:text-sm">Qushlar Salomatligi Uchun</h4>
-                  <p class="text-[11px] text-stone-500">Sayroqi qushlar va to'tilar uchun tozalangan 1-navli ozuqa</p>
+                <div class="flex-1 min-w-0">
+                  <h4 id="heroBirdTitle" class="font-extrabold text-stone-900 text-xs sm:text-sm truncate">Sayroqi Kanareykalar Uchun</h4>
+                  <p id="heroBirdDesc" class="text-[11px] text-stone-500 truncate">Jarangdor sayrashini ta'minlovchi raps va sara urug'lar aralashmasi</p>
                 </div>
               </div>
+
+              <!-- Slide Indicators (Dots) -->
+              <div class="absolute bottom-20 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 bg-black/30 backdrop-blur-xs px-2.5 py-1 rounded-full">
+                <button onclick="goToBirdSlide(0)" class="bird-dot w-3 h-2 rounded-full bg-white transition-all" data-index="0"></button>
+                <button onclick="goToBirdSlide(1)" class="bird-dot w-1.5 h-1.5 rounded-full bg-white/50 transition-all" data-index="1"></button>
+                <button onclick="goToBirdSlide(2)" class="bird-dot w-1.5 h-1.5 rounded-full bg-white/50 transition-all" data-index="2"></button>
+                <button onclick="goToBirdSlide(3)" class="bird-dot w-1.5 h-1.5 rounded-full bg-white/50 transition-all" data-index="3"></button>
+                <button onclick="goToBirdSlide(4)" class="bird-dot w-1.5 h-1.5 rounded-full bg-white/50 transition-all" data-index="4"></button>
+              </div>
+
             </div>
           </div>
         </div>
@@ -1921,10 +1959,118 @@
       modal.classList.remove('flex');
     }
 
-    // Initialize cart on load
+    // ==================== ANIMATSIYALI QUSHLAR SLAYDERI ====================
+    const birdSlidesData = [
+      {
+        badge: "🐤 Kanareyka uchun sara don",
+        icon: "🐤",
+        gradient: "from-amberBrand-500 to-amberBrand-400",
+        title: "Sayroqi Kanareykalar Uchun",
+        desc: "Jarangdor sayrashini ta'minlovchi raps va sara urug'lar aralashmasi"
+      },
+      {
+        badge: "🕊️ Amadinlar uchun elangan don",
+        icon: "🕊️",
+        gradient: "from-brand-600 to-brand-500",
+        title: "Amadin Qushlari Uchun",
+        desc: "Mayda qushlar uchun maxsus elangan tariq va vitaminli donlar"
+      },
+      {
+        badge: "🦜 To'tilar & Kokil uchun mevali don",
+        icon: "🦜",
+        gradient: "from-sky-600 to-teal-500",
+        title: "To'tilar va Kokillar Uchun",
+        desc: "15 dan ortiq turli xil mevali, yong'oqli va energiya beruvchi sara donlar"
+      },
+      {
+        badge: "🪶 Bedanalar uchun sara ozuqa",
+        icon: "🪶",
+        gradient: "from-amber-600 to-orange-500",
+        title: "Bedanalar Uchun Maxsus",
+        desc: "Tuxum berishini 30% oshiruvchi kalsiy va maydalangan dukkakli donlar"
+      },
+      {
+        badge: "🌾 Parrandalar & Kaptar uchun",
+        icon: "🌾",
+        gradient: "from-brand-700 to-emerald-600",
+        title: "Parrandalar & Zotdor Kaptarlar",
+        desc: "Toza bug'doy, suli va quvvat beruvchi 7 xil sara donlar majmuasi"
+      }
+    ];
+
+    let currentBirdSlide = 0;
+    let birdSlideTimer = null;
+
+    function showBirdSlide(index) {
+      const slides = document.querySelectorAll('.bird-slide');
+      const dots = document.querySelectorAll('.bird-dot');
+      if (slides.length === 0) return;
+
+      currentBirdSlide = (index + slides.length) % slides.length;
+
+      slides.forEach((slide, idx) => {
+        if (idx === currentBirdSlide) {
+          slide.className = "bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-100 scale-100 z-10";
+        } else {
+          slide.className = "bird-slide absolute inset-0 transition-all duration-700 ease-in-out opacity-0 scale-105 pointer-events-none z-0";
+        }
+      });
+
+      dots.forEach((dot, idx) => {
+        if (idx === currentBirdSlide) {
+          dot.className = "bird-dot w-3 h-2 rounded-full bg-white transition-all";
+        } else {
+          dot.className = "bird-dot w-1.5 h-1.5 rounded-full bg-white/50 transition-all";
+        }
+      });
+
+      const data = birdSlidesData[currentBirdSlide];
+      if (data) {
+        const badgeEl = document.getElementById('heroBirdBadge');
+        const iconEl = document.getElementById('heroBirdIconBox');
+        const titleEl = document.getElementById('heroBirdTitle');
+        const descEl = document.getElementById('heroBirdDesc');
+
+        if (badgeEl) badgeEl.innerText = data.badge;
+        if (iconEl) {
+          iconEl.innerText = data.icon;
+          iconEl.className = `w-11 h-11 rounded-xl bg-gradient-to-tr ${data.gradient} text-white flex items-center justify-center text-xl shrink-0 font-bold shadow-xs transition-all duration-500`;
+        }
+        if (titleEl) titleEl.innerText = data.title;
+        if (descEl) descEl.innerText = data.desc;
+      }
+    }
+
+    function nextBirdSlide() {
+      showBirdSlide(currentBirdSlide + 1);
+    }
+
+    function prevBirdSlide() {
+      showBirdSlide(currentBirdSlide - 1);
+    }
+
+    function goToBirdSlide(idx) {
+      showBirdSlide(idx);
+    }
+
+    function startBirdSlider() {
+      if (birdSlideTimer) clearInterval(birdSlideTimer);
+      birdSlideTimer = setInterval(nextBirdSlide, 3500); // Har 3.5 soniyada keyingi qush
+    }
+
+    function pauseBirdSlider() {
+      if (birdSlideTimer) clearInterval(birdSlideTimer);
+    }
+
+    function resumeBirdSlider() {
+      startBirdSlider();
+    }
+
+    // Initialize cart & slider on load
     document.addEventListener('DOMContentLoaded', () => { 
       initCart(); 
       loadStoreProducts(); 
+      startBirdSlider();
     });
   </script>
 
