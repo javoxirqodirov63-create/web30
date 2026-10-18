@@ -44,6 +44,39 @@
     "composition": "Oliy navli maxsus pechene biskviti, yovvoyi va o'tloq urug'lari (chia, oq perilla va boshqalar), tabiiy hasharotlar, mollyuskalar va qisqichbaqasimonlar ekstrakti (tabiiy hayvoniy oqsil), o'simlik oqsillari ekstrakti, tozalangan tabiiy yog'lar, minerallar, vitaminlar majmuasi (A, D3, E) va maxsus prebiotiklar."
   },
   {
+    "id": "prod-12",
+    "name": "Raggio di Sole Fly Th White Extra (Pastoncino Bianco Secco)",
+    "price": 500000,
+    "unit": "4 kg",
+    "image": "images/raggio-fly-th-white-extra.jpg",
+    "tag": "Italiya 🇮🇹",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Raggio di Sole' brendidan quruq oq tuxum ozuqasi (pastoncino bianco secco). Maxsus tuxum oqsili (albom) asosida tayyorlangan bo'lib, oq, sariq, mozaik kanareykalar va nozik sayroqi qushlarga mo'ljallangan. Bo'yoqsiz formulasi tufayli patlarning tabiiy rangini aslo sarg'aytirmaydi. 4 kg katta tejamkor chelakda.",
+    "composition": "Oliy navli pechene biskviti, tozalangan tuxum oqsili (albom - albume d'uovo), o'simlik oqsillari konsentrati, sara urug'lar, Fly Premix Paté (vitamin A, D3, E, kalsiy, fosfor, lizin, metionin aminokislotalari), xamirturush va prebiotiklar."
+  },
+  {
+    "id": "prod-13",
+    "name": "Raggio di Sole Fly Gammarus Fruit (Pastoncino Universale)",
+    "price": 250000,
+    "unit": "2 kg",
+    "image": "images/raggio-fly-gammarus-fruit.jpg",
+    "tag": "Mevali & Gammarus",
+    "category": "Qushlar ozuqasi",
+    "description": "Hasharotxo'r, mevaxo'r va barcha turdagi sayroqi qushlar uchun to'yimli mevali va gammarusli universal ozuqa. Tabiiy quritilgan gammarus qisqichbaqalari va sara meva bo'laklari qushlarning jarangdor sayrashini kuchaytiradi, patlarni mayin va sog'lom qiladi.",
+    "composition": "Boshoqli donlar va maxsus biskvit, quritilgan tabiiy gammarus qisqichbaqalari (Gammarus pulex), quritilgan sara mevalar (olma, uzum, anjir va rezavorlar), o'simlik oqsillari, tozalangan yog'lar, tabiiy asal, minerallar va vitaminlar majmuasi."
+  },
+  {
+    "id": "prod-14",
+    "name": "Raggio di Sole Fly Tuttinsect (Pastoncino Insettivori)",
+    "price": 230000,
+    "unit": "1.5 kg",
+    "image": "images/raggio-fly-tuttinsect.jpg",
+    "tag": "12% Hasharotlar 🦗",
+    "category": "Qushlar ozuqasi",
+    "description": "Sayroqi va hasharotxo'r qushlar (sa'va, qorabosh, bulbul, kanareyka) uchun 12% haqiqiy tabiiy hasharotlar, qurtlar va qisqichbaqasimonlar bilan boyitilgan super-premium ozuqa. Ko'payish, bola boqish va sayrashni kuchaytirish uchun tengsiz tabiiy oqsil manbai.",
+    "composition": "12% tabiiy hasharotlar va qurtlar (Tenebrio molitor un qurti lichinkalari, Acheta domesticus chigirtkalari, pilla/g'umbaklar, gammarus), oliy navli biskvit yormasi, o'simlik oqsillari ekstrakti, baliq yog'i va tozalangan tabiiy yog'lar, minerallar, vitaminlar (A, D3, E) va aminokislotalar."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
