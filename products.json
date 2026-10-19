@@ -222,7 +222,7 @@
   {
     "id": "prod-28",
     "name": "Deli Nature Eggfood Yellow Moist (Pâtée Jaune Grasse)",
-    "price": 60000,
+    "price": 80000,
     "unit": "1 kg",
     "image": "images/deli-nature-eggfood-yellow-moist.jpg",
     "tag": "Belgiya 🇧🇪 Asal & Tuxum",
@@ -273,6 +273,39 @@
     "category": "Qushlar ozuqasi",
     "description": "Belgiyaning 'Deli Nature' brendidan kanareykalar uchun chia, kinoa, quritilgan olma bo'laklari va 2.5% me'da toshchalari (bird grit) bilan to'yintirilgan to'liq kompleks ozuqa (Birdelicious Canaries). Oshqozon hazmini mukammal qiladi, immunitetni ko'taradi va patlarni jilodor qiladi.",
     "composition": "Saralangan sara urug'lar (1% chia, 1% kinoa), boshoqli donlar, 2.5% mayda mineral toshchalar (qushlar me'dasida donni maydalovchi grit), quritilgan olma bo'laklari (1%), sabzavotlar, o'simlik yog'lari, xamirturush va vitamin-mineral premiksi (oqsil 17%, kalsiy 1.2%, fosfor 0.5%)."
+  },
+  {
+    "id": "prod-33",
+    "name": "Deli Nature Birdelicious Serengeti (Parrots)",
+    "price": 80000,
+    "unit": "750 gr",
+    "image": "images/deli-nature-serengeti-parrots.jpg",
+    "tag": "Yong'oq & Meva 🥜",
+    "category": "Qushlar ozuqasi",
+    "description": "Belgiyaning 'Deli Nature' brendidan katta va o'rta to'tiqushlar (Jako, Amazon, Kakadu, Ara va b.) uchun 40 dan ortiq xilma-xil tabiiy komponentlardan tayyorlangan premium ekzotik ozuqa (Birdelicious Serengeti). Sidr yong'og'i, grek yong'og'i, yer yong'oq, braziliya yong'og'i, quritilgan ananas, banan, papayya, olma va me'da toshchalari (grit) bilan boyitilgan.",
+    "composition": "40+ xil ingredient: sara urug'lar va boshoqli donlar, yong'oqlar (sidr, yong'oq, yer yong'oq, braziliya yong'og'i 6-7%), quritilgan tropik mevalar (mayiz, na'matak, banan, olma, ananas, papayya ~8%), quritilgan sabzavotlar (sabzi, achchiq qizil qalampir bo'laklari), chia, kinoa, 2.5% me'da toshchalari (stomach grit), o'simlik oqsillari va vitaminlar kompleksi."
+  },
+  {
+    "id": "prod-34",
+    "name": "Deli Nature Premium Foreign Finches",
+    "price": 60000,
+    "unit": "1 kg",
+    "image": "images/deli-nature-premium-foreign-finches.jpg",
+    "tag": "Amadin & Finches 🐦",
+    "category": "Qushlar ozuqasi",
+    "description": "Belgiyaning 'Deli Nature' brendidan ekzotik to'quvchi qushlar va amadinlar (zebrali, yapon, guld amadinlari) uchun maxsus ishlab chiqilgan elangan sara mayda urug'lar aralashmasi (Foreign Finches). Qushlarning ingichka tumshug'iga mos mayda donlar majmuasi immunitet va patlar go'zalligini ta'minlaydi.",
+    "composition": "Sariq panikum (yellow panicum), oq tariq (white millet), kanareyka urug'i (canary seed), qizil panikum (red panicum), qizil tariq (red millet), yapon tariqi (Japanese millet), nug urug'i (niger seed). 100% elangan toza don."
+  },
+  {
+    "id": "prod-35",
+    "name": "Deli Nature Premium Budgies",
+    "price": 60000,
+    "unit": "1 kg",
+    "image": "images/deli-nature-premium-budgies.webp",
+    "tag": "To'lqinsimon to'ti 🦜",
+    "category": "Qushlar ozuqasi",
+    "description": "Belgiyaning 'Deli Nature' brendidan to'lqinsimon to'tiqushlar (Budgies) uchun vitamin va minerallarga boy yuqori sifatli 8 xil tozalangan donlar aralashmasi (Premium Budgies). To'tiqushlarning faolligi, sog'lom hazm qilishi va yorqin ranglarini ta'minlaydi.",
+    "composition": "Sariq tariq (yellow millet), kanareyka urug'i (canary seed), oq tariq (white millet), tozalangan suli (peeled oats), sariq panikum (yellow panicum), yapon tariqi (Japanese millet), qizil tariq (red millet), nug urug'i (niger seed). 100% tabiiy va changdan tozalangan sara don."
   },
   {
     "id": "prod-4",
