@@ -509,56 +509,169 @@
 
 
   <!-- ==================== AFZALLIKLAR: NEGA AYNAN BIZ? ==================== -->
-  <section id="benefits" class="py-16 bg-white border-b border-stone-200/70">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="benefits" class="relative py-20 lg:py-24 bg-gradient-to-b from-stone-50 via-white to-stone-50 border-b border-stone-200/70 overflow-hidden">
+    <!-- Ambient decorative glows in background -->
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[720px] h-[360px] bg-gradient-to-r from-emerald-200/40 via-brand-200/30 to-amberBrand-200/40 blur-3xl pointer-events-none rounded-full -z-10 opacity-70"></div>
+    <div class="absolute -bottom-24 right-10 w-80 h-80 bg-brand-100/40 blur-2xl pointer-events-none rounded-full -z-10"></div>
+    <div class="absolute -bottom-24 left-10 w-80 h-80 bg-amberBrand-100/40 blur-2xl pointer-events-none rounded-full -z-10"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       
-      <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-50 border border-brand-200 text-brand-800 text-xs font-bold uppercase tracking-wider">
-          Bizning Afzalliklarimiz
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-4">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-brand-200/80 shadow-xs text-brand-800 text-xs font-black uppercase tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
+          <i class="fa-solid fa-medal text-brand-600 text-xs"></i>
+          <span>Bizning Afzalliklarimiz</span>
         </div>
-        <h2 class="text-3xl font-black text-stone-900 tracking-tight">
-          Nega aynan Ozuqa-don mahsulotlari?
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-stone-900 tracking-tight leading-tight">
+          Nega aynan <span class="bg-gradient-to-r from-brand-700 via-brand-600 to-emerald-500 bg-clip-text text-transparent">Ozuqa-don</span> mahsulotlari?
         </h2>
-        <p class="text-stone-600 text-sm sm:text-base">
-          Biz parrandalar va qushlar salomatligini har narsadan ustun qo'yamiz.
+        <p class="text-stone-600 text-sm sm:text-base leading-relaxed">
+          Biz parrandalar va qushlar salomatligini har narsadan ustun qo'yamiz. Har bir don tozalangan, saralangan va sifat nazoratidan o'tkazilgan.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <!-- 3 Premium Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
         
-        <!-- Pillar 1 -->
-        <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200/80 hover:border-amberBrand-300 hover:shadow-card-hover transition-all group">
-          <div class="w-12 h-12 rounded-2xl bg-amberBrand-100 text-amberBrand-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-            🧪
+        <!-- Pillar 1: Tabiiy vitaminlar -->
+        <div class="relative p-7 sm:p-8 rounded-3xl bg-white border border-stone-200/80 hover:border-brand-400 shadow-sm hover:shadow-2xl hover:shadow-brand-500/10 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between overflow-hidden">
+          <!-- Top subtle accent bar -->
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-emerald-400 to-brand-500 opacity-80 group-hover:h-2 transition-all"></div>
+          
+          <div>
+            <!-- Header row with icon and pill -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-emerald-50 to-brand-100/90 text-brand-700 flex items-center justify-center text-2xl shadow-inner border border-brand-200/60 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <i class="fa-solid fa-leaf text-brand-600"></i>
+              </div>
+              <span class="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+                100% Tabiiy
+              </span>
+            </div>
+
+            <h3 class="font-extrabold text-stone-900 text-xl mb-3 group-hover:text-brand-800 transition-colors">
+              100% Tabiiy vitaminlar
+            </h3>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Kimyoviy qo'shimchasiz, konservantlarsiz faqat sara tabiiy hosil va mineral premikslar bilan to'yintirilgan.
+            </p>
           </div>
-          <h3 class="font-extrabold text-stone-900 text-base mb-2">100% Tabiiy vitaminlar</h3>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            Kimyoviy qo'shimchasiz, konservantlarsiz faqat tabiiy vitamin va minerallar bilan to'yintirilgan.
-          </p>
+
+          <!-- Feature check tags -->
+          <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-2 text-xs font-semibold text-stone-600">
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-brand-600 text-[10px]"></i> 0% Kimyo
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-brand-600 text-[10px]"></i> Boy vitaminlar
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-brand-600 text-[10px]"></i> Sara hosil
+            </span>
+          </div>
         </div>
 
-        <!-- Pillar 2 -->
-        <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200/80 hover:border-brand-300 hover:shadow-card-hover transition-all group">
-          <div class="w-12 h-12 rounded-2xl bg-brand-100 text-brand-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-            📦
+        <!-- Pillar 2: Germetik xavfsiz qadoq -->
+        <div class="relative p-7 sm:p-8 rounded-3xl bg-white border border-stone-200/80 hover:border-amberBrand-400 shadow-sm hover:shadow-2xl hover:shadow-amberBrand-500/10 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between overflow-hidden">
+          <!-- Top subtle accent bar -->
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-amberBrand-400 to-amber-500 opacity-80 group-hover:h-2 transition-all"></div>
+
+          <div>
+            <!-- Header row with icon and pill -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amberBrand-50 to-amberBrand-100/90 text-amberBrand-700 flex items-center justify-center text-2xl shadow-inner border border-amberBrand-200/60 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <i class="fa-solid fa-shield-halved text-amberBrand-600"></i>
+              </div>
+              <span class="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-amberBrand-50 text-amberBrand-700 border border-amberBrand-200/60">
+                Toza & Himoyalangan
+              </span>
+            </div>
+
+            <h3 class="font-extrabold text-stone-900 text-xl mb-3 group-hover:text-amberBrand-800 transition-colors">
+              Germetik xavfsiz qadoq
+            </h3>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Namlik, chang va zararkunandalar kirmasligi uchun ko'p qatlamli, gigiyenik va mustahkam qadoqlangan.
+            </p>
           </div>
-          <h3 class="font-extrabold text-stone-900 text-base mb-2">Germetik xavfsiz qadoq</h3>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            Namlik, chang va zararkunandalar kirmasligi uchun gigiyenik va mustahkam qadoqlangan.
-          </p>
+
+          <!-- Feature check tags -->
+          <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-2 text-xs font-semibold text-stone-600">
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-amberBrand-600 text-[10px]"></i> Changdan xoli
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-amberBrand-600 text-[10px]"></i> Namlik o'tmas
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-amberBrand-600 text-[10px]"></i> Uzoq saqlanadi
+            </span>
+          </div>
         </div>
 
-        <!-- Pillar 3 -->
-        <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200/80 hover:border-amberBrand-300 hover:shadow-card-hover transition-all group">
-          <div class="w-12 h-12 rounded-2xl bg-amberBrand-100 text-amberBrand-700 flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">
-            🚚
+        <!-- Pillar 3: Tezkor yetkazish -->
+        <div class="relative p-7 sm:p-8 rounded-3xl bg-white border border-stone-200/80 hover:border-blue-400 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-2 group flex flex-col justify-between overflow-hidden">
+          <!-- Top subtle accent bar -->
+          <div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-blue-400 to-sky-500 opacity-80 group-hover:h-2 transition-all"></div>
+
+          <div>
+            <!-- Header row with icon and pill -->
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-50 to-sky-100/90 text-blue-700 flex items-center justify-center text-2xl shadow-inner border border-blue-200/60 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                <i class="fa-solid fa-truck-fast text-blue-600"></i>
+              </div>
+              <span class="text-xs font-extrabold uppercase px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200/60">
+                Butun O'zbekiston
+              </span>
+            </div>
+
+            <h3 class="font-extrabold text-stone-900 text-xl mb-3 group-hover:text-blue-800 transition-colors">
+              Tezkor va xavfsiz yetkazish
+            </h3>
+            <p class="text-stone-600 text-sm leading-relaxed mb-6">
+              Toshkent shahri bo'ylab va barcha viloyatlarga qulay, arzon va tezkor yetkazib berish xizmati yo'lga qo'yilgan.
+            </p>
           </div>
-          <h3 class="font-extrabold text-stone-900 text-base mb-2">Tezkor yetkazish</h3>
-          <p class="text-xs text-stone-600 leading-relaxed">
-            Toshkent bo'ylab va barcha viloyatlarga qulay yetkazib berish xizmati yo'lga qo'yilgan.
-          </p>
+
+          <!-- Feature check tags -->
+          <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-2 text-xs font-semibold text-stone-600">
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-blue-600 text-[10px]"></i> Toshkentda 24 soat
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-blue-600 text-[10px]"></i> Viloyatlarga pochta
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-stone-50 px-2.5 py-1 rounded-lg">
+              <i class="fa-solid fa-check text-blue-600 text-[10px]"></i> Xavfsiz quti
+            </span>
+          </div>
         </div>
 
+      </div>
+
+      <!-- Trust Metrics Bar Underneath -->
+      <div class="mt-14 max-w-5xl mx-auto rounded-3xl bg-gradient-to-r from-stone-900 via-stone-850 to-brand-950 p-6 sm:p-8 text-white shadow-xl shadow-stone-900/10 border border-stone-800 relative overflow-hidden">
+        <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-brand-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-white/10 relative z-10">
+          <div class="pt-4 md:pt-0">
+            <div class="text-2xl sm:text-3xl font-black text-brand-400">100%</div>
+            <div class="text-xs text-stone-300 font-medium mt-1">Tabiiy & Toza don</div>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-2xl sm:text-3xl font-black text-amberBrand-400">46+</div>
+            <div class="text-xs text-stone-300 font-medium mt-1">Xil sara mahsulotlar</div>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-2xl sm:text-3xl font-black text-emerald-400">5,000+</div>
+            <div class="text-xs text-stone-300 font-medium mt-1">Mamnun mijozlar</div>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <div class="text-2xl sm:text-3xl font-black text-sky-400">Tezkor</div>
+            <div class="text-xs text-stone-300 font-medium mt-1">Yetkazib berish</div>
+          </div>
+        </div>
       </div>
 
     </div>
