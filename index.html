@@ -1013,14 +1013,14 @@
   </section>
 
 
-  <!-- ==================== FAQ: KO'P BERILADIGAN SAVOLLAR ==================== -->
+  <!-- ==================== FAQ: KO'P BERILADIGAN SAVOLLAR (YANGI ZAMONAVIY USLUBLAR) ==================== -->
   <section id="faq" class="py-14 sm:py-16 bg-stone-50/70 border-b border-stone-200/70 relative overflow-hidden">
     <!-- Ambient Background Light -->
     <div class="absolute -top-24 left-1/2 -translate-x-1/2 w-96 h-48 bg-emerald-100/50 blur-3xl rounded-full pointer-events-none"></div>
 
     <div class="max-w-3xl mx-auto px-4 sm:px-6 relative z-10">
       
-      <!-- Section Header (More Compact & Refined) -->
+      <!-- Section Header (Compact & Modern) -->
       <div class="text-center max-w-xl mx-auto mb-8 space-y-2.5">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-brand-200/80 shadow-xs text-brand-800 text-[11px] font-black uppercase tracking-wider">
           <i class="fa-regular fa-circle-question text-brand-600 text-xs"></i>
@@ -1039,364 +1039,356 @@
       <!-- DESIGN VARIANT SWITCHER TOOLBAR -->
       <div class="max-w-2xl mx-auto mb-8 p-1.5 bg-white/90 backdrop-blur-md rounded-2xl sm:rounded-full border border-stone-200/80 shadow-xs flex items-center justify-center gap-1 sm:gap-1.5 flex-wrap">
         <span class="text-[10px] sm:text-[11px] font-black text-stone-400 uppercase tracking-wider px-2 py-0.5 flex items-center gap-1">
-          <i class="fa-solid fa-palette text-brand-600"></i> Uslub:
+          <i class="fa-solid fa-palette text-brand-600"></i> Yangi uslublar:
         </span>
-        <button type="button" onclick="switchFaqStyle(1)" id="btnFaqStyle1" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-black transition-all bg-gradient-to-r from-brand-700 to-brand-600 text-white shadow-md shadow-brand-700/25 border border-brand-600">
-          🍱 1. Neo-Glass
+        <button type="button" onclick="switchNewFaqStyle(1)" id="btnNewFaqStyle1" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-black transition-all bg-gradient-to-r from-brand-700 to-brand-600 text-white shadow-md shadow-brand-700/25 border border-brand-600">
+          📑 1. Tabli Karta
         </button>
-        <button type="button" onclick="switchFaqStyle(2)" id="btnFaqStyle2" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
-          📑 2. L-Accent
+        <button type="button" onclick="switchNewFaqStyle(2)" id="btnNewFaqStyle2" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
+          💬 2. Chat Dialog
         </button>
-        <button type="button" onclick="switchFaqStyle(3)" id="btnFaqStyle3" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
-          🔲 3. 2-Ustunli Bento
+        <button type="button" onclick="switchNewFaqStyle(3)" id="btnNewFaqStyle3" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
+          🔲 3. 4-Karta Matritsa
         </button>
-        <button type="button" onclick="switchFaqStyle(4)" id="btnFaqStyle4" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
-          📋 4. Yagona Blok
+        <button type="button" onclick="switchNewFaqStyle(4)" id="btnNewFaqStyle4" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
+          🎠 4. Slayder Karusel
         </button>
-        <button type="button" onclick="switchFaqStyle(5)" id="btnFaqStyle5" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
-          🖤 5. Dark Luxury
+        <button type="button" onclick="switchNewFaqStyle(5)" id="btnNewFaqStyle5" class="faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80">
+          ✨ 5. Neo-Glow Accordion
         </button>
       </div>
 
-      <!-- ==================== VARIANT 1: COMPACT NEO-GLASS ACCORDION (DEFAULT) ==================== -->
-      <div id="faqView1" class="faq-view-container space-y-2.5">
-        
-        <!-- FAQ 1.1 -->
-        <div class="bg-white/90 backdrop-blur-md rounded-2xl border border-stone-200/80 p-3.5 sm:p-4 shadow-xs hover:border-brand-500/40 hover:shadow-sm transition-all group">
-          <button onclick="toggleFaq(1, 1)" class="w-full flex items-center justify-between text-left font-extrabold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-lg bg-emerald-50 text-brand-700 border border-emerald-200/60 flex items-center justify-center text-xs font-black shrink-0">1</span>
-              <span>Buyurtma berish qanday amalga oshiriladi?</span>
-            </span>
-            <span class="w-6 h-6 rounded-full bg-stone-100 text-stone-500 text-[10px] flex items-center justify-center shrink-0 group-hover:bg-brand-50 group-hover:text-brand-700 transition-colors ml-2">
-              <i id="faqIcon-v1-1" class="fa-solid fa-chevron-down transition-transform"></i>
-            </span>
+      <!-- ==================== USLUB 1: LINEAR / STRIPE TABBED CARD (DEFAULT ACTIVE) ==================== -->
+      <div id="newFaqView1" class="new-faq-view-container space-y-4">
+        <!-- 4 Horizontal Category Tabs -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <button type="button" onclick="selectFaqTab(0)" class="faq-tab-btn-item px-3 py-2 rounded-xl text-xs font-black transition-all bg-brand-700 text-white shadow-md shadow-brand-700/25 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>Buyurtma</span>
           </button>
-          <div id="faqContent-v1-1" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-9">
-            Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
-          </div>
+          <button type="button" onclick="selectFaqTab(1)" class="faq-tab-btn-item px-3 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-50 border border-stone-200/80 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-truck-fast"></i>
+            <span>Yetkazish</span>
+          </button>
+          <button type="button" onclick="selectFaqTab(2)" class="faq-tab-btn-item px-3 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-50 border border-stone-200/80 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-seedling"></i>
+            <span>Don sifati</span>
+          </button>
+          <button type="button" onclick="selectFaqTab(3)" class="faq-tab-btn-item px-3 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-50 border border-stone-200/80 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-credit-card"></i>
+            <span>To'lov usuli</span>
+          </button>
         </div>
 
-        <!-- FAQ 1.2 -->
-        <div class="bg-white/90 backdrop-blur-md rounded-2xl border border-stone-200/80 p-3.5 sm:p-4 shadow-xs hover:border-brand-500/40 hover:shadow-sm transition-all group">
-          <button onclick="toggleFaq(2, 1)" class="w-full flex items-center justify-between text-left font-extrabold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-lg bg-emerald-50 text-brand-700 border border-emerald-200/60 flex items-center justify-center text-xs font-black shrink-0">2</span>
-              <span>Yetkazib berish qancha vaqt oladi va qayerlarga yetkaziladi?</span>
-            </span>
-            <span class="w-6 h-6 rounded-full bg-stone-100 text-stone-500 text-[10px] flex items-center justify-center shrink-0 group-hover:bg-brand-50 group-hover:text-brand-700 transition-colors ml-2">
-              <i id="faqIcon-v1-2" class="fa-solid fa-chevron-down transition-transform"></i>
-            </span>
-          </button>
-          <div id="faqContent-v1-2" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-9">
-            Toshkent shahri bo'yicha buyurtmalar 24 soat ichida (kuryer orqali) manzilingizga yetkaziladi. Viloyatlarga esa BTS, pochtalar yoki taksi orqali 1-2 ish kunida yetkazib beriladi.
-          </div>
-        </div>
-
-        <!-- FAQ 1.3 -->
-        <div class="bg-white/90 backdrop-blur-md rounded-2xl border border-stone-200/80 p-3.5 sm:p-4 shadow-xs hover:border-brand-500/40 hover:shadow-sm transition-all group">
-          <button onclick="toggleFaq(3, 1)" class="w-full flex items-center justify-between text-left font-extrabold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-lg bg-emerald-50 text-brand-700 border border-emerald-200/60 flex items-center justify-center text-xs font-black shrink-0">3</span>
-              <span>Donlar haqiqatan ham saralangan va tozalanganmi?</span>
-            </span>
-            <span class="w-6 h-6 rounded-full bg-stone-100 text-stone-500 text-[10px] flex items-center justify-center shrink-0 group-hover:bg-brand-50 group-hover:text-brand-700 transition-colors ml-2">
-              <i id="faqIcon-v1-3" class="fa-solid fa-chevron-down transition-transform"></i>
-            </span>
-          </button>
-          <div id="faqContent-v1-3" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-9">
-            Ha, albatta! Har bir don maxsus ko'p bosqichli elash apparatidan o'tadi. Qushlarning nafas yo'llariga zarar yetkazuvchi chang, xashak va mayda toshlar to'liq ajratib olinadi.
-          </div>
-        </div>
-
-        <!-- FAQ 1.4 -->
-        <div class="bg-white/90 backdrop-blur-md rounded-2xl border border-stone-200/80 p-3.5 sm:p-4 shadow-xs hover:border-brand-500/40 hover:shadow-sm transition-all group">
-          <button onclick="toggleFaq(4, 1)" class="w-full flex items-center justify-between text-left font-extrabold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-3">
-              <span class="w-6 h-6 rounded-lg bg-emerald-50 text-brand-700 border border-emerald-200/60 flex items-center justify-center text-xs font-black shrink-0">4</span>
-              <span>To'lovni qanday tartibda to'lasa bo'ladi?</span>
-            </span>
-            <span class="w-6 h-6 rounded-full bg-stone-100 text-stone-500 text-[10px] flex items-center justify-center shrink-0 group-hover:bg-brand-50 group-hover:text-brand-700 transition-colors ml-2">
-              <i id="faqIcon-v1-4" class="fa-solid fa-chevron-down transition-transform"></i>
-            </span>
-          </button>
-          <div id="faqContent-v1-4" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-9">
-            To'lovni mahsulotni qabul qilib olganingizdan so'ng naqd shaklda, Click yoki Payme ilovalari orqali xavfsiz amalga oshirishingiz mumkin.
-          </div>
-        </div>
-
-      </div>
-
-
-      <!-- ==================== VARIANT 2: MINIMALIST L-ACCENT ACCORDION ==================== -->
-      <div id="faqView2" class="faq-view-container hidden space-y-2.5">
-        
-        <!-- FAQ 2.1 -->
-        <div class="bg-white border-l-4 border-l-brand-600 border border-stone-200/80 rounded-2xl p-3.5 sm:p-4 shadow-xs hover:shadow-sm transition-all">
-          <button onclick="toggleFaq(1, 2)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-2.5">
-              <i class="fa-solid fa-cart-shopping text-brand-600 text-xs"></i>
-              <span>Buyurtma berish qanday amalga oshiriladi?</span>
-            </span>
-            <i id="faqIcon-v2-1" class="fa-solid fa-plus text-brand-600 text-xs transition-transform ml-2"></i>
-          </button>
-          <div id="faqContent-v2-1" class="hidden bg-brand-50/40 rounded-xl p-3 mt-3 text-xs sm:text-[13px] text-stone-700 leading-relaxed border border-brand-100/60">
-            Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
-          </div>
-        </div>
-
-        <!-- FAQ 2.2 -->
-        <div class="bg-white border-l-4 border-l-amberBrand-500 border border-stone-200/80 rounded-2xl p-3.5 sm:p-4 shadow-xs hover:shadow-sm transition-all">
-          <button onclick="toggleFaq(2, 2)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-2.5">
-              <i class="fa-solid fa-truck-fast text-amberBrand-600 text-xs"></i>
-              <span>Yetkazib berish qancha vaqt oladi va qayerlarga yetkaziladi?</span>
-            </span>
-            <i id="faqIcon-v2-2" class="fa-solid fa-plus text-amberBrand-600 text-xs transition-transform ml-2"></i>
-          </button>
-          <div id="faqContent-v2-2" class="hidden bg-amberBrand-50/40 rounded-xl p-3 mt-3 text-xs sm:text-[13px] text-stone-700 leading-relaxed border border-amberBrand-100/60">
-            Toshkent shahri bo'yicha buyurtmalar 24 soat ichida (kuryer orqali) manzilingizga yetkaziladi. Viloyatlarga esa BTS, pochtalar yoki taksi orqali 1-2 ish kunida yetkazib beriladi.
-          </div>
-        </div>
-
-        <!-- FAQ 2.3 -->
-        <div class="bg-white border-l-4 border-l-emerald-500 border border-stone-200/80 rounded-2xl p-3.5 sm:p-4 shadow-xs hover:shadow-sm transition-all">
-          <button onclick="toggleFaq(3, 2)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-2.5">
-              <i class="fa-solid fa-seedling text-emerald-600 text-xs"></i>
-              <span>Donlar haqiqatan ham saralangan va tozalanganmi?</span>
-            </span>
-            <i id="faqIcon-v2-3" class="fa-solid fa-plus text-emerald-600 text-xs transition-transform ml-2"></i>
-          </button>
-          <div id="faqContent-v2-3" class="hidden bg-emerald-50/40 rounded-xl p-3 mt-3 text-xs sm:text-[13px] text-stone-700 leading-relaxed border border-emerald-100/60">
-            Ha, albatta! Har bir don maxsus ko'p bosqichli elash apparatidan o'tadi. Qushlarning nafas yo'llariga zarar yetkazuvchi chang, xashak va mayda toshlar to'liq ajratib olinadi.
-          </div>
-        </div>
-
-        <!-- FAQ 2.4 -->
-        <div class="bg-white border-l-4 border-l-teal-500 border border-stone-200/80 rounded-2xl p-3.5 sm:p-4 shadow-xs hover:shadow-sm transition-all">
-          <button onclick="toggleFaq(4, 2)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-            <span class="flex items-center gap-2.5">
-              <i class="fa-solid fa-credit-card text-teal-600 text-xs"></i>
-              <span>To'lovni qanday tartibda to'lasa bo'ladi?</span>
-            </span>
-            <i id="faqIcon-v2-4" class="fa-solid fa-plus text-teal-600 text-xs transition-transform ml-2"></i>
-          </button>
-          <div id="faqContent-v2-4" class="hidden bg-teal-50/40 rounded-xl p-3 mt-3 text-xs sm:text-[13px] text-stone-700 leading-relaxed border border-teal-100/60">
-            To'lovni mahsulotni qabul qilib olganingizdan so'ng naqd shaklda, Click yoki Payme ilovalari orqali xavfsiz amalga oshirishingiz mumkin.
-          </div>
-        </div>
-
-      </div>
-
-
-      <!-- ==================== VARIANT 3: 2-COLUMN BENTO GRID ACCORDION ==================== -->
-      <div id="faqView3" class="faq-view-container hidden">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 items-start">
-          
-          <!-- Bento FAQ 3.1 -->
-          <div class="bg-white rounded-2xl border border-stone-200/80 p-3.5 shadow-xs hover:border-brand-500/40 transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-[10px] font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded-md flex items-center gap-1">
-                <i class="fa-solid fa-cart-shopping text-[9px]"></i> Xarid tartibi
+        <!-- Featured Rich Answer Card -->
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-stone-200/90 shadow-md relative overflow-hidden space-y-5">
+          <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-2xl bg-brand-50 border border-brand-200/60 flex items-center justify-center">
+                <i id="faqTabIcon" class="fa-solid fa-cart-shopping text-lg text-brand-700"></i>
+              </div>
+              <span id="faqTabTag" class="text-xs font-black text-brand-800 bg-brand-50 px-3 py-1 rounded-full border border-brand-200/60">
+                10 daqiqada tasdiqlash
               </span>
-              <button onclick="toggleFaq(1, 3)" class="text-stone-400 hover:text-stone-700">
-                <i id="faqIcon-v3-1" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-              </button>
             </div>
-            <button onclick="toggleFaq(1, 3)" class="w-full text-left font-bold text-stone-900 text-xs sm:text-sm">
+            <span class="text-[11px] font-bold text-stone-400">1 / 4 Savol</span>
+          </div>
+
+          <div class="space-y-3">
+            <h3 id="faqTabHeading" class="text-base sm:text-lg font-black text-stone-900 leading-snug">
               Buyurtma berish qanday amalga oshiriladi?
-            </button>
-            <div id="faqContent-v3-1" class="hidden pt-2 text-xs text-stone-600 leading-relaxed border-t border-stone-100 mt-2">
-              Saytdan kerakli donni savatchaga qo'shasiz va anketani to'ldirasiz. 10 daqiqada menejerimiz tasdiqlaydi.
-            </div>
+            </h3>
+            <p id="faqTabAnswer" class="text-stone-600 text-xs sm:text-sm leading-relaxed">
+              Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
+            </p>
           </div>
 
-          <!-- Bento FAQ 3.2 -->
-          <div class="bg-white rounded-2xl border border-stone-200/80 p-3.5 shadow-xs hover:border-brand-500/40 transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-[10px] font-black text-amberBrand-800 bg-amberBrand-50 px-2 py-0.5 rounded-md flex items-center gap-1">
-                <i class="fa-solid fa-truck-fast text-[9px]"></i> Yetkazib berish
-              </span>
-              <button onclick="toggleFaq(2, 3)" class="text-stone-400 hover:text-stone-700">
-                <i id="faqIcon-v3-2" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-              </button>
+          <!-- Highlight Bullets -->
+          <div id="faqTabBullets" class="pt-3 border-t border-stone-100 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <div class="flex items-center gap-2 text-xs font-semibold text-stone-700">
+              <i class="fa-solid fa-circle-check text-brand-600 text-xs"></i>
+              <span>Onlayn savatcha orqali 1 daqiqada</span>
             </div>
-            <button onclick="toggleFaq(2, 3)" class="w-full text-left font-bold text-stone-900 text-xs sm:text-sm">
-              Yetkazib berish qancha vaqt oladi va qayerlarga?
-            </button>
-            <div id="faqContent-v3-2" class="hidden pt-2 text-xs text-stone-600 leading-relaxed border-t border-stone-100 mt-2">
-              Toshkent bo'ylab 24 soatda, viloyatlarga BTS yoki taksi orqali 1-2 ish kunida tezkor yetkaziladi.
+            <div class="flex items-center gap-2 text-xs font-semibold text-stone-700">
+              <i class="fa-solid fa-circle-check text-brand-600 text-xs"></i>
+              <span>10 daqiqada operator qo'ng'irog'i</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs font-semibold text-stone-700">
+              <i class="fa-solid fa-circle-check text-brand-600 text-xs"></i>
+              <span>Ro'yxatdan o'tish shart emas</span>
             </div>
           </div>
-
-          <!-- Bento FAQ 3.3 -->
-          <div class="bg-white rounded-2xl border border-stone-200/80 p-3.5 shadow-xs hover:border-brand-500/40 transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-[10px] font-black text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md flex items-center gap-1">
-                <i class="fa-solid fa-shield-halved text-[9px]"></i> Sifat kafolati
-              </span>
-              <button onclick="toggleFaq(3, 3)" class="text-stone-400 hover:text-stone-700">
-                <i id="faqIcon-v3-3" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-              </button>
-            </div>
-            <button onclick="toggleFaq(3, 3)" class="w-full text-left font-bold text-stone-900 text-xs sm:text-sm">
-              Donlar saralangan va changsizmi?
-            </button>
-            <div id="faqContent-v3-3" class="hidden pt-2 text-xs text-stone-600 leading-relaxed border-t border-stone-100 mt-2">
-              Ha! Maxsus ko'p bosqichli elash apparatidan o'tadi, chang va mayda toshlar 100% tozalangan.
-            </div>
-          </div>
-
-          <!-- Bento FAQ 3.4 -->
-          <div class="bg-white rounded-2xl border border-stone-200/80 p-3.5 shadow-xs hover:border-brand-500/40 transition-all">
-            <div class="flex items-center justify-between mb-2">
-              <span class="text-[10px] font-black text-teal-700 bg-teal-50 px-2 py-0.5 rounded-md flex items-center gap-1">
-                <i class="fa-solid fa-wallet text-[9px]"></i> To'lov usuli
-              </span>
-              <button onclick="toggleFaq(4, 3)" class="text-stone-400 hover:text-stone-700">
-                <i id="faqIcon-v3-4" class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-              </button>
-            </div>
-            <button onclick="toggleFaq(4, 3)" class="w-full text-left font-bold text-stone-900 text-xs sm:text-sm">
-              To'lovni qanday tartibda to'lasa bo'ladi?
-            </button>
-            <div id="faqContent-v3-4" class="hidden pt-2 text-xs text-stone-600 leading-relaxed border-t border-stone-100 mt-2">
-              Mahsulotni qo'lingizga olgandan keyin naqd, Click yoki Payme orqali xavfsiz to'lashingiz mumkin.
-            </div>
-          </div>
-
         </div>
       </div>
 
 
-      <!-- ==================== VARIANT 4: UNIFIED SINGLE PANEL WITH DIVIDERS ==================== -->
-      <div id="faqView4" class="faq-view-container hidden">
-        <div class="bg-white rounded-3xl p-3 sm:p-5 border border-stone-200/90 shadow-md divide-y divide-stone-100">
+      <!-- ==================== USLUB 2: INTERACTIVE CHAT DIALOG FAQ ==================== -->
+      <div id="newFaqView2" class="new-faq-view-container hidden space-y-4">
+        <!-- Quick Question Chips -->
+        <div class="flex items-center justify-center gap-1.5 flex-wrap">
+          <button type="button" onclick="selectFaqChat(0)" class="faq-chat-chip px-2.5 py-1.5 rounded-full text-[11px] font-black transition-all bg-brand-700 text-white shadow-xs">
+            ❓ Qanday buyurtma beraman?
+          </button>
+          <button type="button" onclick="selectFaqChat(1)" class="faq-chat-chip px-2.5 py-1.5 rounded-full text-[11px] font-bold transition-all bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200/70">
+            ❓ Yetkazib berish qancha vaqt?
+          </button>
+          <button type="button" onclick="selectFaqChat(2)" class="faq-chat-chip px-2.5 py-1.5 rounded-full text-[11px] font-bold transition-all bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200/70">
+            ❓ Donlar changsizmi?
+          </button>
+          <button type="button" onclick="selectFaqChat(3)" class="faq-chat-chip px-2.5 py-1.5 rounded-full text-[11px] font-bold transition-all bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200/70">
+            ❓ Qanday to'layman?
+          </button>
+        </div>
+
+        <!-- Chat Container -->
+        <div class="bg-white rounded-3xl p-5 sm:p-6 border border-stone-200/90 shadow-md space-y-4">
+          <!-- Chat Header -->
+          <div class="flex items-center justify-between pb-3 border-b border-stone-100">
+            <div class="flex items-center gap-3">
+              <div class="relative">
+                <div class="w-9 h-9 rounded-full bg-brand-700 text-white font-black flex items-center justify-center text-xs shadow-xs">
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-500 ring-2 ring-white"></span>
+              </div>
+              <div>
+                <h4 class="font-black text-stone-900 text-xs sm:text-sm flex items-center gap-1.5">
+                  Ozuqa-don Maslahatchisi
+                  <i class="fa-solid fa-circle-check text-brand-600 text-xs"></i>
+                </h4>
+                <p class="text-[10px] text-emerald-600 font-bold">Onlayn · 1 daqiqada aniq javob</p>
+              </div>
+            </div>
+            <span id="faqChatBadge" class="text-[10px] font-extrabold text-brand-800 bg-brand-50 px-2.5 py-1 rounded-full border border-brand-200/60">
+              10 daqiqada tasdiqlash
+            </span>
+          </div>
+
+          <!-- Dialog Messages -->
+          <div class="space-y-3 pt-1">
+            <!-- User Question Bubble (Right) -->
+            <div class="flex justify-end">
+              <div class="bg-stone-100 text-stone-900 rounded-2xl rounded-tr-sm px-4 py-2.5 text-xs sm:text-sm font-bold shadow-xs max-w-[85%]">
+                <span id="faqChatUserMsg">Buyurtma berish qanday amalga oshiriladi?</span>
+                <span class="text-[9px] text-stone-400 block text-right mt-1 font-normal">Hozirgina</span>
+              </div>
+            </div>
+
+            <!-- Bot Answer Bubble (Left) -->
+            <div class="flex justify-start">
+              <div class="bg-brand-50/70 border border-brand-100 text-stone-800 rounded-2xl rounded-tl-sm px-4 py-3 text-xs sm:text-[13px] leading-relaxed shadow-xs max-w-[90%] space-y-2">
+                <p id="faqChatBotMsg">
+                  Assalomu alaykum! Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
+                </p>
+                <div class="flex items-center justify-between pt-1 border-t border-brand-100/60 text-[10px] text-brand-800 font-bold">
+                  <span>Ozuqa-don Rasmiy Xizmati</span>
+                  <span class="flex items-center gap-1">
+                    <i class="fa-solid fa-check-double text-brand-600"></i> O'qildi
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- ==================== USLUB 3: 4-KARTA BENTO MATRITSA ==================== -->
+      <div id="newFaqView3" class="new-faq-view-container hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           
-          <!-- Unified Row 1 -->
-          <div class="py-3 px-2 sm:px-3 hover:bg-stone-50/70 rounded-xl transition-colors">
-            <button onclick="toggleFaq(1, 4)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-2 h-2 rounded-full bg-brand-500"></span>
-                <span>Buyurtma berish qanday amalga oshiriladi?</span>
+          <!-- Matrix Card 1 -->
+          <div class="bg-white rounded-2xl p-4 border border-stone-200/80 shadow-xs hover:border-brand-500/50 hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-cart-shopping"></i>
               </span>
-              <i id="faqIcon-v4-1" class="fa-solid fa-chevron-down text-stone-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v4-1" class="hidden pt-2 text-xs sm:text-[13px] text-stone-600 leading-relaxed pl-4">
-              Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
+              <span class="text-[10px] font-black text-brand-700 bg-brand-50 px-2 py-0.5 rounded-full">
+                ⚡ 10 daqiqa
+              </span>
             </div>
+            <h4 class="font-black text-stone-900 text-xs sm:text-sm">Buyurtma berish qanday?</h4>
+            <p class="text-stone-600 text-[11px] sm:text-xs leading-relaxed">
+              Mahsulotni savatchaga qo'shasiz, ism va telefon kiritasiz. 10 daqiqada operatorimiz qo'ng'iroq qilib tasdiqlaydi.
+            </p>
           </div>
 
-          <!-- Unified Row 2 -->
-          <div class="py-3 px-2 sm:px-3 hover:bg-stone-50/70 rounded-xl transition-colors">
-            <button onclick="toggleFaq(2, 4)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-2 h-2 rounded-full bg-amberBrand-500"></span>
-                <span>Yetkazib berish qancha vaqt oladi va qayerlarga yetkaziladi?</span>
+          <!-- Matrix Card 2 -->
+          <div class="bg-white rounded-2xl p-4 border border-stone-200/80 shadow-xs hover:border-amberBrand-500/50 hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="w-8 h-8 rounded-xl bg-amberBrand-50 text-amberBrand-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-truck-fast"></i>
               </span>
-              <i id="faqIcon-v4-2" class="fa-solid fa-chevron-down text-stone-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v4-2" class="hidden pt-2 text-xs sm:text-[13px] text-stone-600 leading-relaxed pl-4">
-              Toshkent shahri bo'yicha buyurtmalar 24 soat ichida (kuryer orqali) manzilingizga yetkaziladi. Viloyatlarga esa BTS, pochtalar yoki taksi orqali 1-2 ish kunida yetkazib beriladi.
+              <span class="text-[10px] font-black text-amberBrand-800 bg-amberBrand-50 px-2 py-0.5 rounded-full">
+                📍 Butun O'zbekiston
+              </span>
             </div>
+            <h4 class="font-black text-stone-900 text-xs sm:text-sm">Yetkazib berish qancha vaqt?</h4>
+            <p class="text-stone-600 text-[11px] sm:text-xs leading-relaxed">
+              Toshkent bo'ylab 24 soat ichida yetkaziladi. Barcha viloyatlarga BTS, pochtalar yoki taksi orqali 1-2 kunda boradi.
+            </p>
           </div>
 
-          <!-- Unified Row 3 -->
-          <div class="py-3 px-2 sm:px-3 hover:bg-stone-50/70 rounded-xl transition-colors">
-            <button onclick="toggleFaq(3, 4)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                <span>Donlar haqiqatan ham saralangan va tozalanganmi?</span>
+          <!-- Matrix Card 3 -->
+          <div class="bg-white rounded-2xl p-4 border border-stone-200/80 shadow-xs hover:border-emerald-500/50 hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-seedling"></i>
               </span>
-              <i id="faqIcon-v4-3" class="fa-solid fa-chevron-down text-stone-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v4-3" class="hidden pt-2 text-xs sm:text-[13px] text-stone-600 leading-relaxed pl-4">
-              Ha, albatta! Har bir don maxsus ko'p bosqichli elash apparatidan o'tadi. Qushlarning nafas yo'llariga zarar yetkazuvchi chang, xashak va mayda toshlar to'liq ajratib olinadi.
+              <span class="text-[10px] font-black text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full">
+                ✨ 100% Saralangan
+              </span>
             </div>
+            <h4 class="font-black text-stone-900 text-xs sm:text-sm">Donlar tozalanganmi?</h4>
+            <p class="text-stone-600 text-[11px] sm:text-xs leading-relaxed">
+              Ha! Maxsus elash apparatidan o'tgan, chang va toshlar to'liq tozalangan. Qushlar salomatligiga 100% xavfsiz.
+            </p>
           </div>
 
-          <!-- Unified Row 4 -->
-          <div class="py-3 px-2 sm:px-3 hover:bg-stone-50/70 rounded-xl transition-colors">
-            <button onclick="toggleFaq(4, 4)" class="w-full flex items-center justify-between text-left font-bold text-stone-900 text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-2 h-2 rounded-full bg-teal-500"></span>
-                <span>To'lovni qanday tartibda to'lasa bo'ladi?</span>
+          <!-- Matrix Card 4 -->
+          <div class="bg-white rounded-2xl p-4 border border-stone-200/80 shadow-xs hover:border-teal-500/50 hover:shadow-md transition-all space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="w-8 h-8 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-credit-card"></i>
               </span>
-              <i id="faqIcon-v4-4" class="fa-solid fa-chevron-down text-stone-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v4-4" class="hidden pt-2 text-xs sm:text-[13px] text-stone-600 leading-relaxed pl-4">
-              To'lovni mahsulotni qabul qilib olganingizdan so'ng naqd shaklda, Click yoki Payme ilovalari orqali xavfsiz amalga oshirishingiz mumkin.
+              <span class="text-[10px] font-black text-teal-800 bg-teal-50 px-2 py-0.5 rounded-full">
+                🛡️ Qabulda to'lov
+              </span>
             </div>
+            <h4 class="font-black text-stone-900 text-xs sm:text-sm">To'lov qanday amalga oshadi?</h4>
+            <p class="text-stone-600 text-[11px] sm:text-xs leading-relaxed">
+              Oldindan to'lov shart emas! Tovarni qabul qilib olgach naqd shaklda, Click yoki Payme orqali xavfsiz to'laysiz.
+            </p>
           </div>
 
         </div>
       </div>
 
 
-      <!-- ==================== VARIANT 5: DARK LUXURY EMERALD FAQ ==================== -->
-      <div id="faqView5" class="faq-view-container hidden">
-        <div class="bg-gradient-to-br from-stone-950 via-stone-900 to-stone-950 rounded-3xl p-5 sm:p-7 border border-stone-800 shadow-xl relative overflow-hidden space-y-2.5">
-          <!-- Ambient Glow -->
-          <div class="absolute -top-12 -right-12 w-48 h-48 bg-emerald-500/15 rounded-full blur-2xl pointer-events-none"></div>
+      <!-- ==================== USLUB 4: HORIZONTAL SPOTLIGHT SLIDER ==================== -->
+      <div id="newFaqView4" class="new-faq-view-container hidden">
+        <div class="bg-white rounded-3xl p-6 sm:p-7 border border-stone-200/90 shadow-md relative overflow-hidden space-y-4">
+          <!-- Big Decorative Watermark Number -->
+          <div id="faqSlideWatermark" class="text-7xl sm:text-8xl font-black text-stone-100 absolute right-4 top-1 select-none pointer-events-none">
+            01
+          </div>
 
-          <!-- Dark FAQ 1 -->
-          <div class="bg-stone-900/80 backdrop-blur-sm border border-stone-800 rounded-2xl p-3.5 hover:border-emerald-500/40 transition-all">
-            <button onclick="toggleFaq(1, 5)" class="w-full flex items-center justify-between text-left font-bold text-white text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-6 h-6 rounded-lg bg-emerald-950 border border-emerald-500/30 text-emerald-400 text-xs font-black flex items-center justify-center">1</span>
-                <span>Buyurtma berish qanday amalga oshiriladi?</span>
-              </span>
-              <i id="faqIcon-v5-1" class="fa-solid fa-chevron-down text-emerald-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v5-1" class="hidden pt-2.5 text-xs text-stone-300 leading-relaxed border-t border-stone-800 mt-2.5 pl-8">
+          <!-- Top Row -->
+          <div class="flex items-center justify-between relative z-10">
+            <span id="faqSlideTag" class="text-xs font-black text-brand-800 bg-brand-50 px-3 py-1 rounded-full border border-brand-200/60">
+              10 daqiqada tasdiqlash
+            </span>
+            <span id="faqSlideNum" class="text-xs font-black text-stone-400 bg-stone-100 px-2.5 py-1 rounded-full">
+              01 / 04
+            </span>
+          </div>
+
+          <!-- Slide Content -->
+          <div class="space-y-2.5 relative z-10 pr-12 sm:pr-20">
+            <h3 id="faqSlideQuestion" class="text-base sm:text-lg font-black text-stone-900 leading-snug">
+              Buyurtma berish qanday amalga oshiriladi?
+            </h3>
+            <p id="faqSlideAnswer" class="text-stone-600 text-xs sm:text-sm leading-relaxed">
               Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
-            </div>
+            </p>
           </div>
 
-          <!-- Dark FAQ 2 -->
-          <div class="bg-stone-900/80 backdrop-blur-sm border border-stone-800 rounded-2xl p-3.5 hover:border-amber-500/40 transition-all">
-            <button onclick="toggleFaq(2, 5)" class="w-full flex items-center justify-between text-left font-bold text-white text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-6 h-6 rounded-lg bg-amber-950 border border-amber-500/30 text-amber-400 text-xs font-black flex items-center justify-center">2</span>
-                <span>Yetkazib berish qancha vaqt oladi va qayerlarga yetkaziladi?</span>
-              </span>
-              <i id="faqIcon-v5-2" class="fa-solid fa-chevron-down text-amber-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v5-2" class="hidden pt-2.5 text-xs text-stone-300 leading-relaxed border-t border-stone-800 mt-2.5 pl-8">
-              Toshkent shahri bo'yicha buyurtmalar 24 soat ichida (kuryer orqali) manzilingizga yetkaziladi. Viloyatlarga esa BTS, pochtalar yoki taksi orqali 1-2 ish kunida yetkazib beriladi.
+          <!-- Slider Navigation Footer -->
+          <div class="flex items-center justify-between pt-4 border-t border-stone-100 relative z-10">
+            <div class="flex items-center gap-1.5">
+              <button onclick="setFaqSlide(0)" class="faq-slide-dot w-6 h-2 rounded-full bg-brand-700 transition-all"></button>
+              <button onclick="setFaqSlide(1)" class="faq-slide-dot w-2 h-2 rounded-full bg-stone-300 transition-all"></button>
+              <button onclick="setFaqSlide(2)" class="faq-slide-dot w-2 h-2 rounded-full bg-stone-300 transition-all"></button>
+              <button onclick="setFaqSlide(3)" class="faq-slide-dot w-2 h-2 rounded-full bg-stone-300 transition-all"></button>
+            </div>
+            <div class="flex items-center gap-2">
+              <button onclick="moveFaqSlide(-1)" class="w-8 h-8 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 flex items-center justify-center transition-colors">
+                <i class="fa-solid fa-chevron-left text-xs"></i>
+              </button>
+              <button onclick="moveFaqSlide(1)" class="w-8 h-8 rounded-xl bg-brand-700 hover:bg-brand-800 text-white flex items-center justify-center transition-colors shadow-xs">
+                <i class="fa-solid fa-chevron-right text-xs"></i>
+              </button>
             </div>
           </div>
-
-          <!-- Dark FAQ 3 -->
-          <div class="bg-stone-900/80 backdrop-blur-sm border border-stone-800 rounded-2xl p-3.5 hover:border-sky-500/40 transition-all">
-            <button onclick="toggleFaq(3, 5)" class="w-full flex items-center justify-between text-left font-bold text-white text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-6 h-6 rounded-lg bg-sky-950 border border-sky-500/30 text-sky-400 text-xs font-black flex items-center justify-center">3</span>
-                <span>Donlar haqiqatan ham saralangan va tozalanganmi?</span>
-              </span>
-              <i id="faqIcon-v5-3" class="fa-solid fa-chevron-down text-sky-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v5-3" class="hidden pt-2.5 text-xs text-stone-300 leading-relaxed border-t border-stone-800 mt-2.5 pl-8">
-              Ha, albatta! Har bir don maxsus ko'p bosqichli elash apparatidan o'tadi. Qushlarning nafas yo'llariga zarar yetkazuvchi chang, xashak va mayda toshlar to'liq ajratib olinadi.
-            </div>
-          </div>
-
-          <!-- Dark FAQ 4 -->
-          <div class="bg-stone-900/80 backdrop-blur-sm border border-stone-800 rounded-2xl p-3.5 hover:border-purple-500/40 transition-all">
-            <button onclick="toggleFaq(4, 5)" class="w-full flex items-center justify-between text-left font-bold text-white text-xs sm:text-sm focus:outline-none">
-              <span class="flex items-center gap-2.5">
-                <span class="w-6 h-6 rounded-lg bg-purple-950 border border-purple-500/30 text-purple-400 text-xs font-black flex items-center justify-center">4</span>
-                <span>To'lovni qanday tartibda to'lasa bo'ladi?</span>
-              </span>
-              <i id="faqIcon-v5-4" class="fa-solid fa-chevron-down text-purple-400 text-xs transition-transform ml-2"></i>
-            </button>
-            <div id="faqContent-v5-4" class="hidden pt-2.5 text-xs text-stone-300 leading-relaxed border-t border-stone-800 mt-2.5 pl-8">
-              To'lovni mahsulotni qabul qilib olganingizdan so'ng naqd shaklda, Click yoki Payme ilovalari orqali xavfsiz amalga oshirishingiz mumkin.
-            </div>
-          </div>
-
         </div>
+      </div>
+
+
+      <!-- ==================== USLUB 5: NEO-GLOW ACCORDION ==================== -->
+      <div id="newFaqView5" class="new-faq-view-container hidden space-y-2.5">
+        
+        <!-- Glow FAQ 1 -->
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-stone-200/80 shadow-xs hover:border-brand-500/60 hover:shadow-md transition-all group">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFaqGlow(1)">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-xl bg-brand-50 text-brand-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <span class="font-extrabold text-stone-900 text-xs sm:text-sm">Buyurtma berish qanday amalga oshiriladi?</span>
+            </div>
+            <div id="faqGlowToggle-1" class="w-9 h-5 rounded-full bg-stone-200 p-0.5 flex items-center transition-colors">
+              <div class="w-4 h-4 rounded-full bg-white shadow-xs"></div>
+            </div>
+          </div>
+          <div id="faqGlowContent-1" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-11">
+            Saytdan kerakli don va ozuqalarni "Savatchaga qo'shish" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.
+          </div>
+        </div>
+
+        <!-- Glow FAQ 2 -->
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-stone-200/80 shadow-xs hover:border-amberBrand-500/60 hover:shadow-md transition-all group">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFaqGlow(2)">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-xl bg-amberBrand-50 text-amberBrand-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-truck-fast"></i>
+              </div>
+              <span class="font-extrabold text-stone-900 text-xs sm:text-sm">Yetkazib berish qancha vaqt oladi va qayerlarga?</span>
+            </div>
+            <div id="faqGlowToggle-2" class="w-9 h-5 rounded-full bg-stone-200 p-0.5 flex items-center transition-colors">
+              <div class="w-4 h-4 rounded-full bg-white shadow-xs"></div>
+            </div>
+          </div>
+          <div id="faqGlowContent-2" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-11">
+            Toshkent shahri bo'yicha buyurtmalar 24 soat ichida (kuryer orqali) manzilingizga yetkaziladi. Viloyatlarga esa BTS, pochtalar yoki taksi orqali 1-2 ish kunida yetkazib beriladi.
+          </div>
+        </div>
+
+        <!-- Glow FAQ 3 -->
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-stone-200/80 shadow-xs hover:border-emerald-500/60 hover:shadow-md transition-all group">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFaqGlow(3)">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-seedling"></i>
+              </div>
+              <span class="font-extrabold text-stone-900 text-xs sm:text-sm">Donlar haqiqatan ham saralangan va tozalanganmi?</span>
+            </div>
+            <div id="faqGlowToggle-3" class="w-9 h-5 rounded-full bg-stone-200 p-0.5 flex items-center transition-colors">
+              <div class="w-4 h-4 rounded-full bg-white shadow-xs"></div>
+            </div>
+          </div>
+          <div id="faqGlowContent-3" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-11">
+            Ha, albatta! Har bir don maxsus ko'p bosqichli elash apparatidan o'tadi. Qushlarning nafas yo'llariga zarar yetkazuvchi chang, xashak va mayda toshlar to'liq ajratib olinadi.
+          </div>
+        </div>
+
+        <!-- Glow FAQ 4 -->
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-stone-200/80 shadow-xs hover:border-teal-500/60 hover:shadow-md transition-all group">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFaqGlow(4)">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center text-xs font-black">
+                <i class="fa-solid fa-credit-card"></i>
+              </div>
+              <span class="font-extrabold text-stone-900 text-xs sm:text-sm">To'lovni qanday tartibda to'lasa bo'ladi?</span>
+            </div>
+            <div id="faqGlowToggle-4" class="w-9 h-5 rounded-full bg-stone-200 p-0.5 flex items-center transition-colors">
+              <div class="w-4 h-4 rounded-full bg-white shadow-xs"></div>
+            </div>
+          </div>
+          <div id="faqGlowContent-4" class="hidden pt-2.5 text-xs sm:text-[13px] text-stone-600 leading-relaxed border-t border-stone-100 mt-2.5 pl-11">
+            To'lovni mahsulotni qabul qilib olganingizdan so'ng naqd shaklda, Click yoki Payme ilovalari orqali xavfsiz amalga oshirishingiz mumkin.
+          </div>
+        </div>
+
       </div>
 
       <!-- Quick Support Helper Banner (Compact) -->
@@ -2600,11 +2592,42 @@
       }
     }
 
-    // FAQ Style Switcher
-    function switchFaqStyle(styleNum) {
+    // --- NEW FAQ STYLES INTERACTION LOGIC ---
+    const faqDataStore = [
+      {
+        icon: "fa-solid fa-cart-shopping",
+        tag: "10 daqiqada tasdiqlash",
+        question: "Buyurtma berish qanday amalga oshiriladi?",
+        answer: "Saytdan kerakli don va ozuqalarni \"Savatchaga qo'shish\" tugmasi orqali tanlaysiz. So'ngra buyurtma formasida ismingiz, telefon raqamingiz va manzilingizni qoldirasiz. 10 daqiqa ichida operatorimiz siz bilan bog'lanib buyurtmangizni tasdiqlaydi.",
+        bullets: ["Onlayn savatcha orqali 1 daqiqada", "10 daqiqada operator qo'ng'irog'i", "Ro'yxatdan o'tish shart emas"]
+      },
+      {
+        icon: "fa-solid fa-truck-fast",
+        tag: "Butun O'zbekiston bo'ylab",
+        question: "Yetkazib berish qancha vaqt oladi va qayerlarga yetkaziladi?",
+        answer: "Toshkent shahri bo'yicha buyurtmalar 24 soat ichida (kuryer orqali) manzilingizga yetkaziladi. Viloyatlarga esa BTS, pochtalar yoki taksi orqali 1-2 ish kunida tezkor yetkazib beriladi.",
+        bullets: ["Toshkent bo'ylab 24 soatda eshikkacha", "Viloyatlarga 1-2 kunda BTS yoki taksi", "Xavfsiz va ehtiyotkor qadoqlash"]
+      },
+      {
+        icon: "fa-solid fa-seedling",
+        tag: "100% Changsiz saralangan",
+        question: "Donlar haqiqatan ham saralangan va tozalanganmi?",
+        answer: "Ha, albatta! Har bir don maxsus ko'p bosqichli elash apparatidan o'tadi. Qushlarning nafas yo'llariga zarar yetkazuvchi chang, xashak va mayda toshlar to'liq ajratib olinadi.",
+        bullets: ["Ko'p bosqichli elash apparatidan o'tgan", "Chang va mayda toshlarsiz toza", "Qushlar salomatligiga 100% xavfsiz"]
+      },
+      {
+        icon: "fa-solid fa-credit-card",
+        tag: "Qabulda xavfsiz to'lov",
+        question: "To'lovni qanday tartibda to'lasa bo'ladi?",
+        answer: "To'lovni mahsulotni qabul qilib olganingizdan so'ng naqd shaklda, Click yoki Payme ilovalari orqali xavfsiz amalga oshirishingiz mumkin.",
+        bullets: ["Oldindan to'lov talab etilmaydi", "Mahsulotni ko'rib olgach to'lov", "Click, Payme yoki naqd pulda"]
+      }
+    ];
+
+    function switchNewFaqStyle(styleNum) {
       for (let i = 1; i <= 5; i++) {
-        const view = document.getElementById(`faqView${i}`);
-        const btn = document.getElementById(`btnFaqStyle${i}`);
+        const view = document.getElementById(`newFaqView${i}`);
+        const btn = document.getElementById(`btnNewFaqStyle${i}`);
         if (view) {
           if (i === styleNum) {
             view.classList.remove('hidden');
@@ -2618,6 +2641,110 @@
           } else {
             btn.className = "faq-tab-btn px-3 py-1.5 rounded-xl sm:rounded-full text-xs font-bold transition-all bg-stone-50 text-stone-700 hover:bg-stone-100 border border-stone-200/80";
           }
+        }
+      }
+    }
+
+    // 1. Tabbed FAQ
+    function selectFaqTab(idx) {
+      const d = faqDataStore[idx];
+      if (!d) return;
+      const heading = document.getElementById('faqTabHeading');
+      const answer = document.getElementById('faqTabAnswer');
+      const tag = document.getElementById('faqTabTag');
+      const icon = document.getElementById('faqTabIcon');
+      const bullets = document.getElementById('faqTabBullets');
+      if (heading) heading.textContent = d.question;
+      if (answer) answer.textContent = d.answer;
+      if (tag) tag.textContent = d.tag;
+      if (icon) icon.className = `${d.icon} text-lg text-brand-700`;
+      if (bullets) {
+        bullets.innerHTML = d.bullets.map(b => `
+          <div class="flex items-center gap-2 text-xs font-semibold text-stone-700">
+            <i class="fa-solid fa-circle-check text-brand-600 text-xs"></i>
+            <span>${b}</span>
+          </div>
+        `).join('');
+      }
+      document.querySelectorAll('.faq-tab-btn-item').forEach((btn, i) => {
+        if (i === idx) {
+          btn.className = "faq-tab-btn-item px-3 py-2 rounded-xl text-xs font-black transition-all bg-brand-700 text-white shadow-md shadow-brand-700/25 flex items-center justify-center gap-2";
+        } else {
+          btn.className = "faq-tab-btn-item px-3 py-2 rounded-xl text-xs font-bold transition-all bg-white text-stone-700 hover:bg-stone-50 border border-stone-200/80 flex items-center justify-center gap-2";
+        }
+      });
+    }
+
+    // 2. Chat FAQ
+    function selectFaqChat(idx) {
+      const d = faqDataStore[idx];
+      if (!d) return;
+      const userMsg = document.getElementById('faqChatUserMsg');
+      const botMsg = document.getElementById('faqChatBotMsg');
+      const badge = document.getElementById('faqChatBadge');
+      if (userMsg) userMsg.textContent = d.question;
+      if (botMsg) botMsg.textContent = d.answer;
+      if (badge) badge.textContent = d.tag;
+
+      document.querySelectorAll('.faq-chat-chip').forEach((chip, i) => {
+        if (i === idx) {
+          chip.className = "faq-chat-chip px-2.5 py-1.5 rounded-full text-[11px] font-black transition-all bg-brand-700 text-white shadow-xs";
+        } else {
+          chip.className = "faq-chat-chip px-2.5 py-1.5 rounded-full text-[11px] font-bold transition-all bg-stone-100 hover:bg-stone-200 text-stone-700 border border-stone-200/70";
+        }
+      });
+    }
+
+    // 4. Slider FAQ
+    let currentFaqSlide = 0;
+    function moveFaqSlide(dir) {
+      currentFaqSlide = (currentFaqSlide + dir + faqDataStore.length) % faqDataStore.length;
+      updateFaqSlideView();
+    }
+    function setFaqSlide(idx) {
+      currentFaqSlide = idx;
+      updateFaqSlideView();
+    }
+    function updateFaqSlideView() {
+      const d = faqDataStore[currentFaqSlide];
+      if (!d) return;
+      const numEl = document.getElementById('faqSlideNum');
+      const watermarkEl = document.getElementById('faqSlideWatermark');
+      const qEl = document.getElementById('faqSlideQuestion');
+      const aEl = document.getElementById('faqSlideAnswer');
+      const tagEl = document.getElementById('faqSlideTag');
+      if (numEl) numEl.textContent = `0${currentFaqSlide + 1} / 04`;
+      if (watermarkEl) watermarkEl.textContent = `0${currentFaqSlide + 1}`;
+      if (qEl) qEl.textContent = d.question;
+      if (aEl) aEl.textContent = d.answer;
+      if (tagEl) tagEl.textContent = d.tag;
+
+      document.querySelectorAll('.faq-slide-dot').forEach((dot, i) => {
+        if (i === currentFaqSlide) {
+          dot.className = "faq-slide-dot w-6 h-2 rounded-full bg-brand-700 transition-all";
+        } else {
+          dot.className = "faq-slide-dot w-2 h-2 rounded-full bg-stone-300 transition-all";
+        }
+      });
+    }
+
+    // 5. Glow Accordion
+    function toggleFaqGlow(idx) {
+      const content = document.getElementById(`faqGlowContent-${idx}`);
+      const toggle = document.getElementById(`faqGlowToggle-${idx}`);
+      if (!content) return;
+      const isHidden = content.classList.contains('hidden');
+      if (isHidden) {
+        content.classList.remove('hidden');
+        if (toggle) {
+          toggle.classList.remove('bg-stone-200');
+          toggle.classList.add('bg-brand-600', 'justify-end');
+        }
+      } else {
+        content.classList.add('hidden');
+        if (toggle) {
+          toggle.classList.remove('bg-brand-600', 'justify-end');
+          toggle.classList.add('bg-stone-200');
         }
       }
     }
