@@ -385,6 +385,50 @@
     "composition": "Boshoqli donlar va non mahsulotlari, baliq va baliq mahsulotlari, quritilgan mevalar (o'rmon mevalari, mayiz), hasharotlar va qisqichbaqasimonlar, o'simlik oqsillari ekstrakti, o'simlik yog'lari, sut mahsulotlari, minerallar, xamirturush, 16 xil aminokislotalar (lizin, metionin va b.), vitaminlar (A, D3, E, K, C, B guruhi) (xom oqsil 15.0%, xom yog' 11.5%)."
   },
   {
+    "id": "prod-43",
+    "name": "Pineta Zootecnici Pro.Complete Carduelidi & Spinus",
+    "price": 300000,
+    "unit": "4 kg",
+    "image": "images/pineta-pro-complete-4kg.jpg",
+    "tag": "Sa'va & Chij 🐦",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Pineta Zootecnici' brendidan sa'valar (Carduelis) va chijlar (Spinus) uchun an'anaviy don aralashmalarining to'liq o'rnini bosuvchi yarim yumshoq professional to'liq ozuqa (Pro.Complete 4 kg). Maxsus hasharot oqsili (insect meal), silimarin (jigarni himoyalovchi sut qushqo'nmasi), oregano ekstrakti va F.O.S. prebiotiklari bilan boyitilgan. Qushlar patining tabiiy rangini buzmaydi (anti-doré).",
+    "composition": "Non va qandolat mahsulotlari, hasharot oqsili uni (insect meal), yog'li urug'lar va mevalar, o'simlik ekstraktlari (silimarin va oregano ekstrakti), o'simlik yog'lari, F.O.S. prebiotiklari, xamirturush, minerallar, lizin, metionin, vitaminlar kompleksi (xom oqsil 15.0%, xom yog' 9.5%)."
+  },
+  {
+    "id": "prod-44",
+    "name": "Pineta Selection Ornimax Fringillidi P33 Spinus",
+    "price": 180000,
+    "unit": "3 kg",
+    "image": "images/pineta-selection-p33-spinus-3kg.jpg",
+    "tag": "Spinus & Fringillidi 🌾",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Pineta Zootecnici' brendidan Fringillidi oilasi (sa'va, chij, chechyotka, yovvoyi kanareykalar) uchun maxsus saralangan elangan mayda urug'lar aralashmasi (Selection Ornimax P33 Spinus 3 kg). Ingichka tumshuqli qushlarning qiyinchiliksiz hazm qilishi uchun chang va chiqindilardan 100% tozalangan sara donlar majmuasi.",
+    "composition": "Oq va jigarrang perilla, daktilis (o'tloq urug'i), sara kanareyka urug'i, chia urug'i, qora va oq salat urug'i, tsikoriya, kunjut, mayda qorashakak, DL-metionin aminokislotasi va minerallar bilan boyitilgan toza sara urug'lar."
+  },
+  {
+    "id": "prod-45",
+    "name": "Pineta Zootecnici Psit.Birds Soft Plus",
+    "price": 300000,
+    "unit": "3 kg",
+    "image": "images/pineta-psit-birds-soft-plus-3kg.jpg",
+    "tag": "Jako & Ara To'ti 🦜",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Pineta Zootecnici' brendidan katta va o'rta to'tiqushlar (Jako, Amazon, Kakadu, Ara, Korella) uchun ishlab chiqilgan professional yumshoq patee ozuqa (Psit.Birds Soft Plus 3 kg). Quritilgan mevalar, qisqichbaqasimonlar (gammarus), tuxum oqsili, shifobaxsh dorivor o'tlar va minerallar bilan to'yintirilgan to'tilar sevimli delikatesi.",
+    "composition": "Biskvit va sara boshoqli donlar, o'simlik ekstraktlari, quritilgan mevalar va rezavorlar, tuxum mahsulotlari, qisqichbaqasimonlar (gammarus), saralangan moyli urug'lar, o'simlik moylari, dorivor o'tlar ekstrakti, xamirturush, tabiiy minerallar va vitaminlar kompleksi."
+  },
+  {
+    "id": "prod-46",
+    "name": "Pineta Zootecnici Vanity Food Professional",
+    "price": 250000,
+    "unit": "3 kg",
+    "image": "images/pineta-vanity-food-3kg.jpg",
+    "tag": "21% Protein 🌟",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning 'Pineta Zootecnici' brendidan barcha zotdor kanareykalar (oq, mozaik, qizil omil), sa'valar va mayda sayroqi qushlar uchun 21% yuqori oqsilli, tuxumsiz (egg-free) va bedasiz (alfalfa-free) tayyorlangan yumshoq universal ozuqa (Vanity Food 3 kg). Oq va nozik patli qushlarning pat rangini mutlaqo o'zgartirmaydi (anti-doré), mukammal hazm bo'ladi.",
+    "composition": "Sara don mahsulotlari, yog'li urug'lar va mevalar hosilalari, shifobaxsh o'tlar, sut mahsulotlari, o'simlik moylari, xamirturush, minerallar, 12 xil vitaminlar (A, D3, E, K, C, B guruhi), xolin (750 mg) va muhim aminokislotalar (xom oqsil 21.0%, xom yog' 10.0%)."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
