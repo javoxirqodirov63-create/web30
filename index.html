@@ -54,16 +54,69 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Inter+Tight:wght@800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Shippori+Mincho:wght@500;700;800&family=Space+Grotesk:wght@600;700&display=swap');
     
     body {
       font-family: 'Plus Jakarta Sans', sans-serif;
       background-color: #faf8f5;
+      transition: background-color 0.4s ease, color 0.4s ease;
+    }
+
+    /* THEME 1: NORDIC CLEAN (APPLE / LINEAR STYLE) */
+    body.theme-nordic {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      background-color: #faf8f5 !important;
+    }
+    body.theme-nordic h1, body.theme-nordic h2, body.theme-nordic h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      letter-spacing: -0.025em;
+    }
+
+    /* THEME 2: ROYAL BOTANICAL (LUXURY EDITORIAL) */
+    body.theme-royal {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      background-color: #fcf9f2 !important;
+    }
+    body.theme-royal h1, body.theme-royal h2, body.theme-royal h3 {
+      font-family: 'Playfair Display', serif !important;
+      font-style: normal;
+      letter-spacing: -0.01em;
+    }
+
+    /* THEME 3: WARM EARTH (CALIFORNIA ORGANIC) */
+    body.theme-warm-earth {
+      font-family: 'DM Sans', sans-serif !important;
+      background-color: #fbf8f3 !important;
+    }
+    body.theme-warm-earth h1, body.theme-warm-earth h2, body.theme-warm-earth h3 {
+      font-family: 'Fraunces', serif !important;
+      letter-spacing: -0.02em;
+    }
+
+    /* THEME 4: JAPANESE WABI-SABI (ZEN NATURE) */
+    body.theme-wabi-sabi {
+      font-family: 'DM Sans', sans-serif !important;
+      background-color: #f7f4ed !important;
+    }
+    body.theme-wabi-sabi h1, body.theme-wabi-sabi h2, body.theme-wabi-sabi h3 {
+      font-family: 'Shippori Mincho', serif !important;
+      letter-spacing: 0.035em;
+    }
+
+    /* THEME 5: SWISS PRECISION (BAUHAUS MINIMAL) */
+    body.theme-swiss {
+      font-family: 'Inter', sans-serif !important;
+      background-color: #ffffff !important;
+    }
+    body.theme-swiss h1, body.theme-swiss h2, body.theme-swiss h3 {
+      font-family: 'Inter Tight', sans-serif !important;
+      font-weight: 900 !important;
+      letter-spacing: -0.04em !important;
     }
 
     /* Soft grain background effect */
     .bg-canvas {
-      background-color: #faf8f5;
+      background-color: transparent;
     }
     
     /* Mesh Gradients */
@@ -150,32 +203,63 @@
 </head>
 <body class="bg-canvas text-stone-800 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
-  <!-- ==================== HEADER VARIANTS SWITCHER TOOLBAR ==================== -->
-  <div id="headerVariantSwitcher" class="bg-stone-900/95 backdrop-blur-md text-white py-2 px-3 border-b border-stone-800 text-xs sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2.5">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-gradient-to-tr from-brand-700 to-emerald-500 text-white font-black text-xs shadow-xs">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
-        </span>
-        <span class="font-extrabold text-white text-xs tracking-wide">TOPBAR & NAVBAR DIZAYN VARIANTLARI:</span>
-        <span class="text-[11px] text-emerald-400 font-semibold bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30 hidden sm:inline">5 xil zamonaviy uslub</span>
+  <!-- ==================== LIVE DESIGN CONTROLLER (HEADER + TYPOGRAPHY/COLORS) ==================== -->
+  <div id="headerVariantSwitcher" class="bg-stone-900/98 backdrop-blur-md text-white py-2.5 px-3 border-b-2 border-brand-500/50 sticky top-0 z-50 shadow-xl">
+    <div class="max-w-7xl mx-auto space-y-2">
+      <!-- 1-QATOR: HEADER & NAVBAR SHAKLI -->
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-2 border-b border-stone-800 pb-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-gradient-to-tr from-brand-700 to-emerald-500 text-white font-black text-xs shadow-xs">
+            <i class="fa-solid fa-layer-group"></i>
+          </span>
+          <span class="font-extrabold text-white text-xs tracking-wide">1. HEADER & TOPBAR DIZAYNI:</span>
+          <span class="text-[11px] text-emerald-400 font-semibold bg-emerald-950/80 px-2 py-0.5 rounded-full border border-emerald-500/30 hidden sm:inline">5 xil shakl</span>
+        </div>
+        <div class="flex items-center gap-1.5 flex-wrap justify-center">
+          <button type="button" onclick="switchHeaderStyle(1)" id="btnHeaderStyle1" class="header-style-btn px-2.5 py-1 rounded-lg text-xs font-black transition-all bg-gradient-to-r from-brand-700 to-brand-600 text-white shadow-xs scale-105 border border-brand-400">
+            1. Glass Island (Apple)
+          </button>
+          <button type="button" onclick="switchHeaderStyle(2)" id="btnHeaderStyle2" class="header-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            2. Emerald & Gold
+          </button>
+          <button type="button" onclick="switchHeaderStyle(3)" id="btnHeaderStyle3" class="header-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            3. Cyber Dark
+          </button>
+          <button type="button" onclick="switchHeaderStyle(4)" id="btnHeaderStyle4" class="header-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            4. Dynamic Dock
+          </button>
+          <button type="button" onclick="switchHeaderStyle(5)" id="btnHeaderStyle5" class="header-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            5. Warm Nature 3D
+          </button>
+        </div>
       </div>
-      <div class="flex items-center gap-1.5 flex-wrap justify-center">
-        <button type="button" onclick="switchHeaderStyle(1)" id="btnHeaderStyle1" class="header-style-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-700 to-brand-600 text-white shadow-md shadow-brand-700/30 scale-105 border border-brand-500">
-          1. Glass Island (Apple)
-        </button>
-        <button type="button" onclick="switchHeaderStyle(2)" id="btnHeaderStyle2" class="header-style-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
-          2. Emerald & Gold Luxury
-        </button>
-        <button type="button" onclick="switchHeaderStyle(3)" id="btnHeaderStyle3" class="header-style-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
-          3. Cyber-Organic Dark
-        </button>
-        <button type="button" onclick="switchHeaderStyle(4)" id="btnHeaderStyle4" class="header-style-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
-          4. Split Dynamic Dock
-        </button>
-        <button type="button" onclick="switchHeaderStyle(5)" id="btnHeaderStyle5" class="header-style-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
-          5. Warm Harvest 3D
-        </button>
+
+      <!-- 2-QATOR: SHRIFTLAR (YOZUVLAR) VA RANGLAR PALITRASI -->
+      <div class="flex flex-col lg:flex-row items-center justify-between gap-2">
+        <div class="flex items-center gap-2">
+          <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-gradient-to-tr from-amber-500 to-amberBrand-400 text-stone-900 font-black text-xs shadow-xs">
+            <i class="fa-solid fa-font"></i>
+          </span>
+          <span class="font-extrabold text-amber-300 text-xs tracking-wide">2. YOZUV (SHRIFT) VA RANGLAR:</span>
+          <span class="text-[11px] text-stone-400 hidden sm:inline">(Butun sayt yozuv va ranglari o'zgaradi)</span>
+        </div>
+        <div class="flex items-center gap-1.5 flex-wrap justify-center">
+          <button type="button" onclick="switchTypographyTheme('nordic')" id="btnTheme-nordic" class="theme-style-btn px-2.5 py-1 rounded-lg text-xs font-black transition-all bg-amber-500 text-stone-900 shadow-xs scale-105 border border-amber-300 ring-2 ring-amber-400/50">
+            ✦ Nordic Clean (Apple)
+          </button>
+          <button type="button" onclick="switchTypographyTheme('royal')" id="btnTheme-royal" class="theme-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            ✦ Royal Botanical (Playfair)
+          </button>
+          <button type="button" onclick="switchTypographyTheme('warm-earth')" id="btnTheme-warm-earth" class="theme-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            ✦ Warm Earth (Fraunces)
+          </button>
+          <button type="button" onclick="switchTypographyTheme('wabi-sabi')" id="btnTheme-wabi-sabi" class="theme-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            ✦ Japanese Zen (Mincho)
+          </button>
+          <button type="button" onclick="switchTypographyTheme('swiss')" id="btnTheme-swiss" class="theme-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700">
+            ✦ Swiss Pure (Inter Tight)
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -2958,6 +3042,27 @@
       }
     }
 
+    // Typography & Color Theme Switcher (5 styles)
+    function switchTypographyTheme(themeName) {
+      document.body.classList.remove('theme-nordic', 'theme-royal', 'theme-warm-earth', 'theme-wabi-sabi', 'theme-swiss');
+      document.body.classList.add(`theme-${themeName}`);
+
+      const themes = ['nordic', 'royal', 'warm-earth', 'wabi-sabi', 'swiss'];
+      themes.forEach(t => {
+        const btn = document.getElementById(`btnTheme-${t}`);
+        if (btn) {
+          if (t === themeName) {
+            btn.className = "theme-style-btn px-2.5 py-1 rounded-lg text-xs font-black transition-all bg-amber-500 text-stone-900 shadow-xs scale-105 border border-amber-300 ring-2 ring-amber-400/50";
+          } else {
+            btn.className = "theme-style-btn px-2.5 py-1 rounded-lg text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 border border-stone-700";
+          }
+        }
+      });
+      try {
+        localStorage.setItem('ozuqadon_theme', themeName);
+      } catch (e) {}
+    }
+
     // Render all cart elements in DOM
     function renderCartUI() {
       const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -3422,6 +3527,11 @@
       loadStoreProducts(); 
       showHeroBirdSlide(0);
       resetHeroSlideTimer();
+
+      try {
+        const savedTheme = localStorage.getItem('ozuqadon_theme') || 'nordic';
+        switchTypographyTheme(savedTheme);
+      } catch(e) {}
     });
   </script>
 
