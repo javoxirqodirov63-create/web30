@@ -374,6 +374,17 @@
     "composition": "Tuxum va tuxum mahsulotlari (kamida 40%), tabiiy toza asal, biskvit mahsulotlari, mevalar (kamida 4%: mayiz va ryabina mevalari), qisqichbaqasimonlar va hasharotlar, o'simlik oqsillari ekstrakti, sara donlar, oregano efir moyi, vitaminlar kompleksi va minerallar (xom oqsil 17.5%, xom yog' 14%)."
   },
   {
+    "id": "prod-42",
+    "name": "Pineta Zootecnici Superpast Professional",
+    "price": 400000,
+    "unit": "5 kg",
+    "image": "images/pineta-superpast-5kg.jpg",
+    "tag": "Italiya 🇮🇹 Hasharot & Meva",
+    "category": "Qushlar ozuqasi",
+    "description": "Italiyaning nufuzli 'Pineta Zootecnici' brendidan hasharotxo'r, o'rmon va sayroqi qushlar (Drozd, bulbul, snegir, yapon bülbuli, sa'va va b.) uchun maxsus ishlab chiqilgan professional yumshoq universal ozuqa (Superpast 5 kg). Quritilgan o'rmon mevalari (ryabina, archa mevasi), hasharotlar, qisqichbaqasimonlar (gammarus), baliq oqsili va vitaminlar bilan boyitilgan.",
+    "composition": "Boshoqli donlar va non mahsulotlari, baliq va baliq mahsulotlari, quritilgan mevalar (o'rmon mevalari, mayiz), hasharotlar va qisqichbaqasimonlar, o'simlik oqsillari ekstrakti, o'simlik yog'lari, sut mahsulotlari, minerallar, xamirturush, 16 xil aminokislotalar (lizin, metionin va b.), vitaminlar (A, D3, E, K, C, B guruhi) (xom oqsil 15.0%, xom yog' 11.5%)."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
