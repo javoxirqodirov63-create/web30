@@ -625,6 +625,61 @@
         composition: "Boshoqli donlar, o'simlik ekstraktlari va oqsillari, 3.5% o'simlik ko'miri (carbone vegetale), quritilgan mevalar, o'simlik yog'lari, minerallar va vitaminlar kompleksi."
       },
       {
+        id: 'prod-28',
+        name: "Deli Nature Eggfood Yellow Moist (Pâtée Jaune Grasse)",
+        price: 60000,
+        unit: "1 kg",
+        image: "images/deli-nature-eggfood-yellow-moist.jpg",
+        tag: "Belgiya 🇧🇪 Asal & Tuxum",
+        category: "Qushlar ozuqasi",
+        description: "Belgiyaning 'Deli Nature' brendidan barcha sayroqi qushlar uchun 100% tabiiy toza asal va tuxum bilan tayyorlangan sariq yumshoq nam ozuqa (Eggfood Yellow Moist). 17.1% tabiiy oqsilga ega bo'lib, polaponlarni boqish, ko'payish va pat almashtirish (tullash) davrida qushlar uchun ajoyib quvvat manbai.",
+        composition: "100% tabiiy asal, tuxum va tuxum mahsulotlari (6.2%), oliy navli biskvit va non mahsulotlari, o'simlik oqsillari ekstrakti, tozalangan o'simlik yog'lari, sara urug'lar, xamirturush, oregano tabiiy efir moyi, vitaminlar (A, D3, E, C) va minerallar (rux, temir, kalsiy 0.54%, fosfor 0.31%)."
+      },
+      {
+        id: 'prod-29',
+        name: "Deli Nature Premium Canaries (Mix Semi)",
+        price: 152000,
+        unit: "4 kg",
+        image: "images/deli-nature-premium-canaries-4kg.jpg",
+        tag: "Premium 4kg 🌾",
+        category: "Qushlar ozuqasi",
+        description: "Belgiyaning 'Deli Nature' brendidan kanareykalar uchun elangan premium 7 xil sara urug'lar aralashmasi (4 kg katta qopda). Kanareyka urug'i, qimmatbaho jigarrang perilla va oq salat urug'i bilan boyitilgan. Qushlarning jarangdor sayrashi va doimiy tetikligini ta'minlaydi.",
+        composition: "Kanareyka urug'i (scagliola), raps urug'i (colza), tozalangan suli (avena), nug urug'i (niger), zig'ir urug'i (lino), jigarrang perilla (perilla bruna) va oq salat urug'i (lattuga bianca). 100% elangan toza don."
+      },
+      {
+        id: 'prod-30',
+        name: "Deli Nature Birdelicious Carduelis Light",
+        price: 100000,
+        unit: "750 gr",
+        image: "images/deli-nature-carduelis-light.jpg",
+        tag: "20+ Sara urug' 🌿",
+        category: "Qushlar ozuqasi",
+        description: "Belgiyaning 'Deli Nature' brendidan sa'valar (schegol / Carduelis: mayda, katta mayjor va kulrangbosh sa'valar) uchun 20 dan ortiq yovvoyi o'tloq va sara urug'lardan iborat yengil parhezli super-premium ozuqa (Carduelis Light). Yog' miqdori muvozanatlangan bo'lib, jigar faoliyatini himoyalaydi va sa'valarning jarangdor sayrashini kuchaytiradi.",
+        composition: "Oq perilla (yuqori miqdorda), daktilis (o'tloq urug'i), kanareyka urug'i, chia urug'i, kamelina (lino falso), tsikoriya, kunjut, mayda qorashakak, sariq zig'ir, oq salat urug'i, sebarga urug'i, rastropsha (sut qushqo'nmasi) va 20 dan ortiq sara yovvoyi urug'lar."
+      },
+      {
+        id: 'prod-31',
+        name: "Deli Nature Birdelicious Carduelis (Goldfinches)",
+        price: 100000,
+        unit: "750 gr",
+        image: "images/deli-nature-carduelis.jpg",
+        tag: "Sa'va & O'rmon qushlari 🎶",
+        category: "Qushlar ozuqasi",
+        description: "Belgiyaning 'Deli Nature' brendidan sa'valar uchun yuqori quvvatli, boy tarkibli super-premium ozuqa (Carduelis Goldfinches). Kanop urug'i va oq perilla bilan to'yintirilgan bo'lib, ko'payish, tuxum qo'yish va qishki sovuq davrlarda sa'valar hamda o'rmon sayroqi qushlariga katta energiya beradi.",
+        composition: "Kanop urug'i (canapa), oq perilla (perilla bianca), nug urug'i (niger), kanareyka urug'i, tsikoriya, krokus urug'i, zig'ir, oq salat urug'i, kunjut, mikro pista, sabzi urug'i, sebarga urug'i."
+      },
+      {
+        id: 'prod-32',
+        name: "Deli Nature Birdelicious Canaries",
+        price: 60000,
+        unit: "800 gr",
+        image: "images/deli-nature-birdelicious-canaries.jpg",
+        tag: "Chia & Quinoa 🥣",
+        category: "Qushlar ozuqasi",
+        description: "Belgiyaning 'Deli Nature' brendidan kanareykalar uchun chia, kinoa, quritilgan olma bo'laklari va 2.5% me'da toshchalari (bird grit) bilan to'yintirilgan to'liq kompleks ozuqa (Birdelicious Canaries). Oshqozon hazmini mukammal qiladi, immunitetni ko'taradi va patlarni jilodor qiladi.",
+        composition: "Saralangan sara urug'lar (1% chia, 1% kinoa), boshoqli donlar, 2.5% mayda mineral toshchalar (qushlar me'dasida donni maydalovchi grit), quritilgan olma bo'laklari (1%), sabzavotlar, o'simlik yog'lari, xamirturush va vitamin-mineral premiksi (oqsil 17%, kalsiy 1.2%, fosfor 0.5%)."
+      },
+      {
         id: 'prod-4',
         name: "Bedanalar uchun maxsus sara don",
         price: 16000,
@@ -1064,7 +1119,7 @@
         try {
           const parsed = JSON.parse(saved);
           if (Array.isArray(parsed) && parsed.length > 0) {
-            ['prod-11', 'prod-12', 'prod-13', 'prod-14', 'prod-15', 'prod-16', 'prod-17', 'prod-18', 'prod-19', 'prod-20', 'prod-21', 'prod-22', 'prod-23', 'prod-24', 'prod-25', 'prod-26', 'prod-27'].forEach(newId => {
+            ['prod-11', 'prod-12', 'prod-13', 'prod-14', 'prod-15', 'prod-16', 'prod-17', 'prod-18', 'prod-19', 'prod-20', 'prod-21', 'prod-22', 'prod-23', 'prod-24', 'prod-25', 'prod-26', 'prod-27', 'prod-28', 'prod-29', 'prod-30', 'prod-31', 'prod-32'].forEach(newId => {
               if (!parsed.some(item => item.id === newId)) {
                 const defP = PRODUCTS_LIST.find(x => x.id === newId);
                 if (defP) parsed.push(defP);
