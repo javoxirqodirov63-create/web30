@@ -352,6 +352,28 @@
     "composition": "Elangan mayda sara donlar va urug'lar (oq va yo'l-yo'l kungaboqar, kanareyka urug'i, tariq, 1% chia, 1% kinoa), quritilgan mevalar (banan 2%, mayiz 1%, olma 1%, ryabina 0.8%, na'matak 0.7%, archa mevasi 0.7%), sabzavotlar (sabzi 2%, chili qalampiri 0.7%), yong'oqlar (yer yong'oq 1%, grek yong'og'i 0.7%), 2.5% me'da toshchalari (grit), vitaminli granulalar."
   },
   {
+    "id": "prod-40",
+    "name": "Deli Nature Eggfood Parakeets (Eivoer Parkieten)",
+    "price": 90000,
+    "unit": "1 kg",
+    "image": "images/deli-nature-eggfood-parakeets.jpg",
+    "tag": "To'ti Tuxumli Ozuqa 🥚",
+    "category": "Qushlar ozuqasi",
+    "description": "Belgiyaning 'Deli Nature' brendidan to'lqinsimon to'tiqushlar va mayda to'tilar uchun maxsus tayyorlangan yuqori sifatli tuxumli ozuqa (Eggfood Parakeets). Tabiiy tuxum oqsili va chuchuk suv qisqichbaqalari (gammarus) bilan to'yintirilgan. Ko'payish, polaponlarni boqish va tullash davrida qushlar uchun zaruriy quvvat va aminokislotalar manbai.",
+    "composition": "Tuxum va tuxum mahsulotlari, oliy navli biskvit va non mahsulotlari, o'simlik oqsillari ekstrakti, chuchuk suv qisqichbaqalari (1% hayvon oqsili manbai), sara urug'lar va donlar, xamirturush, tabiiy minerallar, vitaminlar (A, D3, E, C) va aminokislotalar (xom oqsil 17.3%, xom yog' 5.7%, kalsiy 0.5%, fosfor 0.32%)."
+  },
+  {
+    "id": "prod-41",
+    "name": "Deli Nature Eggfood Large Parakeets & Parrots (Eivoer Grote Parkieten & Papegaaien)",
+    "price": 90000,
+    "unit": "1 kg",
+    "image": "images/deli-nature-eggfood-large-parakeets.jpg",
+    "tag": "Katta To'ti & Korella 🦜",
+    "category": "Qushlar ozuqasi",
+    "description": "Belgiyaning 'Deli Nature' brendidan katta to'tiqushlar (Jako, Amazon, Kakadu, Ara) va o'rta to'tilar (Korella, Rosella, Kakariki) uchun maxsus ishlab chiqilgan tayyor nam tuxumli ozuqa (Eggfood Large Parakeets & Parrots). 100% tabiiy toza asal, quritilgan mayiz, ryabina mevalari va hasharotlar/gammarus bilan to'yintirilgan boy tarkib.",
+    "composition": "Tuxum va tuxum mahsulotlari (kamida 40%), tabiiy toza asal, biskvit mahsulotlari, mevalar (kamida 4%: mayiz va ryabina mevalari), qisqichbaqasimonlar va hasharotlar, o'simlik oqsillari ekstrakti, sara donlar, oregano efir moyi, vitaminlar kompleksi va minerallar (xom oqsil 17.5%, xom yog' 14%)."
+  },
+  {
     "id": "prod-4",
     "name": "Bedanalar uchun maxsus sara don",
     "price": 16000,
