@@ -195,6 +195,99 @@
       animation: sheenSweepAnim 3.2s ease-in-out infinite;
     }
 
+
+    /* ==================== 5 TA REALISTIK 3D LOGOTIP ANIMATSIYALARI ==================== */
+    
+    /* 1. Realistik Bug'doy Shamol Tebranishi & Shudring Jilosi */
+    @keyframes realWheatSway1 {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(4.5deg) translateY(-0.8px); }
+    }
+    @keyframes realWheatSway2 {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(-4deg) translateY(-0.6px); }
+    }
+    .real-sway-stalk-1 {
+      transform-origin: 18px 38px;
+      animation: realWheatSway1 3.8s ease-in-out infinite;
+    }
+    .real-sway-stalk-2 {
+      transform-origin: 24px 38px;
+      animation: realWheatSway2 4.2s ease-in-out infinite 0.5s;
+    }
+    @keyframes dewGleamAnim {
+      0%, 100% { transform: scale(1); opacity: 0.85; filter: drop-shadow(0 0 1px #ffffff); }
+      50% { transform: scale(1.4); opacity: 1; filter: drop-shadow(0 0 4px #ffffff); }
+    }
+    .real-dew-gleam {
+      transform-origin: 19.5px 28px;
+      animation: dewGleamAnim 2.5s ease-in-out infinite;
+    }
+
+    /* 2. Realistik Sayroqi Qush Nafas Olishi & Miltillash */
+    @keyframes realBirdBreatheAnim {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-0.8px) scale(1.02); }
+    }
+    .real-bird-actor {
+      transform-origin: 28px 33px;
+      animation: realBirdBreatheAnim 3s ease-in-out infinite;
+    }
+
+    /* 3. Realistik 3D Shisha Shar Nurlari & Zarrachalar */
+    @keyframes glassSpecularAnim {
+      0%, 100% { opacity: 0.65; transform: scale(1); }
+      50% { opacity: 0.9; transform: scale(1.03); }
+    }
+    .glass-specular-sweep {
+      transform-origin: 24px 24px;
+      animation: glassSpecularAnim 4s ease-in-out infinite;
+    }
+    @keyframes floatPollenAnim {
+      0% { transform: translate(0, 0); opacity: 0.3; }
+      50% { opacity: 0.95; }
+      100% { transform: translate(4px, -8px); opacity: 0.2; }
+    }
+    .real-pollen-1 { animation: floatPollenAnim 3.5s ease-in-out infinite; }
+    .real-pollen-2 { animation: floatPollenAnim 4.2s ease-in-out infinite 1s; }
+    .real-pollen-3 { animation: floatPollenAnim 3.8s ease-in-out infinite 2s; }
+
+    /* 4. Realistik Don Tovoqchasi & Cho'qish */
+    @keyframes realBirdPeckingAnim {
+      0%, 35%, 100% { transform: rotate(0deg) translateY(0); }
+      12% { transform: rotate(-16deg) translate(-2px, 3px); }
+      20% { transform: rotate(-19deg) translate(-2.5px, 3.5px); }
+      26% { transform: rotate(4deg) translateY(-0.5px); }
+    }
+    .real-pecking-bird-actor {
+      transform-origin: 25px 28px;
+      animation: realBirdPeckingAnim 3.2s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+    @keyframes realPeckSparkleAnim {
+      0%, 12%, 100% { transform: scale(0); opacity: 0; }
+      18% { transform: scale(1.6); opacity: 1; filter: drop-shadow(0 0 2px #fef08a); }
+      24% { transform: scale(0.3); opacity: 0; }
+    }
+    .real-peck-sparkle {
+      transform-origin: 41.5px 18.5px;
+      animation: realPeckSparkleAnim 3.2s ease-out infinite;
+    }
+
+    /* 5. Realistik Metallik Oltin Refleks / Sheen Sweep */
+    @keyframes realGoldSheenAnim {
+      0% { transform: translateX(-150%) skewX(-25deg); }
+      30%, 100% { transform: translateX(250%) skewX(-25deg); }
+    }
+    .real-gold-sheen-sweep {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+      animation: realGoldSheenAnim 3.5s ease-in-out infinite;
+    }
+
     .badge-bounce {
       animation: badgeBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
@@ -238,35 +331,39 @@
 
 
   <!-- ==================== XARAKATLANUVCHI LOGOTIP VARIANTLARI (THEME PREVIEW TOOLBAR) ==================== -->
-  <aside id="animLogoPreviewBar" aria-label="Xarakatlanuvchi logotip variantlari" class="bg-stone-900 text-white py-2.5 px-3 sm:px-4 border-b border-stone-800 relative z-50 shadow-md">
+  
+
+
+  <!-- ==================== REALISTIK LOGOTIP VARIANTLARI (THEME PREVIEW TOOLBAR) ==================== -->
+  <aside id="realLogoPreviewBar" aria-label="Realistik logotip variantlari" class="bg-stone-900 text-white py-2.5 px-3 sm:px-4 border-b border-stone-800 relative z-50 shadow-md">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-2.5 text-center lg:text-left">
       <div class="flex items-center gap-2">
         <span class="w-7 h-7 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-xs shrink-0 shadow-inner">
-          <i class="fa-solid fa-play text-sm text-amber-400 animate-pulse"></i>
+          <i class="fa-solid fa-cube text-sm text-amber-400 animate-pulse"></i>
         </span>
         <div class="text-left">
           <div class="flex items-center gap-2">
-            <span class="text-xs font-black text-amber-300 uppercase tracking-wider">Xarakatlanuvchi Logotiplar:</span>
-            <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30 font-bold hidden sm:inline">5 xil animatsiya</span>
+            <span class="text-xs font-black text-amber-300 uppercase tracking-wider">Realistik Logotip Uslubi:</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold hidden sm:inline">5 xil 3D realistik dizayn</span>
           </div>
-          <span id="animLogoDescBadge" class="text-[11px] text-stone-300 block">🌾 1. Tebranuvchi Boshoq — mayin shabadada tebranuvchi oltin donlar va suzuvchi zarrachalar (Tavsiya)</span>
+          <span id="realLogoDescBadge" class="text-[11px] text-stone-300 block">🌾 1. 3D Oltin Bug'doy & Shudring — hajmli realistik donlar, barg tomirlari va tabiiy shudring (Tavsiya)</span>
         </div>
       </div>
       <div class="flex items-center gap-1.5 flex-wrap justify-center shrink-0">
-        <button type="button" onclick="switchAnimLogo(1)" id="btnAnimLogo1" class="anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-600 to-emerald-600 text-white shadow-md scale-105 ring-2 ring-brand-400/50">
-          1. Tebranuvchi Boshoq (Tavsiya)
+        <button type="button" onclick="switchRealLogo(1)" id="btnRealLogo1" class="real-logo-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-600 to-emerald-600 text-white shadow-md scale-105 ring-2 ring-brand-400/50">
+          1. 3D Oltin Bug'doy (Tavsiya)
         </button>
-        <button type="button" onclick="switchAnimLogo(2)" id="btnAnimLogo2" class="anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
-          2. Qush Qanoti
+        <button type="button" onclick="switchRealLogo(2)" id="btnRealLogo2" class="real-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          2. Sayroqi Qush & Don
         </button>
-        <button type="button" onclick="switchAnimLogo(3)" id="btnAnimLogo3" class="anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
-          3. Aylanuvchi Aura
+        <button type="button" onclick="switchRealLogo(3)" id="btnRealLogo3" class="real-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          3. Shisha Shar & Dala
         </button>
-        <button type="button" onclick="switchAnimLogo(4)" id="btnAnimLogo4" class="anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
-          4. Cho'qiyotgan Qush
+        <button type="button" onclick="switchRealLogo(4)" id="btnRealLogo4" class="real-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          4. Don Tovoqcha & Qush
         </button>
-        <button type="button" onclick="switchAnimLogo(5)" id="btnAnimLogo5" class="anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
-          5. Golografik To'lqin
+        <button type="button" onclick="switchRealLogo(5)" id="btnRealLogo5" class="real-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          5. 3D Metall Muhr
         </button>
       </div>
     </div>
@@ -3082,178 +3179,371 @@
 
     // Initialize cart & carousel on load
 
-    // ==================== ANIMATED LOGO SWITCHER LOGIC ====================
-    const animLogoTemplates = {
+    
+
+
+    // ==================== REALISTIC LOGO SWITCHER LOGIC ====================
+    const realLogoTemplates = {
       1: `<a href="#" class="flex items-center gap-3.5 group">
-  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-md shadow-brand-700/25 group-hover:scale-105 transition-all duration-300">
-    <div class="absolute inset-0 bg-gradient-to-tr from-brand-900 via-emerald-700 to-amber-500"></div>
-    <span class="seed-particle p1"></span>
-    <span class="seed-particle p2"></span>
-    <span class="seed-particle p3"></span>
-    <svg viewBox="0 0 44 44" class="w-9 h-9 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g class="sway-stalk-1">
-        <path d="M16 34C18 28 19 22 20 14" stroke="#fde047" stroke-width="2" stroke-linecap="round"/>
-        <path d="M20 14H24M20 18H24M20 22H24" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="25" cy="14" r="1.5" fill="#fef08a"/>
-        <circle cx="25" cy="18" r="1.5" fill="#fef08a"/>
-        <circle cx="25" cy="22" r="1.5" fill="#fef08a"/>
+  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-lg shadow-brand-900/30 group-hover:scale-105 transition-all duration-300">
+    <!-- 3D Volumetric Beveled Squircle -->
+    <div class="absolute inset-0 bg-gradient-to-br from-emerald-800 via-brand-900 to-stone-900"></div>
+    <div class="absolute inset-0.5 rounded-[14px] bg-gradient-to-tr from-brand-950 via-emerald-900 to-amber-900/80 border border-emerald-500/30 shadow-inner"></div>
+    <!-- Soft Sunlight Beam in background -->
+    <div class="absolute -top-3 -right-3 w-10 h-10 bg-amber-400/25 rounded-full blur-md"></div>
+    <!-- Realistic 3D Wheat SVG -->
+    <svg viewBox="0 0 48 48" class="w-10 h-10 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- 3D Grain Gradient Left -->
+        <linearGradient id="r1_grain_l" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fef08a"/>
+          <stop offset="35%" stop-color="#f59e0b"/>
+          <stop offset="85%" stop-color="#b45309"/>
+          <stop offset="100%" stop-color="#78350f"/>
+        </linearGradient>
+        <!-- 3D Grain Gradient Right -->
+        <linearGradient id="r1_grain_r" x1="1" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#fef9c3"/>
+          <stop offset="40%" stop-color="#fbbf24"/>
+          <stop offset="85%" stop-color="#d97706"/>
+          <stop offset="100%" stop-color="#92400e"/>
+        </linearGradient>
+        <!-- Realistic Leaf Gradient -->
+        <linearGradient id="r1_leaf" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#34d399"/>
+          <stop offset="50%" stop-color="#059669"/>
+          <stop offset="100%" stop-color="#064e3b"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- Realistic Main Swaying Wheat Stalk (Left, Taller) -->
+      <g class="real-sway-stalk-1">
+        <!-- Stem -->
+        <path d="M18 38C20 31 21 24 22 13" stroke="#d97706" stroke-width="1.8" stroke-linecap="round"/>
+        <!-- Individual Volumetric Kernels (realistic 3D wheat ear) -->
+        <path d="M22 13C20 11 18 13 19 15C20.5 16 22 15 22 13Z" fill="url(#r1_grain_l)"/>
+        <path d="M22 13C24 11 26 13 25 15C23.5 16 22 15 22 13Z" fill="url(#r1_grain_r)"/>
+        <path d="M21.5 16C19.5 14 17.5 16 18.5 18C20 19 21.5 18 21.5 16Z" fill="url(#r1_grain_l)"/>
+        <path d="M22.5 16C24.5 14 26.5 16 25.5 18C24 19 22.5 18 22.5 16Z" fill="url(#r1_grain_r)"/>
+        <path d="M21 19C19 17 17 19 18 21C19.5 22 21 21 21 19Z" fill="url(#r1_grain_l)"/>
+        <path d="M23 19C25 17 27 19 26 21C24.5 22 23 21 23 19Z" fill="url(#r1_grain_r)"/>
+        <path d="M20.5 22C18.5 20 16.5 22 17.5 24C19 25 20.5 24 20.5 22Z" fill="url(#r1_grain_l)"/>
+        <path d="M23.5 22C25.5 20 27.5 22 26.5 24C25 25 23.5 24 23.5 22Z" fill="url(#r1_grain_r)"/>
+        <!-- Realistic Wheat Beards/Awns (chiziqchalar) -->
+        <path d="M22 13L21 8M25 15L28 10M19 15L16 11M25.5 18L29 14M18.5 18L15 15" stroke="#fef08a" stroke-width="0.8" stroke-linecap="round" stroke-opacity="0.85"/>
       </g>
-      <g class="sway-stalk-2">
-        <path d="M22 34C24 29 25 24 26 18" stroke="#f59e0b" stroke-width="2" stroke-linecap="round"/>
-        <path d="M26 18H30M26 22H30M26 26H30" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"/>
-        <circle cx="31" cy="18" r="1.5" fill="#fde047"/>
-        <circle cx="31" cy="22" r="1.5" fill="#fde047"/>
-        <circle cx="31" cy="26" r="1.5" fill="#fde047"/>
+      
+      <!-- Realistic Secondary Stalk (Right) -->
+      <g class="real-sway-stalk-2">
+        <path d="M24 38C25 32 26 27 28 18" stroke="#b45309" stroke-width="1.8" stroke-linecap="round"/>
+        <path d="M28 18C26 16 24 18 25 20C26.5 21 28 20 28 18Z" fill="url(#r1_grain_l)"/>
+        <path d="M28 18C30 16 32 18 31 20C29.5 21 28 20 28 18Z" fill="url(#r1_grain_r)"/>
+        <path d="M27.5 21C25.5 19 23.5 21 24.5 23C26 24 27.5 23 27.5 21Z" fill="url(#r1_grain_l)"/>
+        <path d="M28.5 21C30.5 19 32.5 21 31.5 23C30 24 28.5 23 28.5 21Z" fill="url(#r1_grain_r)"/>
+        <path d="M27 24C25 22 23 24 24 26C25.5 27 27 26 27 24Z" fill="url(#r1_grain_l)"/>
+        <path d="M29 24C31 22 33 24 32 26C30.5 27 29 26 29 24Z" fill="url(#r1_grain_r)"/>
+        <path d="M28 18L30 13M31 20L34 16M25 20L22 17" stroke="#fde047" stroke-width="0.8" stroke-linecap="round" stroke-opacity="0.85"/>
       </g>
-      <path d="M14 34C14 28 17 25 17 25C17 25 18 29 18 34" fill="#34d399"/>
-      <path d="M27 34C27 29 25 26 25 26C25 26 24 30 24 34" fill="#10b981"/>
+      
+      <!-- Realistic Botanical Green Leaves with Veins -->
+      <g>
+        <path d="M15 38C14 31 18 26 20 26C19 29 18 34 18 38H15Z" fill="url(#r1_leaf)"/>
+        <path d="M16 36C17 32 18 29 19 27" stroke="#6ee7b7" stroke-width="0.7" stroke-linecap="round"/>
+        <path d="M29 38C30 32 27 27 25 27C26 30 27 35 27 38H29Z" fill="url(#r1_leaf)"/>
+        <!-- Real Dew Drop with Caustic Glow -->
+        <circle cx="19.5" cy="28" r="1.5" fill="#ffffff" fill-opacity="0.9" class="real-dew-gleam"/>
+        <circle cx="19.8" cy="27.7" r="0.6" fill="#ffffff"/>
+      </g>
     </svg>
   </div>
   <div>
     <div class="flex items-center gap-2">
       <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-brand-700 transition-colors">Ozuqa-don</span>
-      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-black uppercase tracking-wider">ECO 100%</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-black uppercase tracking-wider shadow-xs">3D SARA DON</span>
     </div>
-    <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
+    <span class="block text-[11px] font-bold text-brand-700 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
   </div>
 </a>`,
       2: `<a href="#" class="flex items-center gap-3.5 group">
-  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-md shadow-brand-700/25 bg-gradient-to-tr from-brand-950 via-emerald-800 to-amber-600 group-hover:scale-105 transition-all duration-300">
-    <svg viewBox="0 0 44 44" class="w-9 h-9 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M15 35C17 30 20 24 24 17" stroke="#fde047" stroke-width="1.8" stroke-linecap="round"/>
-      <circle cx="22" cy="20" r="1.5" fill="#fef08a"/>
-      <circle cx="24" cy="17" r="2" fill="#fbbf24" class="grain-pulse-glow"/>
-      <g class="flapping-bird-group">
-        <path d="M23 25C21 21 23 16 28 16C31 16 33 17 35 19L38 17L37 21C38 22.5 38 24 37 25.5C35 29 30 31 25 31C23 31 22 28 23 25Z" fill="#ffffff" fill-opacity="0.95"/>
-        <g class="bird-wing-flap">
-          <path d="M26 22C24 16 29 11 33 12C33 16 30 21 26 22Z" fill="#34d399"/>
-          <path d="M28 22C26 17 30 13 34 14C33 17 31 21 28 22Z" fill="#fde047"/>
-        </g>
-        <circle cx="34" cy="19" r="1" fill="#064e3b"/>
-        <path d="M37 19L40 20.5L37 22V19Z" fill="#f59e0b"/>
+  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-lg shadow-brand-900/30 bg-gradient-to-br from-emerald-950 via-stone-900 to-amber-950 border border-amber-500/30 group-hover:scale-105 transition-all duration-300">
+    <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-8 h-8 bg-amber-400/20 rounded-full blur-md"></div>
+    <svg viewBox="0 0 48 48" class="w-10 h-10 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Bird Feather Gradient (Warm Canary Gold) -->
+        <linearGradient id="r2_feather_body" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fef08a"/>
+          <stop offset="40%" stop-color="#f59e0b"/>
+          <stop offset="85%" stop-color="#b45309"/>
+        </linearGradient>
+        <!-- Wing Gradient with Emerald-Teal Sheen -->
+        <linearGradient id="r2_wing" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#34d399"/>
+          <stop offset="60%" stop-color="#047857"/>
+          <stop offset="100%" stop-color="#064e3b"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- Realistic Perch Branch with Texture -->
+      <path d="M8 36C18 35 28 35 40 37" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"/>
+      <path d="M14 36C15 37 16 38 17 38M25 36C26 37 27 38 28 38" stroke="#92400e" stroke-width="1.5" stroke-linecap="round"/>
+      
+      <!-- Realistic Golden Wheat Seed Cluster on Perch -->
+      <g>
+        <ellipse cx="14" cy="33" rx="2.5" ry="1.6" fill="#fef08a" stroke="#d97706" stroke-width="0.6"/>
+        <ellipse cx="18" cy="34" rx="2.2" ry="1.4" fill="#fbbf24" stroke="#b45309" stroke-width="0.6"/>
+        <ellipse cx="16" cy="31.5" rx="2" ry="1.3" fill="#fde047" stroke="#d97706" stroke-width="0.6"/>
+        <!-- Seed Gleam -->
+        <circle cx="15.5" cy="31" r="0.6" fill="#ffffff"/>
+      </g>
+      
+      <!-- Realistic Songbird Anatomy (Breathing Actor) -->
+      <g class="real-bird-actor">
+        <!-- Tail Feathers with layering -->
+        <path d="M19 32L11 37L13 33L12 30L20 28" fill="#d97706"/>
+        <path d="M18 31L12 35L14 32L19 29" fill="#92400e"/>
+        <!-- Volumetric Body with Soft Belly Gradient -->
+        <path d="M22 28C20 24 22 18 28 17C31.5 17 34 18.5 35 21L39 19.5L37.5 23.5C39 25 39 27.5 38 29.5C36 33.5 30 35 25 33C23 32 22 30 22 28Z" fill="url(#r2_feather_body)"/>
+        <!-- Layered Wing with Individual Primary Feathers -->
+        <path d="M25 24C23 18 28 14 32 15C32.5 19 30 25 26 26Z" fill="url(#r2_wing)"/>
+        <path d="M27 25C25 20 29 17 32.5 18C32 21 30.5 26 28 27Z" fill="#10b981" fill-opacity="0.8"/>
+        <!-- Realistic Eye: Sclera + Iris + Specular Cornea Catch -->
+        <circle cx="34" cy="20.5" r="1.4" fill="#1e293b"/>
+        <circle cx="34.4" cy="20.1" r="0.5" fill="#ffffff"/>
+        <!-- Realistic Curved Horn Beak -->
+        <path d="M37.5 20.5L42 22L37.5 23.5V20.5Z" fill="#fbbf24" stroke="#d97706" stroke-width="0.5"/>
+        <path d="M37.5 22H40.5" stroke="#92400e" stroke-width="0.5"/>
+        <!-- Bird Feet Clasping Branch -->
+        <path d="M24 33L23 36M26 33L25 36" stroke="#fbbf24" stroke-width="1.2" stroke-linecap="round"/>
       </g>
     </svg>
   </div>
   <div>
     <div class="flex items-center gap-2">
-      <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-emerald-700 transition-colors">Ozuqa<span class="text-amber-500 mx-0.5">•</span>don</span>
-      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-amber-800 text-[10px] font-black uppercase tracking-wider">PARVOZ & QUVVAT</span>
+      <span class="text-2xl font-black tracking-tight text-stone-900">Ozuqa<span class="text-amber-500 font-extrabold">•</span>don</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-50 border border-amber-300 text-amber-900 text-[10px] font-black uppercase tracking-wider">HAYOTIY QUSH</span>
     </div>
-    <span class="block text-[11px] font-bold text-emerald-700 tracking-wider uppercase">Sayroqi Qushlar Ozuqasi</span>
+    <span class="block text-[11px] font-bold text-emerald-700 tracking-wider uppercase">Sayroqi Qushlar Tabiiy Ozuqasi</span>
   </div>
 </a>`,
       3: `<a href="#" class="flex items-center gap-3.5 group">
-  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-md shadow-brand-700/25 bg-gradient-to-tr from-brand-950 to-emerald-900 border border-emerald-500/30 group-hover:scale-105 transition-all duration-300">
-    <svg viewBox="0 0 44 44" class="w-11 h-11 absolute inset-0 m-auto spinning-aura-ring" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="22" cy="22" r="18" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="3 3" stroke-opacity="0.85"/>
+  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-lg shadow-brand-900/30 bg-gradient-to-br from-slate-900 via-emerald-950 to-stone-950 border border-emerald-500/40 group-hover:scale-105 transition-all duration-300">
+    <!-- Realistic 3D Glass Sphere with Refraction & Miniature Field -->
+    <svg viewBox="0 0 48 48" class="w-11 h-11 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Glass Sphere Inner Glow -->
+        <radialGradient id="r3_sphere_bg" cx="40%" cy="35%" r="65%">
+          <stop offset="0%" stop-color="#059669" stop-opacity="0.6"/>
+          <stop offset="60%" stop-color="#064e3b" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#022c22" stop-opacity="0.95"/>
+        </radialGradient>
+        <!-- Realistic Sunrise Beam -->
+        <linearGradient id="r3_sunbeam" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fef08a" stop-opacity="0.8"/>
+          <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.4"/>
+          <stop offset="100%" stop-color="#d97706" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- Outer Glass Sphere Base -->
+      <circle cx="24" cy="24" r="21" fill="url(#r3_sphere_bg)" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+      <!-- Soft Sun Rays across the globe -->
+      <path d="M12 10L36 34M18 6L38 28M8 18L32 40" stroke="url(#r3_sunbeam)" stroke-width="2.5" stroke-linecap="round"/>
+      
+      <!-- Realistic Golden Wheat Field Stalks inside globe -->
+      <g class="real-globe-stalks">
+        <!-- Stalk 1 -->
+        <path d="M17 38C18 31 19 25 21 16" stroke="#f59e0b" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="20.5" cy="17" rx="1.6" ry="2.2" fill="#fef08a" transform="rotate(-15 20.5 17)"/>
+        <ellipse cx="21.5" cy="21" rx="1.6" ry="2.2" fill="#fbbf24" transform="rotate(-15 21.5 21)"/>
+        <ellipse cx="22" cy="25" rx="1.6" ry="2.2" fill="#f59e0b" transform="rotate(-15 22 25)"/>
+        <!-- Stalk 2 -->
+        <path d="M24 38C24 30 25 23 26 14" stroke="#fbbf24" stroke-width="1.8" stroke-linecap="round"/>
+        <ellipse cx="25.5" cy="15" rx="1.8" ry="2.5" fill="#fef9c3"/>
+        <ellipse cx="26" cy="19.5" rx="1.8" ry="2.5" fill="#fde047"/>
+        <ellipse cx="26.5" cy="24" rx="1.8" ry="2.5" fill="#fbbf24"/>
+        <!-- Stalk 3 -->
+        <path d="M30 38C29 32 29 27 30 19" stroke="#d97706" stroke-width="1.5" stroke-linecap="round"/>
+        <ellipse cx="30" cy="20" rx="1.6" ry="2.2" fill="#fde047" transform="rotate(15 30 20)"/>
+        <ellipse cx="29.5" cy="24" rx="1.6" ry="2.2" fill="#f59e0b" transform="rotate(15 29.5 24)"/>
+      </g>
+      
+      <!-- Realistic Glass Specular Reflection Crescent on Top-Left -->
+      <path d="M10 20C11 13 17 8 24 8C26 8 24 10 22 10C16 11 12 15 11 21C11 23 10 21 10 20Z" fill="#ffffff" fill-opacity="0.65" class="glass-specular-sweep"/>
+      <!-- Small bottom bounce reflection -->
+      <path d="M19 39C24 41 29 40 33 37" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-opacity="0.4"/>
+      
+      <!-- Golden Pollen Dust floating inside -->
+      <circle cx="16" cy="23" r="0.8" fill="#fef08a" class="real-pollen-1"/>
+      <circle cx="31" cy="16" r="0.7" fill="#fbbf24" class="real-pollen-2"/>
+      <circle cx="28" cy="29" r="0.9" fill="#fde047" class="real-pollen-3"/>
     </svg>
-    <div class="breathing-sprout-center relative z-10 flex items-center justify-center">
-      <svg viewBox="0 0 32 32" class="w-7 h-7" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M16 6C20 10 24 16 21 22C19 26 15 26 13 23C11 20 12 17 14 13C15 10 16 6 16 6Z" fill="#f59e0b"/>
-        <path d="M16 8C17 13 17 18 15 23" stroke="#78350f" stroke-width="1" stroke-linecap="round" stroke-opacity="0.6"/>
-        <path d="M10 23C8 18 9 12 15 9C12 11 10 15 11 20C11 22 13 23 14 24C12 24 11 24 10 23Z" fill="#34d399"/>
-      </svg>
-    </div>
   </div>
   <div>
     <div class="flex items-center gap-2">
       <span class="text-2xl font-black tracking-tight text-stone-900">OZUQA-DON</span>
-      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-amber-900 text-[10px] font-black uppercase tracking-wider">BIO-AURA</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-black uppercase tracking-wider">3D GLOBE</span>
     </div>
-    <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">100% Tabiiy & Jonli Sara Don</span>
+    <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">Tabiiy Dala Hosili & Sof Ozuqa</span>
   </div>
 </a>`,
       4: `<a href="#" class="flex items-center gap-3.5 group">
-  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-md shadow-brand-700/25 bg-gradient-to-tr from-brand-900 via-brand-700 to-amber-600 group-hover:scale-105 transition-all duration-300">
-    <svg viewBox="0 0 44 44" class="w-9 h-9 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g class="feeding-seeds-cluster">
-        <ellipse cx="14" cy="31" rx="2" ry="1.2" fill="#fef08a"/>
-        <ellipse cx="18" cy="32" rx="1.8" ry="1" fill="#fde047"/>
-        <circle cx="15" cy="27" r="1.2" fill="#fbbf24" class="seed-sparkle-pop"/>
+  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-lg shadow-brand-900/30 bg-gradient-to-tr from-brand-900 via-emerald-800 to-amber-700 border border-emerald-400/30 group-hover:scale-105 transition-all duration-300">
+    <svg viewBox="0 0 48 48" class="w-10 h-10 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Realistic Ceramic/Wood Bowl Gradient -->
+        <linearGradient id="r4_bowl" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#d97706"/>
+          <stop offset="50%" stop-color="#92400e"/>
+          <stop offset="100%" stop-color="#451a03"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- Realistic Feeder Dish / Bowl with 3D Depth -->
+      <g>
+        <!-- Outer Bowl Base -->
+        <path d="M8 29C8 37 15 41 24 41C33 41 40 37 40 29H8Z" fill="url(#r4_bowl)"/>
+        <!-- Bowl Rim with 3D Specular Highlight -->
+        <ellipse cx="24" cy="29" rx="16" ry="4.5" fill="#78350f" stroke="#fbbf24" stroke-width="1.2"/>
+        <ellipse cx="24" cy="29" rx="14.5" ry="3.5" fill="#451a03"/>
+        
+        <!-- Mountain of Realistic Seeds in Bowl -->
+        <g class="real-seeds-dish">
+          <ellipse cx="20" cy="28.5" rx="2" ry="1.4" fill="#fef08a"/>
+          <ellipse cx="24" cy="28" rx="2.2" ry="1.5" fill="#f59e0b"/>
+          <ellipse cx="27" cy="28.5" rx="1.8" ry="1.3" fill="#fbbf24"/>
+          <ellipse cx="17" cy="29" rx="1.6" ry="1.2" fill="#d97706"/>
+          <ellipse cx="30" cy="29.5" rx="2" ry="1.3" fill="#fef9c3"/>
+          <ellipse cx="22" cy="27" rx="1.8" ry="1.2" fill="#fde047"/>
+          <ellipse cx="25" cy="26.8" rx="1.9" ry="1.3" fill="#fef08a"/>
+          <!-- Grains Glistening -->
+          <circle cx="23" cy="26.5" r="0.6" fill="#ffffff"/>
+          <circle cx="26" cy="26.5" r="0.6" fill="#ffffff"/>
+        </g>
       </g>
-      <g class="pecking-bird-actor">
-        <path d="M22 27C21 23 23 18 28 18C30 18 32 19 33 21L36 20L35 23C36 24 36 25 35 26.5C34 29 30 31 25 31C23 31 22 29 22 27Z" fill="#ffffff"/>
-        <path d="M25 24C23 20 26 17 29 18C28 21 27 24 25 24Z" fill="#34d399"/>
-        <circle cx="33" cy="20.5" r="0.9" fill="#064e3b"/>
-        <path d="M35 20.5L38 21.5L35 22.5V20.5Z" fill="#f59e0b"/>
+      
+      <!-- Realistic Lifelike Pecking Bird (Realistic feeding animation) -->
+      <g class="real-pecking-bird-actor">
+        <!-- Body with soft feather volume -->
+        <path d="M23 23C21 19 23 14 28 14C31 14 33 15.5 34 17L38 16L36.5 19.5C37.5 21 38 23 37 25C35 28 30 30 25 28C23 27 22 25 23 23Z" fill="#f8fafc"/>
+        <!-- Realistic Wing Layer (Yellow-Green canary blend) -->
+        <path d="M25 20C23 15 27 12 30 13C30 16 28 21 25 21Z" fill="#10b981"/>
+        <path d="M26 21C24 17 28 14 31 15C30.5 18 29 22 26.5 22Z" fill="#f59e0b"/>
+        <!-- Realistic Eye -->
+        <circle cx="33.5" cy="17" r="1.1" fill="#0f172a"/>
+        <circle cx="33.8" cy="16.7" r="0.4" fill="#ffffff"/>
+        <!-- Beak picking seed -->
+        <path d="M36 17L40.5 18.5L36 19.5V17Z" fill="#f59e0b"/>
+        <!-- Seed Sparkle when picked -->
+        <circle cx="41.5" cy="18.5" r="1" fill="#fef08a" class="real-peck-sparkle"/>
       </g>
-      <path d="M10 33H34" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-linecap="round"/>
     </svg>
   </div>
   <div>
     <div class="flex items-center gap-2">
       <span class="text-2xl font-black tracking-tight text-stone-900">Ozuqa-don</span>
-      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-teal-50 border border-teal-200 text-teal-800 text-[10px] font-black uppercase tracking-wider">ISHTAHA & SALOMATLIK</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-50 border border-amber-300 text-amber-900 text-[10px] font-black uppercase tracking-wider">ISHTAHALI OZUQA</span>
     </div>
-    <span class="block text-[11px] font-bold text-amber-600 tracking-wider uppercase">Don Cho'quvchi Qushlar Uchun</span>
+    <span class="block text-[11px] font-bold text-amber-700 tracking-wider uppercase">Don Cho'quvchi Qushlar Sevimlisi</span>
   </div>
 </a>`,
       5: `<a href="#" class="flex items-center gap-3.5 group">
-  <div class="w-12 h-12 rounded-2xl relative flex items-center justify-center overflow-hidden shadow-md shadow-brand-700/25 group-hover:scale-105 transition-all duration-300">
-    <div class="liquid-bg-layer absolute inset-0"></div>
-    <div class="sheen-sweep-beam"></div>
-    <svg viewBox="0 0 44 44" class="w-9 h-9 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M17 33C19 28 20 22 21 15" stroke="#fef08a" stroke-width="2" stroke-linecap="round"/>
-      <path d="M21 15H25M21 19H25M21 23H25" stroke="#fef08a" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="26" cy="15" r="1.5" fill="#ffffff"/>
-      <path d="M23 33C25 29 26 24 27 19" stroke="#fde047" stroke-width="2" stroke-linecap="round"/>
-      <path d="M27 19H31M27 23H31M27 27H31" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"/>
-      <circle cx="32" cy="19" r="1.5" fill="#ffffff"/>
-      <path d="M15 33C15 28 18 26 18 26C18 26 19 30 19 33" fill="#a7f3d0"/>
-      <path d="M28 33C28 29 26 27 26 27C26 27 25 30 25 33" fill="#6ee7b7"/>
-    </svg>
+  <div class="w-12 h-12 rounded-full relative flex items-center justify-center overflow-hidden shadow-lg shadow-emerald-950/40 border-2 border-amber-400 group-hover:scale-105 transition-all duration-300">
+    <!-- Heavy 3D Gold Coin Base with Radial Specular Reflection -->
+    <div class="absolute inset-0 bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700"></div>
+    <!-- Inner Deep Emerald Enamel Center -->
+    <div class="absolute inset-1 rounded-full bg-gradient-to-tr from-emerald-950 via-brand-950 to-emerald-900 border border-amber-400/60 shadow-inner flex items-center justify-center">
+      <!-- Metallic Light Sweep Beam -->
+      <div class="real-gold-sheen-sweep"></div>
+      <svg viewBox="0 0 44 44" class="w-9 h-9 relative z-10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="r5_sculpted_gold" x1="0" y1="0" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+            <stop offset="0%" stop-color="#fffbeb"/>
+            <stop offset="35%" stop-color="#fbbf24"/>
+            <stop offset="70%" stop-color="#d97706"/>
+            <stop offset="100%" stop-color="#78350f"/>
+          </linearGradient>
+        </defs>
+        
+        <!-- Coin Beaded Rim (Tanga bo'rtma nuqtalari) -->
+        <circle cx="22" cy="22" r="19" stroke="url(#r5_sculpted_gold)" stroke-dasharray="1.5 2.5" stroke-width="1.2"/>
+        
+        <!-- Left Embossed 3D Wheat Ear -->
+        <g>
+          <path d="M12 30C11 23 13 17 17 12" stroke="url(#r5_sculpted_gold)" stroke-width="1.4" stroke-linecap="round"/>
+          <ellipse cx="13" cy="18" rx="1.8" ry="1.2" transform="rotate(-35 13 18)" fill="url(#r5_sculpted_gold)"/>
+          <ellipse cx="12" cy="22" rx="1.8" ry="1.2" transform="rotate(-25 12 22)" fill="url(#r5_sculpted_gold)"/>
+          <ellipse cx="13" cy="26" rx="1.8" ry="1.2" transform="rotate(-15 13 26)" fill="url(#r5_sculpted_gold)"/>
+        </g>
+        
+        <!-- Right Embossed 3D Wheat Ear -->
+        <g>
+          <path d="M32 30C33 23 31 17 27 12" stroke="url(#r5_sculpted_gold)" stroke-width="1.4" stroke-linecap="round"/>
+          <ellipse cx="31" cy="18" rx="1.8" ry="1.2" transform="rotate(35 31 18)" fill="url(#r5_sculpted_gold)"/>
+          <ellipse cx="32" cy="22" rx="1.8" ry="1.2" transform="rotate(25 32 22)" fill="url(#r5_sculpted_gold)"/>
+          <ellipse cx="31" cy="26" rx="1.8" ry="1.2" transform="rotate(15 31 26)" fill="url(#r5_sculpted_gold)"/>
+        </g>
+        
+        <!-- Center Sculpted 3D Relief Bird (Majestic Canary Silhouette with Drop Shadow) -->
+        <path d="M18 29C17 25 19 21 21 19C22 17.5 24 16.5 26 17C27.5 17.5 28.5 19 28.5 21C28.5 23 27 25 25.5 27C24 28.5 21 29 18 29Z" fill="url(#r5_sculpted_gold)" filter="drop-shadow(0 2px 2px rgba(0,0,0,0.6))"/>
+        <circle cx="25.5" cy="18.5" r="0.7" fill="#022c22"/>
+        <path d="M28 18L31 19L28 20V18Z" fill="url(#r5_sculpted_gold)"/>
+        <!-- Star on Top -->
+        <polygon points="22,6 23,9 26,9 23.5,11 24.5,14 22,12 19.5,14 20.5,11 18,9 21,9" fill="url(#r5_sculpted_gold)"/>
+      </svg>
+    </div>
   </div>
   <div>
     <div class="flex items-center gap-2">
-      <span class="text-2xl font-black tracking-tight text-stone-900">Ozuqa<span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-amber-500">don</span></span>
-      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-300 text-emerald-800 text-[10px] font-black uppercase tracking-wider animate-pulse">2026 PRO</span>
+      <span class="text-2xl font-black tracking-tight text-stone-900 font-serif">OZUQA-DON</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-100 border border-amber-400 text-amber-950 text-[10px] font-black uppercase tracking-wider shadow-xs">3D METALL MUHR</span>
     </div>
-    <span class="block text-[11px] font-bold text-emerald-700 tracking-wider uppercase">Sara Don & Ozuqa Texnologiyasi</span>
+    <span class="block text-[10px] font-black text-amber-800 tracking-widest uppercase">Yevropa Sertifikatlangan Sifat</span>
   </div>
 </a>`
     };
 
-    const animLogoDescriptions = {
-      1: "🌾 1. Tebranuvchi Boshoq — mayin shabadada tebranuvchi oltin donlar va suzuvchi zarrachalar (Tavsiya)",
-      2: "🕊️ 2. Qush Qanoti — qanot qoqayotgan sayroqi qush va nur sochuvchi sara don",
-      3: "☀️ 3. Aylanuvchi Quyosh Aurasi — sekin aylanuvchi oltin halqa va nafas oluvchi eko-kurtak",
-      4: "🐥 4. Don Cho'qiyotgan Qushcha — tovoqchadan don cho'qiyotgan sho'x qushcha va oltin uchqun",
-      5: "🌊 5. Golografik Neon To'lqin — suyuqlikdek oquvchi gradient va metallik nur chaqnashi"
+    const realLogoDescriptions = {
+      1: "🌾 1. 3D Oltin Bug'doy & Shudring — hajmli realistik donlar, barg tomirlari va tabiiy shudring (Tavsiya)",
+      2: "🕊️ 2. Sayroqi Qush & Don — nozik pat to'qimali sayroqi qush va saralangan haqiqiy donlar",
+      3: "🔮 3. Shisha Shar & Dala — 3D shaffof shisha diorama, quyosh nurlari va daladagi sara hosil",
+      4: "🥣 4. Don Tovoqcha & Qush — tabiiy don tovoqchasi va don cho'qiyotgan realistik qushcha",
+      5: "🪙 5. 3D Metall Muhr — og'ir zarb qilingan metallik oltin tanga, bo'rtma boshoq va zumrad emal"
     };
 
-    function switchAnimLogo(num) {
+    function switchRealLogo(num) {
       const slot = document.getElementById('navbarLogoSlot');
-      if (slot && animLogoTemplates[num]) {
-        slot.innerHTML = animLogoTemplates[num];
+      if (slot && realLogoTemplates[num]) {
+        slot.innerHTML = realLogoTemplates[num];
       }
 
       const footerSlot = document.getElementById('footerLogoSlot');
-      if (footerSlot && animLogoTemplates[num]) {
-        footerSlot.innerHTML = animLogoTemplates[num].replace(/text-stone-900/g, 'text-white').replace(/text-brand-600/g, 'text-brand-400');
+      if (footerSlot && realLogoTemplates[num]) {
+        footerSlot.innerHTML = realLogoTemplates[num].replace(/text-stone-900/g, 'text-white').replace(/text-brand-700/g, 'text-brand-400');
       }
 
       try {
-        localStorage.setItem('ozuqadon_anim_logo_var', num);
+        localStorage.setItem('ozuqadon_real_logo_var', num);
       } catch(e) {}
 
-      const descBadge = document.getElementById('animLogoDescBadge');
-      if (descBadge && animLogoDescriptions[num]) {
-        descBadge.textContent = animLogoDescriptions[num];
+      const descBadge = document.getElementById('realLogoDescBadge');
+      if (descBadge && realLogoDescriptions[num]) {
+        descBadge.textContent = realLogoDescriptions[num];
       }
 
       for (let i = 1; i <= 5; i++) {
-        const btn = document.getElementById(`btnAnimLogo${i}`);
+        const btn = document.getElementById(`btnRealLogo${i}`);
         if (!btn) continue;
         if (i === num) {
-          btn.className = "anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-600 to-emerald-600 text-white shadow-md scale-105 ring-2 ring-brand-400/50";
+          btn.className = "real-logo-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-600 to-emerald-600 text-white shadow-md scale-105 ring-2 ring-brand-400/50";
         } else {
-          btn.className = "anim-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white";
+          btn.className = "real-logo-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white";
         }
       }
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      try { const savedAnimLogo = parseInt(localStorage.getItem('ozuqadon_anim_logo_var') || '1', 10); switchAnimLogo(savedAnimLogo); } catch(e) { switchAnimLogo(1); } 
+      try { const savedRealLogo = parseInt(localStorage.getItem('ozuqadon_real_logo_var') || '1', 10); switchRealLogo(savedRealLogo); } catch(e) { switchRealLogo(1); }
+       
       initCart(); 
       loadStoreProducts(); 
       showHeroBirdSlide(0);
