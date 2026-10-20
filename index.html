@@ -115,6 +115,42 @@
 </head>
 <body class="bg-canvas text-stone-800 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
+
+  <!-- ==================== LOGOTIP VARIANTLARI (THEME PREVIEW TOOLBAR) ==================== -->
+  <aside id="logoPreviewBar" aria-label="Logotip variantlari" class="bg-stone-900 text-white py-2.5 px-3 sm:px-4 border-b border-stone-800 relative z-50 shadow-md">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-2.5 text-center lg:text-left">
+      <div class="flex items-center gap-2">
+        <span class="w-7 h-7 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-xs shrink-0 shadow-inner">
+          <i class="fa-solid fa-shapes text-sm text-amber-400"></i>
+        </span>
+        <div class="text-left">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-black text-amber-300 uppercase tracking-wider">Logotip Variantlari:</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full bg-brand-500/20 text-brand-300 border border-brand-500/30 font-bold hidden sm:inline">5 xil dizayn</span>
+          </div>
+          <span id="logoDescBadge" class="text-[11px] text-stone-300 block">🌾 1. Qush & Oltin Qanot — qush silueti va 3 ta oltin don qanoti (Tavsiya)</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-1.5 flex-wrap justify-center shrink-0">
+        <button type="button" onclick="switchLogoVariant(1)" id="btnLogoVar1" class="logo-var-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-600 to-emerald-600 text-white shadow-md scale-105 ring-2 ring-brand-400/50">
+          1. Qush & Qanot (Tavsiya)
+        </button>
+        <button type="button" onclick="switchLogoVariant(2)" id="btnLogoVar2" class="logo-var-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          2. Sara Don & Barg
+        </button>
+        <button type="button" onclick="switchLogoVariant(3)" id="btnLogoVar3" class="logo-var-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          3. Aerodinamik Qush
+        </button>
+        <button type="button" onclick="switchLogoVariant(4)" id="btnLogoVar4" class="logo-var-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          4. Royal Eko-Muhr
+        </button>
+        <button type="button" onclick="switchLogoVariant(5)" id="btnLogoVar5" class="logo-var-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white">
+          5. Monogram OD
+        </button>
+      </div>
+    </div>
+  </aside>
+
   <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
   <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-amberBrand-800 text-white text-xs py-2 px-4 border-b border-brand-700/50">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
@@ -139,19 +175,39 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3.5 group">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-800 via-brand-600 to-amberBrand-500 flex items-center justify-center text-white text-2xl shadow-md shadow-brand-600/25 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
-            🌾
-          </div>
-          <div>
-            <div class="flex items-center gap-2">
-              <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-brand-700 transition-colors">Ozuqa-don</span>
-              <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-black uppercase tracking-wider">ECO</span>
-            </div>
-            <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
-          </div>
-        </a>
+        <!-- Logo Slot (Dynamic) -->
+        <div id="navbarLogoSlot">
+<a href="#" class="flex items-center gap-3.5 group">
+  <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-900 via-brand-700 to-amber-600 flex items-center justify-center text-white shadow-md shadow-brand-700/25 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+      <defs>
+        <linearGradient id="nav_bgGrad1" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#064e3b"/><stop offset="50%" stop-color="#047857"/><stop offset="100%" stop-color="#d97706"/>
+        </linearGradient>
+        <linearGradient id="nav_goldGrad1" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+      </defs>
+      <rect width="52" height="52" rx="16" fill="url(#nav_bgGrad1)"/>
+      <rect x="1" y="1" width="50" height="50" rx="15" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <path d="M14 29C15 23 19 19 25 18C28 17.5 31 18.5 33 20L37 17.5L35.5 22C37 23.5 37.5 25.5 37 27.5C36 32 30 35 24 35C19 35 15 32 14 29Z" fill="white" fill-opacity="0.15"/>
+      <path d="M22 17C24.5 19.5 25 23 23 25C21 23 20.5 19.5 22 17Z" fill="url(#nav_goldGrad1)"/>
+      <path d="M26 15C29 17.5 29.5 21.5 27 23.5C25 21.5 24.5 17.5 26 15Z" fill="#fde047"/>
+      <path d="M30 14C33.5 16.5 34 20.5 31.5 22.5C29.5 20.5 29 16.5 30 14Z" fill="url(#nav_goldGrad1)"/>
+      <circle cx="34" cy="20.5" r="1.2" fill="#064e3b"/>
+      <path d="M37 20L41 21.5L37 23V20Z" fill="#fbbf24"/>
+      <path d="M15 36C18 34 21 30 23 25" stroke="#fde047" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-brand-700 transition-colors">Ozuqa-don</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-black uppercase tracking-wider">ECO 100%</span>
+    </div>
+    <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
+  </div>
+</a>
+        </div>
 
         <!-- Desktop Navigation -->
         <nav class="hidden lg:flex items-center gap-8 font-semibold text-stone-600 text-sm">
@@ -1293,7 +1349,7 @@
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
         
         <div class="space-y-4 md:col-span-2">
-          <div class="flex items-center gap-3">
+          <div id="footerLogoSlot" class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-700 to-amberBrand-500 flex items-center justify-center text-white text-xl shadow-md">
               🌾
             </div>
@@ -2901,7 +2957,191 @@
     }
 
     // Initialize cart & carousel on load
-    document.addEventListener('DOMContentLoaded', () => { 
+
+    // ==================== LOGO VARIANT SWITCHER LOGIC ====================
+    const logoTemplates = {
+      1: `<a href="#" class="flex items-center gap-3.5 group">
+  <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-900 via-brand-700 to-amber-600 flex items-center justify-center text-white shadow-md shadow-brand-700/25 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+      <defs>
+        <linearGradient id="nav_bgGrad1" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#064e3b"/><stop offset="50%" stop-color="#047857"/><stop offset="100%" stop-color="#d97706"/>
+        </linearGradient>
+        <linearGradient id="nav_goldGrad1" x1="0" y1="0" x2="30" y2="30" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+      </defs>
+      <rect width="52" height="52" rx="16" fill="url(#nav_bgGrad1)"/>
+      <rect x="1" y="1" width="50" height="50" rx="15" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+      <path d="M14 29C15 23 19 19 25 18C28 17.5 31 18.5 33 20L37 17.5L35.5 22C37 23.5 37.5 25.5 37 27.5C36 32 30 35 24 35C19 35 15 32 14 29Z" fill="white" fill-opacity="0.15"/>
+      <path d="M22 17C24.5 19.5 25 23 23 25C21 23 20.5 19.5 22 17Z" fill="url(#nav_goldGrad1)"/>
+      <path d="M26 15C29 17.5 29.5 21.5 27 23.5C25 21.5 24.5 17.5 26 15Z" fill="#fde047"/>
+      <path d="M30 14C33.5 16.5 34 20.5 31.5 22.5C29.5 20.5 29 16.5 30 14Z" fill="url(#nav_goldGrad1)"/>
+      <circle cx="34" cy="20.5" r="1.2" fill="#064e3b"/>
+      <path d="M37 20L41 21.5L37 23V20Z" fill="#fbbf24"/>
+      <path d="M15 36C18 34 21 30 23 25" stroke="#fde047" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-brand-700 transition-colors">Ozuqa-don</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-emerald-800 text-[10px] font-black uppercase tracking-wider">ECO 100%</span>
+    </div>
+    <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
+  </div>
+</a>`,
+      2: `<a href="#" class="flex items-center gap-3.5 group">
+  <div class="w-12 h-12 rounded-full bg-emerald-950 flex items-center justify-center text-white shadow-md shadow-emerald-900/30 group-hover:scale-105 transition-all duration-300 border border-amber-500/40">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+      <defs>
+        <linearGradient id="nav_leafGrad2" x1="10" y1="10" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#34d399"/><stop offset="100%" stop-color="#059669"/>
+        </linearGradient>
+        <linearGradient id="nav_grainGrad2" x1="20" y1="10" x2="35" y2="40" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fef08a"/><stop offset="40%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+      </defs>
+      <path d="M16 35C13 28 14 18 23 13C25 12 28 12 29 14C23 15 19 20 20 27C21 31 23 34 27 36C21 38 18 37 16 35Z" fill="url(#nav_leafGrad2)"/>
+      <path d="M26 12C32 17 37 25 33 34C30 40 24 40 22 36C20 32 21 27 23 22C24 17 26 12 26 12Z" fill="url(#nav_grainGrad2)"/>
+      <path d="M26 14C27 20 27 28 25 35" stroke="#78350f" stroke-width="1.2" stroke-linecap="round" stroke-opacity="0.5"/>
+      <path d="M27 12C32 9 37 11 38 15C34 15 30 14 27 12Z" fill="#6ee7b7"/>
+      <circle cx="31" cy="24" r="1.5" fill="white" fill-opacity="0.8"/>
+    </svg>
+  </div>
+  <div>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-emerald-700 transition-colors">OZUQA<span class="text-amber-500 mx-0.5">•</span>DON</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-50 border border-amber-200 text-amber-800 text-[10px] font-black uppercase tracking-wider">BIO NATURE</span>
+    </div>
+    <span class="block text-[11px] font-bold text-emerald-700 tracking-wider uppercase">100% Tabiiy Sara Donlar</span>
+  </div>
+</a>`,
+      3: `<a href="#" class="flex items-center gap-3.5 group">
+  <div class="w-12 h-12 rounded-2xl bg-slate-900 flex items-center justify-center text-white shadow-md shadow-slate-900/30 group-hover:scale-105 transition-all duration-300 border border-emerald-500/30">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+      <defs>
+        <linearGradient id="nav_sunGrad3" x1="20" y1="8" x2="44" y2="32" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fbbf24"/><stop offset="100%" stop-color="#ea580c"/>
+        </linearGradient>
+        <linearGradient id="nav_birdGrad3" x1="8" y1="14" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#38bdf8"/><stop offset="50%" stop-color="#34d399"/><stop offset="100%" stop-color="#10b981"/>
+        </linearGradient>
+      </defs>
+      <circle cx="32" cy="20" r="11" fill="url(#nav_sunGrad3)"/>
+      <polygon points="12,34 26,22 28,32" fill="#047857"/>
+      <polygon points="26,22 42,16 30,26" fill="url(#nav_birdGrad3)"/>
+      <polygon points="26,22 30,26 24,36" fill="#10b981"/>
+      <polygon points="30,26 42,16 38,28" fill="#34d399"/>
+      <polygon points="42,16 45,15 42,19" fill="#fbbf24"/>
+      <path d="M43 18C44 21 43 24 41 26" stroke="#fbbf24" stroke-width="1.2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-black tracking-tight text-stone-900">Ozuqa<span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500">Don</span></span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-teal-50 border border-teal-200 text-teal-800 text-[10px] font-black uppercase tracking-wider">PREMIUM</span>
+    </div>
+    <span class="block text-[11px] font-bold text-teal-600 tracking-wider uppercase">Quvvat & Salomatlik</span>
+  </div>
+</a>`,
+      4: `<a href="#" class="flex items-center gap-3.5 group">
+  <div class="w-12 h-12 rounded-full bg-emerald-950 flex items-center justify-center text-white shadow-md shadow-emerald-950/40 group-hover:scale-105 transition-all duration-300 border-2 border-amber-400">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+      <defs>
+        <linearGradient id="nav_crestGold4" x1="0" y1="0" x2="52" y2="52" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fef08a"/><stop offset="50%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+      </defs>
+      <circle cx="26" cy="26" r="21" stroke="rgba(245,158,11,0.3)" stroke-dasharray="2 2" stroke-width="1"/>
+      <polygon points="26,8 27.5,12 31.5,12 28.5,14.5 29.5,18.5 26,16 22.5,18.5 23.5,14.5 20.5,12 24.5,12" fill="url(#nav_crestGold4)"/>
+      <path d="M14 36C12 28 14 20 18 15" stroke="url(#nav_crestGold4)" stroke-width="1.2" stroke-linecap="round"/>
+      <ellipse cx="14" cy="22" rx="2" ry="1.2" transform="rotate(-30 14 22)" fill="url(#nav_crestGold4)"/>
+      <ellipse cx="13" cy="27" rx="2" ry="1.2" transform="rotate(-20 13 27)" fill="url(#nav_crestGold4)"/>
+      <path d="M38 36C40 28 38 20 34 15" stroke="url(#nav_crestGold4)" stroke-width="1.2" stroke-linecap="round"/>
+      <ellipse cx="38" cy="22" rx="2" ry="1.2" transform="rotate(30 38 22)" fill="url(#nav_crestGold4)"/>
+      <ellipse cx="39" cy="27" rx="2" ry="1.2" transform="rotate(20 39 27)" fill="url(#nav_crestGold4)"/>
+      <path d="M22 34C21 30 22 26 24 23C25 21.5 27 20.5 29 21C30.5 21.5 31 23 31 25C31 27 29.5 29 28 31C26.5 33 24 34 22 34Z" fill="white"/>
+      <circle cx="28.5" cy="22.5" r="0.8" fill="#064e3b"/>
+      <path d="M30.5 22L33 23L30.5 24V22Z" fill="url(#nav_crestGold4)"/>
+      <path d="M19 40C23 42 29 42 33 40" stroke="url(#nav_crestGold4)" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-black tracking-tight text-stone-900 font-serif">OZUQA-DON</span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-amber-100 border border-amber-300 text-amber-900 text-[10px] font-black uppercase tracking-wider">EST. 2024</span>
+    </div>
+    <span class="block text-[10px] font-black text-amber-700 tracking-widest uppercase">Yevropa Standarti • Sara Don</span>
+  </div>
+</a>`,
+      5: `<a href="#" class="flex items-center gap-3.5 group">
+  <div class="w-12 h-12 rounded-2xl bg-stone-100 flex items-center justify-center shadow-xs group-hover:scale-105 transition-all duration-300 border border-stone-200">
+    <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-11 h-11">
+      <defs>
+        <linearGradient id="nav_oGrad5" x1="6" y1="6" x2="32" y2="40" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#047857"/>
+        </linearGradient>
+        <linearGradient id="nav_dGrad5" x1="20" y1="10" x2="44" y2="44" gradientUnits="userSpaceOnUse">
+          <stop offset="0%" stop-color="#fde047"/><stop offset="60%" stop-color="#f59e0b"/><stop offset="100%" stop-color="#b45309"/>
+        </linearGradient>
+      </defs>
+      <path d="M24 12C16 12 10 18 10 26C10 34 16 40 24 40C27 40 30 38.5 32 36C29 36 26 34 24 32C19 32 16 28 16 26C16 20 20 16 25 16C28 16 30 17 32 19L36 15C33 13 28.5 12 24 12Z" fill="url(#nav_oGrad5)"/>
+      <polygon points="36,15 40,16.5 36,18" fill="#f59e0b"/>
+      <path d="M26 15H32C37.5 15 42 19.5 42 26C42 32.5 37.5 37 32 37H26V15ZM31.5 32C34.5 32 37 29.5 37 26C37 22.5 34.5 20 31.5 20H30V32H31.5Z" fill="url(#nav_dGrad5)"/>
+      <ellipse cx="33.5" cy="23" rx="1.5" ry="2.5" fill="#fef08a"/>
+      <ellipse cx="33.5" cy="29" rx="1.5" ry="2.5" fill="#fde047"/>
+    </svg>
+  </div>
+  <div>
+    <div class="flex items-center gap-2">
+      <span class="text-2xl font-black tracking-tight text-stone-900">ozuqa<span class="text-brand-600">don</span></span>
+      <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-stone-100 border border-stone-200 text-stone-700 text-[10px] font-black uppercase tracking-wider">PRO</span>
+    </div>
+    <span class="block text-[11px] font-bold text-stone-500 tracking-wider uppercase">Don Mahsulotlari</span>
+  </div>
+</a>`
+    };
+
+    const logoDescriptions = {
+      1: "🌾 1. Qush & Oltin Qanot — qush silueti va 3 ta oltin don qanoti (Tavsiya)",
+      2: "🌿 2. Sara Don & Eko Barg — oltin don urug'i va yangi unib chiqqan yashil yaproq",
+      3: "⚡ 3. Aerodinamik Qush & Quyosh — zamonaviy origami qush, quyosh va don boshog'i",
+      4: "👑 4. Royal Eko-Muhr — Yevropa standartidagi nufuzli oltin bug'doy chambari",
+      5: "💠 5. Minimalist Monogram OD — 'O' (yaproq) va 'D' (boshoq) zamonaviy harflar uyg'unligi"
+    };
+
+    function switchLogoVariant(num) {
+      const slot = document.getElementById('navbarLogoSlot');
+      if (slot && logoTemplates[num]) {
+        slot.innerHTML = logoTemplates[num];
+      }
+        const footerSlot = document.getElementById('footerLogoSlot');
+        if (footerSlot && logoTemplates[num]) {
+          footerSlot.innerHTML = logoTemplates[num].replace(/text-stone-900/g, 'text-white').replace(/text-brand-600/g, 'text-brand-400');
+        }
+
+      try {
+        localStorage.setItem('ozuqadon_logo_variant', num);
+      } catch(e) {}
+
+      const descBadge = document.getElementById('logoDescBadge');
+      if (descBadge && logoDescriptions[num]) {
+        descBadge.textContent = logoDescriptions[num];
+      }
+
+      for (let i = 1; i <= 5; i++) {
+        const btn = document.getElementById(`btnLogoVar${i}`);
+        if (!btn) continue;
+        if (i === num) {
+          btn.className = "logo-var-btn px-3 py-1.5 rounded-xl text-xs font-black transition-all bg-gradient-to-r from-brand-600 to-emerald-600 text-white shadow-md scale-105 ring-2 ring-brand-400/50";
+        } else {
+          btn.className = "logo-var-btn px-3 py-1.5 rounded-xl text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700 hover:text-white";
+        }
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      try { const savedLogo = parseInt(localStorage.getItem('ozuqadon_logo_variant') || '1', 10); switchLogoVariant(savedLogo); } catch(e) { switchLogoVariant(1); } 
       initCart(); 
       loadStoreProducts(); 
       showHeroBirdSlide(0);
