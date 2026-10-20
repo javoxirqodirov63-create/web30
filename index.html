@@ -82,35 +82,6 @@
       50% { transform: scale(1.4); }
     }
 
-    /* Keyframe Animations for Header Variants */
-    @keyframes ringShake {
-      0%, 100% { transform: rotate(0deg); }
-      20%, 60% { transform: rotate(-15deg); }
-      40%, 80% { transform: rotate(15deg); }
-    }
-    .animate-ring-shake {
-      display: inline-block;
-      animation: ringShake 2s infinite ease-in-out;
-    }
-    @keyframes neonPulseGlow {
-      0%, 100% { box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), inset 0 0 10px rgba(16, 185, 129, 0.2); }
-      50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.8), inset 0 0 15px rgba(16, 185, 129, 0.4); }
-    }
-    .animate-neon-glow {
-      animation: neonPulseGlow 2.5s infinite ease-in-out;
-    }
-    @keyframes subtleMarquee {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-50%); }
-    }
-    .animate-marquee-smooth {
-      display: inline-flex;
-      animation: subtleMarquee 30s linear infinite;
-    }
-    .animate-marquee-smooth:hover {
-      animation-play-state: paused;
-    }
-
     /* Custom scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
@@ -144,572 +115,108 @@
 </head>
 <body class="bg-canvas text-stone-800 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen">
 
-  <!-- ==================== HEADER DESIGN VARIANT SWITCHER TOOLBAR ==================== -->
-  <aside aria-label="Dizayn variantlarini almashtirish" id="headerVariantSwitcherBar" class="bg-stone-950 text-white py-2 px-3 border-b border-stone-800 sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-2">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center justify-center w-6 h-6 rounded-lg bg-brand-500 text-stone-950 font-black text-xs shadow-xs">
-          <i class="fa-solid fa-wand-magic-sparkles"></i>
+  <!-- ==================== TOP ANNOUNCEMENT BAR ==================== -->
+  <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-amberBrand-800 text-white text-xs py-2 px-4 border-b border-brand-700/50">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
+      <div class="flex items-center gap-2 font-medium tracking-wide">
+        <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-stone-900 text-[10px] font-black">★</span>
+        <span>100% Tabiiy, saralangan va changdan xoli toza don mahsulotlari</span>
+      </div>
+      <div class="flex items-center gap-4 text-stone-200 text-[11px]">
+        <span class="hidden md:inline-flex items-center gap-1.5">
+          <i class="fa-solid fa-truck-fast text-amber-300"></i> O'zbekiston bo'ylab tezkor yetkazish
         </span>
-        <div class="leading-none flex items-center gap-1.5 flex-wrap">
-          <span class="text-xs font-black tracking-wide uppercase text-white">Header Dizayn Tanlovi:</span>
-          <span id="activeHeaderVariantDesc" class="text-[11px] text-brand-400 font-bold">1-Dizayn: Floating Glass Island (Apple / Vercel Frosted Glass)</span>
-        </div>
-      </div>
-      
-      <!-- 5 Selector Buttons -->
-      <div class="flex items-center gap-1.5 flex-wrap justify-center">
-        <button type="button" onclick="switchHeaderVariant(1)" id="btnHeaderVar1" class="header-var-btn px-3 py-1 rounded-full text-xs font-black transition-all bg-brand-600 text-white shadow-xs scale-105">
-          1. Glass Island
-        </button>
-        <button type="button" onclick="switchHeaderVariant(2)" id="btnHeaderVar2" class="header-var-btn px-3 py-1 rounded-full text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700">
-          2. Cyber Emerald
-        </button>
-        <button type="button" onclick="switchHeaderVariant(3)" id="btnHeaderVar3" class="header-var-btn px-3 py-1 rounded-full text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700">
-          3. Minimalist SaaS
-        </button>
-        <button type="button" onclick="switchHeaderVariant(4)" id="btnHeaderVar4" class="header-var-btn px-3 py-1 rounded-full text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700">
-          4. Bio-Organic
-        </button>
-        <button type="button" onclick="switchHeaderVariant(5)" id="btnHeaderVar5" class="header-var-btn px-3 py-1 rounded-full text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700">
-          5. Segmented Islands
-        </button>
-      </div>
-    </div>
-  </aside>
-
-
-  <!-- ========================================================================================= -->
-  <!-- VARIANT 1: FLOATING GLASS ISLAND (APPLE / VERCEL GLASSMORPHISM) -->
-  <!-- ========================================================================================= -->
-  <div id="headerVariant1" class="header-variant">
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-emerald-950 via-brand-900 to-stone-900 text-white text-xs py-2 px-4 border-b border-emerald-500/20 relative overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none animate-pulse"></div>
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 relative z-10 text-center sm:text-left">
-        <div class="flex items-center gap-2 overflow-hidden">
-          <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-amber-400 text-stone-950 text-[10px] font-black uppercase tracking-wider shrink-0 shadow-xs">
-            ★ Tavsiya
-          </span>
-          <div class="inline-flex items-center gap-3 text-xs font-semibold tracking-wide text-stone-100 flex-wrap justify-center sm:justify-start">
-            <span class="flex items-center gap-1.5"><i class="fa-solid fa-wheat-awn text-amber-300"></i> 100% Tabiiy changsiz saralangan donlar</span>
-            <span class="hidden md:inline-flex items-center gap-1.5 text-stone-300">• <i class="fa-solid fa-shield-halved text-emerald-400"></i> Laboratoriya tekshiruvidan o'tgan</span>
-            <span class="hidden lg:inline-flex items-center gap-1.5 text-stone-300">• <i class="fa-solid fa-truck-fast text-amber-300"></i> Toshkent bo'ylab 24 soatda</span>
-          </div>
-        </div>
-        <div class="flex items-center gap-3 text-stone-200 text-xs shrink-0 justify-center">
-          <span class="hidden md:inline-flex items-center gap-1.5 text-stone-300 text-[11px]">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span> Tezkor aloqa:
-          </span>
-          <a href="tel:+998901234567" class="hover:text-amber-300 font-extrabold text-white transition-colors inline-flex items-center gap-1.5 bg-white/10 hover:bg-white/15 px-2.5 py-1 rounded-full border border-white/10">
-            <i class="fa-solid fa-phone text-amber-400 text-xs"></i> +998 90 123-45-67
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Floating Glass Capsule Header -->
-    <header class="sticky top-0 z-40 px-3 sm:px-6 py-2.5 sm:py-3 transition-all">
-      <div class="max-w-7xl mx-auto bg-white/85 backdrop-blur-2xl rounded-2xl sm:rounded-full border border-stone-200/90 shadow-xl shadow-stone-900/5 px-4 sm:px-6 py-2.5 sm:py-3">
-        <div class="flex items-center justify-between">
-          
-          <!-- Logo -->
-          <a href="#" class="flex items-center gap-3 group">
-            <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-brand-800 via-brand-600 to-amberBrand-500 flex items-center justify-center text-white text-xl shadow-md shadow-brand-600/30 group-hover:scale-105 group-hover:rotate-6 transition-all duration-300">
-              🌾
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xl sm:text-2xl font-black tracking-tight text-stone-900 group-hover:text-brand-700 transition-colors">Ozuqa-don</span>
-                <span class="px-2 py-0.5 rounded-full bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-black uppercase tracking-wider">ECO</span>
-              </div>
-              <span class="block text-[10px] sm:text-[11px] font-extrabold text-brand-600 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
-            </div>
-          </a>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center gap-1 font-bold text-stone-700 text-xs">
-            <a href="#about" class="px-3.5 py-2 rounded-full hover:bg-brand-50 hover:text-brand-700 transition-all">Biz haqimizda</a>
-            <a href="#benefits" class="px-3.5 py-2 rounded-full hover:bg-brand-50 hover:text-brand-700 transition-all">Afzalliklar</a>
-            <a href="#products" class="px-3.5 py-2 rounded-full hover:bg-brand-50 hover:text-brand-700 transition-all">Mahsulotlar</a>
-            <a href="#testimonials" class="px-3.5 py-2 rounded-full hover:bg-brand-50 hover:text-brand-700 transition-all">Mijozlar fikri</a>
-            <a href="#faq" class="px-3.5 py-2 rounded-full hover:bg-brand-50 hover:text-brand-700 transition-all">Savol-Javob</a>
-          </nav>
-
-          <!-- Right Action Button & Cart -->
-          <div class="hidden sm:flex items-center gap-2.5">
-            <a href="tel:+998901234567" class="flex items-center gap-2 px-3.5 py-2 rounded-full bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs transition-colors">
-              <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span class="hidden xl:inline">+998 90 123-45-67</span>
-              <span class="xl:hidden"><i class="fa-solid fa-phone"></i></span>
-            </a>
-
-            <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2 px-4 py-2 rounded-full bg-amberBrand-50 hover:bg-amberBrand-100 text-amberBrand-900 font-extrabold text-xs border border-amberBrand-200/90 shadow-xs transition-all active:scale-95 group">
-              <i class="fa-solid fa-cart-shopping text-amberBrand-600 text-sm group-hover:scale-110 transition-transform"></i>
-              <span>Savatcha</span>
-              <span class="nav-cart-badge-count bg-brand-600 text-white text-[11px] px-2 py-0.5 rounded-full font-black min-w-[20px] text-center shadow-xs">0</span>
-            </button>
-
-            <a href="#order" class="px-5 py-2 rounded-full bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 text-white font-extrabold text-xs shadow-md shadow-brand-600/25 hover:shadow-glow-emerald transition-all active:scale-95 flex items-center gap-1.5">
-              <span>Buyurtma</span>
-              <i class="fa-solid fa-arrow-down text-[10px]"></i>
-            </a>
-          </div>
-
-          <!-- Mobile Buttons -->
-          <div class="flex items-center gap-2 sm:hidden">
-            <button onclick="toggleCartDrawer(true)" class="relative p-2 rounded-xl bg-amberBrand-50 text-amberBrand-900 border border-amberBrand-200 font-bold text-sm flex items-center justify-center">
-              <i class="fa-solid fa-cart-shopping text-base text-amberBrand-600"></i>
-              <span class="nav-cart-badge-count absolute -top-1.5 -right-1.5 bg-brand-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-black shadow-sm">0</span>
-            </button>
-            <button onclick="toggleMobileMenuVariant(1)" aria-label="Menu" class="p-2 rounded-xl text-stone-700 hover:bg-stone-100 focus:outline-none">
-              <i class="fa-solid fa-bars text-lg"></i>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenuVar1" class="hidden lg:hidden pb-4 pt-3 border-t border-stone-100 mt-2 flex flex-col gap-2">
-          <a href="#about" class="mobile-link text-stone-700 font-medium py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Biz haqimizda</a>
-          <a href="#benefits" class="mobile-link text-stone-700 font-medium py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Afzalliklar</a>
-          <a href="#products" class="mobile-link text-stone-700 font-medium py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Mahsulotlar katalogi</a>
-          <a href="#testimonials" class="mobile-link text-stone-700 font-medium py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Mijozlar fikri</a>
-          <a href="#faq" class="mobile-link text-stone-700 font-medium py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Savol-Javob</a>
-          <a href="#order" class="mobile-link text-stone-700 font-medium py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Buyurtma berish</a>
-          
-          <button onclick="toggleCartDrawer(true); toggleMobileMenuVariant(1);" class="w-full text-left py-2.5 font-bold text-amberBrand-900 bg-amberBrand-50 rounded-xl px-4 flex items-center justify-between border border-amberBrand-200/60 mt-1 text-xs">
-            <span class="flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-amberBrand-600"></i> Savatchani ko'rish</span>
-            <span class="mobile-menu-cart-count bg-brand-600 text-white text-[11px] px-2.5 py-0.5 rounded-full font-bold">0 ta</span>
-          </button>
-
-          <a href="tel:+998901234567" class="text-center py-2.5 font-bold text-brand-800 bg-brand-50 border border-brand-200/60 rounded-xl text-xs mt-1">
-            📞 +998 90 123-45-67
-          </a>
-        </div>
-      </div>
-    </header>
-  </div>
-
-
-  <!-- ========================================================================================= -->
-  <!-- VARIANT 2: CYBER EMERALD & NEO-ECO (DARK LUXURY & TECH GLOW) -->
-  <!-- ========================================================================================= -->
-  <div id="headerVariant2" class="header-variant hidden">
-    <!-- Top Announcement Bar -->
-    <div class="bg-[#02130d] text-stone-300 text-xs py-2 px-4 border-b border-emerald-500/20 relative">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
-        <div class="flex items-center gap-2.5">
-          <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-950 border border-emerald-500/40 text-emerald-400 text-[10px] font-black uppercase tracking-wider shadow-[0_0_10px_rgba(16,185,129,0.3)]">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
-            TIZIM FAOL
-          </span>
-          <span class="text-stone-300 text-xs font-semibold tracking-wide">
-            Buyurtmalar 24/7 qabul qilinmoqda • 100% toza elangan donlar
-          </span>
-        </div>
-        <div class="flex items-center gap-4 text-xs font-bold">
-          <span class="hidden md:inline-flex items-center gap-1.5 text-emerald-400 text-[11px]">
-            <i class="fa-solid fa-bolt"></i> Tezkor kuryerlik jo'natmasi
-          </span>
-          <a href="tel:+998901234567" class="text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1.5">
-            <i class="fa-solid fa-phone-volume"></i> +998 90 123-45-67
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Dark Obsidian Header -->
-    <header class="sticky top-0 z-40 bg-[#051c14]/95 backdrop-blur-2xl border-b border-emerald-500/30 shadow-2xl shadow-emerald-950/50 text-white transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          
-          <!-- Logo -->
-          <a href="#" class="flex items-center gap-3.5 group">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-950 border border-emerald-400/50 text-emerald-400 flex items-center justify-center text-2xl shadow-[0_0_15px_rgba(16,185,129,0.35)] group-hover:scale-105 group-hover:border-emerald-300 transition-all duration-300">
-              🌾
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-black tracking-tight text-white group-hover:text-emerald-400 transition-colors">Ozuqa-don</span>
-                <span class="px-2 py-0.5 rounded-md bg-emerald-900/60 border border-emerald-500/40 text-emerald-300 text-[10px] font-black uppercase tracking-wider shadow-[0_0_10px_rgba(16,185,129,0.25)]">PREMIUM ECO</span>
-              </div>
-              <span class="block text-[10px] font-extrabold text-emerald-400 tracking-widest uppercase">PARRANDALAR UCHUN SARA OZUQA</span>
-            </div>
-          </a>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center gap-7 font-bold text-stone-300 text-xs">
-            <a href="#about" class="hover:text-emerald-400 transition-colors py-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-0.5 after:bg-emerald-400 after:transition-all">Biz haqimizda</a>
-            <a href="#benefits" class="hover:text-emerald-400 transition-colors py-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-0.5 after:bg-emerald-400 after:transition-all">Afzalliklar</a>
-            <a href="#products" class="hover:text-emerald-400 transition-colors py-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-0.5 after:bg-emerald-400 after:transition-all">Mahsulotlar</a>
-            <a href="#testimonials" class="hover:text-emerald-400 transition-colors py-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-0.5 after:bg-emerald-400 after:transition-all">Mijozlar fikri</a>
-            <a href="#faq" class="hover:text-emerald-400 transition-colors py-2 relative after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-0.5 after:bg-emerald-400 after:transition-all">Savol-Javob</a>
-          </nav>
-
-          <!-- Right Action Button & Cart -->
-          <div class="hidden sm:flex items-center gap-3">
-            <a href="tel:+998901234567" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-emerald-950/80 hover:bg-emerald-900/80 border border-emerald-500/30 hover:border-emerald-400 text-emerald-300 font-bold text-xs transition-colors">
-              <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
-              <span class="hidden xl:inline">+998 90 123-45-67</span>
-              <span class="xl:hidden"><i class="fa-solid fa-phone"></i></span>
-            </a>
-
-            <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-emerald-950/80 hover:bg-emerald-900/80 text-emerald-200 border border-emerald-500/40 font-extrabold text-xs shadow-xs transition-all active:scale-95 group">
-              <i class="fa-solid fa-cart-shopping text-emerald-400 text-sm group-hover:scale-110 transition-transform"></i>
-              <span>Savatcha</span>
-              <span class="nav-cart-badge-count bg-gradient-to-r from-amber-400 to-amber-500 text-stone-950 text-[11px] px-2 py-0.5 rounded-full font-black min-w-[20px] text-center shadow-[0_0_10px_rgba(251,191,36,0.6)]">0</span>
-            </button>
-
-            <a href="#order" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-400 via-teal-400 to-emerald-500 hover:from-emerald-300 hover:to-teal-300 text-stone-950 font-black text-xs shadow-[0_0_20px_rgba(16,185,129,0.45)] hover:shadow-[0_0_25px_rgba(16,185,129,0.7)] transition-all active:scale-95 flex items-center gap-1.5 hover:scale-105">
-              <span>Buyurtma</span>
-              <i class="fa-solid fa-arrow-down text-xs"></i>
-            </a>
-          </div>
-
-          <!-- Mobile Buttons -->
-          <div class="flex items-center gap-2 sm:hidden">
-            <button onclick="toggleCartDrawer(true)" class="relative p-2.5 rounded-xl bg-emerald-950 text-emerald-300 border border-emerald-500/40 font-bold text-sm flex items-center justify-center">
-              <i class="fa-solid fa-cart-shopping text-base text-emerald-400"></i>
-              <span class="nav-cart-badge-count absolute -top-1.5 -right-1.5 bg-amber-400 text-stone-950 text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-black shadow-sm">0</span>
-            </button>
-            <button onclick="toggleMobileMenuVariant(2)" aria-label="Menu" class="p-2.5 rounded-xl text-stone-300 hover:bg-emerald-950 focus:outline-none">
-              <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenuVar2" class="hidden lg:hidden pb-6 pt-3 border-t border-emerald-900/60 flex flex-col gap-2.5">
-          <a href="#about" class="mobile-link text-stone-300 font-semibold py-1.5 px-3 rounded-xl hover:bg-emerald-950 text-xs">Biz haqimizda</a>
-          <a href="#benefits" class="mobile-link text-stone-300 font-semibold py-1.5 px-3 rounded-xl hover:bg-emerald-950 text-xs">Afzalliklar</a>
-          <a href="#products" class="mobile-link text-stone-300 font-semibold py-1.5 px-3 rounded-xl hover:bg-emerald-950 text-xs">Mahsulotlar katalogi</a>
-          <a href="#testimonials" class="mobile-link text-stone-300 font-semibold py-1.5 px-3 rounded-xl hover:bg-emerald-950 text-xs">Mijozlar fikri</a>
-          <a href="#faq" class="mobile-link text-stone-300 font-semibold py-1.5 px-3 rounded-xl hover:bg-emerald-950 text-xs">Savol-Javob</a>
-          <a href="#order" class="mobile-link text-stone-300 font-semibold py-1.5 px-3 rounded-xl hover:bg-emerald-950 text-xs">Buyurtma berish</a>
-          
-          <button onclick="toggleCartDrawer(true); toggleMobileMenuVariant(2);" class="w-full text-left py-2.5 font-bold text-emerald-300 bg-emerald-950 rounded-xl px-4 flex items-center justify-between border border-emerald-500/40 mt-1 text-xs">
-            <span class="flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-emerald-400"></i> Savatchani ko'rish</span>
-            <span class="mobile-menu-cart-count bg-amber-400 text-stone-950 text-xs px-2.5 py-0.5 rounded-full font-black">0 ta</span>
-          </button>
-
-          <a href="tel:+998901234567" class="text-center py-2.5 font-bold text-emerald-300 bg-emerald-950/80 border border-emerald-500/30 rounded-xl text-xs mt-1">
-            📞 +998 90 123-45-67
-          </a>
-        </div>
-      </div>
-    </header>
-  </div>
-
-
-  <!-- ========================================================================================= -->
-  <!-- VARIANT 3: MODERN MINIMALIST & CLEAN EDITORIAL (LINEAR / STRIPE SAAS STYLE) -->
-  <!-- ========================================================================================= -->
-  <div id="headerVariant3" class="header-variant hidden">
-    <!-- Top Announcement Bar -->
-    <div class="bg-stone-100 border-b border-stone-200 text-stone-700 text-xs py-1.5 px-4">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1 text-center sm:text-left">
-        <div class="flex items-center gap-2">
-          <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-stone-900 text-white text-[10px] font-mono font-bold tracking-wider">
-            FAST DELIVERY
-          </span>
-          <span class="text-stone-600 text-xs font-medium">
-            Respublika bo'ylab kafolatlangan va xavfsiz yetkazib berish
-          </span>
-        </div>
-        <div class="flex items-center gap-3 text-xs font-semibold text-stone-600">
-          <span class="hidden md:inline-flex items-center gap-1">• Toshkentda 24 soat</span>
-          <a href="tel:+998901234567" class="hover:text-stone-900 font-bold text-stone-800 transition-colors inline-flex items-center gap-1 font-mono">
-            <i class="fa-solid fa-phone text-xs"></i> +998 90 123-45-67
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Clean Linear SaaS Header -->
-    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-xs transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-18 py-3">
-          
-          <!-- Logo -->
-          <a href="#" class="flex items-center gap-3 group">
-            <div class="w-10 h-10 rounded-lg bg-stone-900 text-amber-400 flex items-center justify-center text-lg font-black shadow-xs group-hover:bg-brand-700 transition-colors">
-              🌾
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-xl font-black tracking-tight text-stone-900 font-mono">OZUQA • DON</span>
-                <span class="px-1.5 py-0.5 rounded text-[9px] font-mono font-bold uppercase tracking-wider bg-stone-100 text-stone-700 border border-stone-200">VERIFIED</span>
-              </div>
-              <span class="block text-[10px] font-bold text-stone-400 tracking-wider uppercase font-mono">TABIIY OZUQA BAZASI</span>
-            </div>
-          </a>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center gap-6 font-semibold text-stone-600 text-xs">
-            <a href="#about" class="hover:text-stone-950 transition-colors py-2">Biz haqimizda</a>
-            <a href="#benefits" class="hover:text-stone-950 transition-colors py-2">Afzalliklar</a>
-            <a href="#products" class="hover:text-stone-950 transition-colors py-2">Mahsulotlar</a>
-            <a href="#testimonials" class="hover:text-stone-950 transition-colors py-2">Mijozlar fikri</a>
-            <a href="#faq" class="hover:text-stone-950 transition-colors py-2">Savol-Javob</a>
-          </nav>
-
-          <!-- Right Action Button & Cart -->
-          <div class="hidden sm:flex items-center gap-2.5">
-            <a href="tel:+998901234567" class="border border-stone-200 hover:border-stone-400 text-stone-800 px-3.5 py-1.5 rounded-lg text-xs font-bold transition-colors font-mono">
-              +998 90 123-45-67
-            </a>
-
-            <button onclick="toggleCartDrawer(true)" class="border border-stone-300 hover:border-stone-900 text-stone-900 px-3.5 py-1.5 rounded-lg font-bold text-xs flex items-center gap-2 transition-colors">
-              <i class="fa-solid fa-cart-shopping text-stone-600"></i>
-              <span>Savatcha</span>
-              <span class="nav-cart-badge-count bg-stone-900 text-white text-[11px] font-bold px-2 py-0.5 rounded-md min-w-[20px] text-center">0</span>
-            </button>
-
-            <a href="#order" class="bg-stone-900 hover:bg-brand-700 text-white font-bold text-xs px-4 py-2 rounded-lg shadow-sm hover:scale-[1.02] active:scale-95 transition-all flex items-center gap-2 font-mono">
-              <span>BUYURTMA</span>
-              <i class="fa-solid fa-arrow-down text-[10px]"></i>
-            </a>
-          </div>
-
-          <!-- Mobile Buttons -->
-          <div class="flex items-center gap-2 sm:hidden">
-            <button onclick="toggleCartDrawer(true)" class="p-2 rounded-lg border border-stone-200 text-stone-900 font-bold text-sm relative">
-              <i class="fa-solid fa-cart-shopping"></i>
-              <span class="nav-cart-badge-count absolute -top-1 -right-1 bg-stone-900 text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
-            </button>
-            <button onclick="toggleMobileMenuVariant(3)" aria-label="Menu" class="p-2 rounded-lg text-stone-700 hover:bg-stone-100">
-              <i class="fa-solid fa-bars"></i>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenuVar3" class="hidden lg:hidden pb-4 pt-2 border-t border-stone-100 flex flex-col gap-2 font-mono">
-          <a href="#about" class="mobile-link text-stone-700 font-medium py-1.5 px-2 hover:bg-stone-50 text-xs">Biz haqimizda</a>
-          <a href="#benefits" class="mobile-link text-stone-700 font-medium py-1.5 px-2 hover:bg-stone-50 text-xs">Afzalliklar</a>
-          <a href="#products" class="mobile-link text-stone-700 font-medium py-1.5 px-2 hover:bg-stone-50 text-xs">Mahsulotlar</a>
-          <a href="#testimonials" class="mobile-link text-stone-700 font-medium py-1.5 px-2 hover:bg-stone-50 text-xs">Mijozlar fikri</a>
-          <a href="#faq" class="mobile-link text-stone-700 font-medium py-1.5 px-2 hover:bg-stone-50 text-xs">Savol-Javob</a>
-          <a href="#order" class="mobile-link text-stone-700 font-medium py-1.5 px-2 hover:bg-stone-50 text-xs">Buyurtma berish</a>
-          
-          <button onclick="toggleCartDrawer(true); toggleMobileMenuVariant(3);" class="w-full text-left py-2 font-bold text-stone-900 bg-stone-100 rounded-lg px-3 flex items-center justify-between mt-1 text-xs">
-            <span>Savatcha</span>
-            <span class="mobile-menu-cart-count bg-stone-900 text-white text-xs px-2 py-0.5 rounded font-bold">0 ta</span>
-          </button>
-        </div>
-      </div>
-    </header>
-  </div>
-
-
-  <!-- ========================================================================================= -->
-  <!-- VARIANT 4: BIO-ORGANIC DYNAMIC MESH (WARM AMBER & SAGE NATURE FLOW) -->
-  <!-- ========================================================================================= -->
-  <div id="headerVariant4" class="header-variant hidden">
-    <!-- Top Announcement Bar -->
-    <div class="bg-gradient-to-r from-emerald-800 via-amber-800 to-amber-700 text-white text-xs py-2 px-4 border-b border-amber-600/30">
-      <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
-        <div class="flex items-center gap-2">
-          <span class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-amber-400 text-amber-950 text-xs font-black animate-ring-shake">
-            🌾
-          </span>
-          <span class="font-bold tracking-wide">
-            100% Organik & Changsiz Saralangan Tabiiy Ozuqalar
-          </span>
-        </div>
-        <div class="flex items-center gap-4 text-amber-100 text-xs">
-          <span class="hidden md:inline-flex items-center gap-1.5 font-medium">
-            <i class="fa-solid fa-truck text-amber-300"></i> Toshkent va viloyatlarga tez yetkazish
-          </span>
-          <a href="tel:+998901234567" class="hover:text-white font-extrabold text-amber-300 transition-colors inline-flex items-center gap-1.5 bg-amber-900/40 px-2.5 py-0.5 rounded-full border border-amber-500/30">
-            <i class="fa-solid fa-phone text-xs animate-pulse"></i> +998 90 123-45-67
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Warm Organic Header -->
-    <header class="sticky top-0 z-40 bg-[#fffdf9]/95 backdrop-blur-xl border-b border-amber-200/60 shadow-md shadow-amber-900/5 transition-all">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between h-20">
-          
-          <!-- Logo -->
-          <a href="#" class="flex items-center gap-3.5 group">
-            <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-500 via-brand-600 to-emerald-600 flex items-center justify-center text-white text-2xl shadow-md shadow-amber-500/25 group-hover:scale-105 group-hover:rotate-6 transition-all duration-300">
-              🌾
-            </div>
-            <div>
-              <div class="flex items-center gap-2">
-                <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-amber-800 transition-colors">Ozuqa-don</span>
-                <span class="px-2 py-0.5 rounded-full bg-amber-100 border border-amber-300 text-amber-800 text-[10px] font-black uppercase tracking-wider">ECO FERMA</span>
-              </div>
-              <span class="block text-[11px] font-black text-amber-700 tracking-wider uppercase">PARRANDALAR UCHUN MEHR BILAN</span>
-            </div>
-          </a>
-
-          <!-- Desktop Navigation -->
-          <nav class="hidden lg:flex items-center gap-3 font-bold text-stone-700 text-xs">
-            <a href="#about" class="px-3 py-1.5 rounded-xl hover:bg-amber-100/70 hover:text-amber-900 transition-all">Biz haqimizda</a>
-            <a href="#benefits" class="px-3 py-1.5 rounded-xl hover:bg-amber-100/70 hover:text-amber-900 transition-all">Afzalliklar</a>
-            <a href="#products" class="px-3 py-1.5 rounded-xl hover:bg-amber-100/70 hover:text-amber-900 transition-all">Mahsulotlar</a>
-            <a href="#testimonials" class="px-3 py-1.5 rounded-xl hover:bg-amber-100/70 hover:text-amber-900 transition-all">Mijozlar fikri</a>
-            <a href="#faq" class="px-3 py-1.5 rounded-xl hover:bg-amber-100/70 hover:text-amber-900 transition-all">Savol-Javob</a>
-          </nav>
-
-          <!-- Right Action Button & Cart -->
-          <div class="hidden sm:flex items-center gap-3">
-            <a href="tel:+998901234567" class="flex items-center gap-2 px-3.5 py-2 rounded-2xl bg-amber-100/70 hover:bg-amber-200/70 text-amber-900 font-bold text-xs transition-colors">
-              <i class="fa-solid fa-phone text-amber-600 animate-ring-shake"></i>
-              <span class="hidden xl:inline">+998 90 123-45-67</span>
-            </a>
-
-            <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2 px-4 py-2 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-black text-xs shadow-sm hover:scale-105 transition-transform active:scale-95 group">
-              <i class="fa-solid fa-basket-shopping text-stone-900 text-sm group-hover:rotate-12 transition-transform"></i>
-              <span>Savatcha</span>
-              <span class="nav-cart-badge-count bg-brand-800 text-white text-[11px] px-2 py-0.5 rounded-full font-black min-w-[20px] text-center shadow-xs">0</span>
-            </button>
-
-            <a href="#order" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-brand-700 via-emerald-600 to-amber-600 hover:from-brand-800 hover:to-amber-700 text-white font-black text-xs shadow-md shadow-brand-700/20 hover:scale-105 active:scale-95 transition-all flex items-center gap-1.5">
-              <span>Buyurtma berish</span>
-              <i class="fa-solid fa-seedling text-amber-300"></i>
-            </a>
-          </div>
-
-          <!-- Mobile Buttons -->
-          <div class="flex items-center gap-2 sm:hidden">
-            <button onclick="toggleCartDrawer(true)" class="p-2.5 rounded-2xl bg-amber-100 text-amber-900 font-bold relative">
-              <i class="fa-solid fa-basket-shopping text-amber-800"></i>
-              <span class="nav-cart-badge-count absolute -top-1.5 -right-1.5 bg-brand-800 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-black">0</span>
-            </button>
-            <button onclick="toggleMobileMenuVariant(4)" aria-label="Menu" class="p-2.5 rounded-2xl text-stone-700 hover:bg-amber-100">
-              <i class="fa-solid fa-bars text-xl"></i>
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Mobile Dropdown Menu -->
-        <div id="mobileMenuVar4" class="hidden lg:hidden pb-5 pt-3 border-t border-amber-200/50 flex flex-col gap-2">
-          <a href="#about" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-amber-100 text-xs">Biz haqimizda</a>
-          <a href="#benefits" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-amber-100 text-xs">Afzalliklar</a>
-          <a href="#products" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-amber-100 text-xs">Mahsulotlar</a>
-          <a href="#testimonials" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-amber-100 text-xs">Mijozlar fikri</a>
-          <a href="#faq" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-amber-100 text-xs">Savol-Javob</a>
-          <a href="#order" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-amber-100 text-xs">Buyurtma berish</a>
-          
-          <button onclick="toggleCartDrawer(true); toggleMobileMenuVariant(4);" class="w-full text-left py-2.5 font-bold text-amber-950 bg-amber-100 rounded-xl px-4 flex items-center justify-between border border-amber-300 mt-1 text-xs">
-            <span>Savatchani ko'rish</span>
-            <span class="mobile-menu-cart-count bg-brand-800 text-white text-xs px-2.5 py-0.5 rounded-full font-bold">0 ta</span>
-          </button>
-        </div>
-      </div>
-    </header>
-  </div>
-
-
-  <!-- ========================================================================================= -->
-  <!-- VARIANT 5: SEGMENTED FUTURISTIC ISLANDS (THREE FLOATING CAPSULES) -->
-  <!-- ========================================================================================= -->
-  <div id="headerVariant5" class="header-variant hidden">
-    <!-- Top Announcement Bar -->
-    <div class="bg-stone-900 text-stone-300 text-xs py-1.5 px-4 border-b border-stone-800">
-      <div class="max-w-7xl mx-auto flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <span class="inline-flex items-center gap-1.5 text-brand-400 font-black text-[11px]">
-            <span class="w-2 h-2 rounded-full bg-brand-500 animate-ping"></span>
-            LIVE BAZA
-          </span>
-          <span class="text-stone-300 text-xs font-semibold">
-            Donlar changsiz, saralangan va laboratoriya sifat nazoratidan o'tgan
-          </span>
-        </div>
-        <a href="tel:+998901234567" class="text-amber-400 hover:text-amber-300 font-bold text-xs flex items-center gap-1">
+        <a href="tel:+998901234567" class="hover:text-white font-bold text-amber-300 transition-colors inline-flex items-center gap-1">
           <i class="fa-solid fa-phone"></i> +998 90 123-45-67
         </a>
       </div>
     </div>
+  </div>
 
-    <!-- Three Floating Island Capsules Header -->
-    <header class="sticky top-0 z-40 px-3 sm:px-6 py-2.5 transition-all">
-      <div class="max-w-7xl mx-auto flex items-center justify-between gap-3">
+
+  <!-- ==================== HEADER / NAVBAR ==================== -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-xl border-b border-stone-200/80 transition-all duration-300 shadow-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
         
-        <!-- ISLAND 1: Brand Capsule -->
-        <a href="#" class="bg-white/90 backdrop-blur-xl border border-stone-200/90 rounded-2xl px-4 py-2 shadow-lg shadow-stone-900/5 flex items-center gap-3 hover:scale-[1.02] transition-transform group shrink-0">
-          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-700 to-emerald-500 flex items-center justify-center text-white text-base shadow-sm group-hover:rotate-6 transition-transform">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3.5 group">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-800 via-brand-600 to-amberBrand-500 flex items-center justify-center text-white text-2xl shadow-md shadow-brand-600/25 group-hover:scale-105 group-hover:rotate-3 transition-all duration-300">
             🌾
           </div>
           <div>
-            <div class="flex items-center gap-1.5">
-              <span class="text-lg font-black tracking-tight text-stone-900">Ozuqa-don</span>
-              <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+            <div class="flex items-center gap-2">
+              <span class="text-2xl font-black tracking-tight text-stone-900 group-hover:text-brand-700 transition-colors">Ozuqa-don</span>
+              <span class="hidden sm:inline-block px-2 py-0.5 rounded-md bg-brand-50 border border-brand-200 text-brand-700 text-[10px] font-black uppercase tracking-wider">ECO</span>
             </div>
-            <span class="block text-[9px] font-extrabold text-stone-400 tracking-wider uppercase">ECO PREMIUM</span>
+            <span class="block text-[11px] font-bold text-brand-600 tracking-wider uppercase">Parrandalar & Qushlar Uchun</span>
           </div>
         </a>
 
-        <!-- ISLAND 2: Center Navigation Capsule -->
-        <nav class="hidden lg:flex items-center gap-1 bg-white/90 backdrop-blur-xl border border-stone-200/90 rounded-2xl p-1.5 shadow-lg shadow-stone-900/5 font-bold text-xs text-stone-700">
-          <a href="#about" class="px-3 py-1.5 rounded-xl hover:bg-stone-100 hover:text-brand-700 transition-colors flex items-center gap-1.5">
-            <span class="w-1 h-1 rounded-full bg-stone-300 group-hover:bg-brand-500"></span> Biz haqimizda
-          </a>
-          <a href="#benefits" class="px-3 py-1.5 rounded-xl hover:bg-stone-100 hover:text-brand-700 transition-colors flex items-center gap-1.5">
-            <span class="w-1 h-1 rounded-full bg-stone-300 group-hover:bg-brand-500"></span> Afzalliklar
-          </a>
-          <a href="#products" class="px-3 py-1.5 rounded-xl hover:bg-stone-100 hover:text-brand-700 transition-colors flex items-center gap-1.5">
-            <span class="w-1 h-1 rounded-full bg-stone-300 group-hover:bg-brand-500"></span> Mahsulotlar
-          </a>
-          <a href="#testimonials" class="px-3 py-1.5 rounded-xl hover:bg-stone-100 hover:text-brand-700 transition-colors flex items-center gap-1.5">
-            <span class="w-1 h-1 rounded-full bg-stone-300 group-hover:bg-brand-500"></span> Fikrlar
-          </a>
-          <a href="#faq" class="px-3 py-1.5 rounded-xl hover:bg-stone-100 hover:text-brand-700 transition-colors flex items-center gap-1.5">
-            <span class="w-1 h-1 rounded-full bg-stone-300 group-hover:bg-brand-500"></span> FAQ
-          </a>
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex items-center gap-8 font-semibold text-stone-600 text-sm">
+          <a href="#about" class="hover:text-brand-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-600 after:transition-all">Biz haqimizda</a>
+          <a href="#benefits" class="hover:text-brand-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-600 after:transition-all">Afzalliklar</a>
+          <a href="#products" class="hover:text-brand-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-600 after:transition-all">Mahsulotlar</a>
+          <a href="#testimonials" class="hover:text-brand-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-600 after:transition-all">Mijozlar fikri</a>
+          <a href="#faq" class="hover:text-brand-600 transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-brand-600 after:transition-all">Savol-Javob</a>
         </nav>
 
-        <!-- ISLAND 3: Actions Capsule -->
-        <div class="bg-white/90 backdrop-blur-xl border border-stone-200/90 rounded-2xl p-1.5 shadow-lg shadow-stone-900/5 flex items-center gap-2 shrink-0">
-          <!-- Direct Phone -->
-          <a href="tel:+998901234567" class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs transition-colors">
-            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <!-- Right Action Button & Cart -->
+        <div class="hidden sm:flex items-center gap-3">
+          <!-- Direct Call pill -->
+          <a href="tel:+998901234567" class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-700 font-bold text-xs transition-colors">
+            <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
             <span class="hidden xl:inline">+998 90 123-45-67</span>
             <span class="xl:hidden"><i class="fa-solid fa-phone"></i></span>
           </a>
 
-          <!-- Cart Button -->
-          <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-amberBrand-50 hover:bg-amberBrand-100 text-amberBrand-900 font-extrabold text-xs border border-amberBrand-200/90 shadow-xs transition-all active:scale-95 group">
-            <i class="fa-solid fa-cart-shopping text-amberBrand-600 group-hover:scale-110 transition-transform"></i>
-            <span class="hidden sm:inline">Savatcha</span>
-            <span class="nav-cart-badge-count bg-brand-600 text-white text-[11px] px-2 py-0.5 rounded-full font-black min-w-[18px] text-center shadow-xs">0</span>
+          <!-- Cart Button in Navbar -->
+          <button onclick="toggleCartDrawer(true)" class="relative flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-amberBrand-50 hover:bg-amberBrand-100 text-amberBrand-900 font-extrabold text-sm border border-amberBrand-200/90 shadow-xs transition-all active:scale-95 group">
+            <i class="fa-solid fa-cart-shopping text-amberBrand-600 text-base group-hover:scale-110 transition-transform"></i>
+            <span>Savatcha</span>
+            <span id="navCartBadge" class="bg-brand-600 text-white text-xs px-2 py-0.5 rounded-full font-black min-w-[20px] text-center shadow-xs">0</span>
           </button>
 
-          <!-- Spotlight CTA Button -->
-          <a href="#order" class="px-4 py-1.5 rounded-xl bg-gradient-to-r from-brand-700 to-emerald-600 hover:from-brand-800 hover:to-emerald-700 text-white font-extrabold text-xs shadow-md shadow-brand-700/25 hover:shadow-glow-emerald transition-all active:scale-95 flex items-center gap-1.5">
+          <!-- Order Link CTA -->
+          <a href="#order" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-brand-700 to-brand-600 hover:from-brand-800 hover:to-brand-700 text-white font-extrabold text-sm shadow-md shadow-brand-600/25 hover:shadow-glow-emerald transition-all active:scale-95 flex items-center gap-2">
             <span>Buyurtma</span>
-            <i class="fa-solid fa-arrow-down text-[10px]"></i>
+            <i class="fa-solid fa-arrow-down text-xs"></i>
           </a>
-
-          <!-- Mobile Menu Trigger -->
-          <button onclick="toggleMobileMenuVariant(5)" aria-label="Menu" class="lg:hidden p-1.5 rounded-xl text-stone-700 hover:bg-stone-100">
-            <i class="fa-solid fa-bars text-lg"></i>
-          </button>
         </div>
 
+        <!-- Mobile Buttons (Cart + Menu) -->
+        <div class="flex items-center gap-2 sm:hidden">
+          <button onclick="toggleCartDrawer(true)" class="relative p-2.5 rounded-xl bg-amberBrand-50 text-amberBrand-900 border border-amberBrand-200 font-bold text-sm flex items-center justify-center">
+            <i class="fa-solid fa-cart-shopping text-base text-amberBrand-600"></i>
+            <span id="mobileNavCartBadge" class="absolute -top-1.5 -right-1.5 bg-brand-600 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-black shadow-sm">0</span>
+          </button>
+          <button id="mobileMenuBtn" aria-label="Menu" class="p-2.5 rounded-xl text-stone-700 hover:bg-stone-100 focus:outline-none">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
       </div>
 
-      <!-- Mobile Menu for Variant 5 -->
-      <div id="mobileMenuVar5" class="hidden lg:hidden max-w-7xl mx-auto mt-2 bg-white/95 backdrop-blur-xl border border-stone-200/90 rounded-2xl p-4 shadow-xl flex flex-col gap-2">
-        <a href="#about" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Biz haqimizda</a>
-        <a href="#benefits" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Afzalliklar</a>
-        <a href="#products" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Mahsulotlar</a>
-        <a href="#testimonials" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Mijozlar fikri</a>
-        <a href="#faq" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Savol-Javob</a>
-        <a href="#order" class="mobile-link text-stone-700 font-bold py-1.5 px-3 rounded-xl hover:bg-stone-50 text-xs">Buyurtma berish</a>
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobileMenu" class="hidden lg:hidden pb-6 pt-3 border-t border-stone-100 flex flex-col gap-3">
+        <a href="#about" class="mobile-link text-stone-700 font-medium py-1.5 px-2 rounded-lg hover:bg-stone-50">Biz haqimizda</a>
+        <a href="#benefits" class="mobile-link text-stone-700 font-medium py-1.5 px-2 rounded-lg hover:bg-stone-50">Afzalliklar</a>
+        <a href="#products" class="mobile-link text-stone-700 font-medium py-1.5 px-2 rounded-lg hover:bg-stone-50">Mahsulotlar katalogi</a>
+        <a href="#testimonials" class="mobile-link text-stone-700 font-medium py-1.5 px-2 rounded-lg hover:bg-stone-50">Mijozlar fikri</a>
+        <a href="#faq" class="mobile-link text-stone-700 font-medium py-1.5 px-2 rounded-lg hover:bg-stone-50">Savol-Javob</a>
+        <a href="#order" class="mobile-link text-stone-700 font-medium py-1.5 px-2 rounded-lg hover:bg-stone-50">Buyurtma berish</a>
+        
+        <button onclick="toggleCartDrawer(true); document.getElementById('mobileMenu').classList.add('hidden');" class="w-full text-left py-2.5 font-bold text-amberBrand-900 bg-amberBrand-50 rounded-xl px-4 flex items-center justify-between border border-amberBrand-200/60 mt-1">
+          <span class="flex items-center gap-2"><i class="fa-solid fa-cart-shopping text-amberBrand-600"></i> Savatchani ko'rish</span>
+          <span id="mobileMenuCartCount" class="bg-brand-600 text-white text-xs px-2.5 py-0.5 rounded-full font-bold">0 ta</span>
+        </button>
+
+        <a href="tel:+998901234567" class="text-center py-2.5 font-bold text-brand-800 bg-brand-50 border border-brand-200/60 rounded-xl text-sm mt-1">
+          📞 +998 90 123-45-67
+        </a>
       </div>
-    </header>
-  </div>
+    </div>
+  </header>
 
 
   <!-- ==================== FLOATING QUICK CART BUTTON ==================== -->
@@ -2944,58 +2451,17 @@
       return Number(number).toLocaleString('ru-RU') + " so'm";
     }
 
-    // ==================== HEADER DESIGN VARIANT CONTROLLER ====================
-    const headerVariantDescriptions = {
-      1: "1-Dizayn: Floating Glass Island (Apple / Vercel Frosted Glass)",
-      2: "2-Dizayn: Cyber Emerald & Neo-Eco (Dark Luxury & Tech Glow)",
-      3: "3-Dizayn: Modern Minimalist & Clean Editorial (Linear / Stripe SaaS)",
-      4: "4-Dizayn: Bio-Organic Dynamic Mesh (Warm Amber & Sage Nature Flow)",
-      5: "5-Dizayn: Segmented Futuristic Islands (Three Floating Capsules)"
-    };
-
-    function switchHeaderVariant(variantNum) {
-      for (let i = 1; i <= 5; i++) {
-        const variantEl = document.getElementById(`headerVariant${i}`);
-        const btn = document.getElementById(`btnHeaderVar${i}`);
-        if (variantEl) {
-          if (i === variantNum) {
-            variantEl.classList.remove('hidden');
-          } else {
-            variantEl.classList.add('hidden');
-          }
-        }
-        if (btn) {
-          if (i === variantNum) {
-            btn.className = "header-var-btn px-3 py-1 rounded-full text-xs font-black transition-all bg-brand-600 text-white shadow-xs scale-105";
-          } else {
-            btn.className = "header-var-btn px-3 py-1 rounded-full text-xs font-bold transition-all bg-stone-800 text-stone-300 hover:bg-stone-700";
-          }
-        }
-      }
-      const descEl = document.getElementById('activeHeaderVariantDesc');
-      if (descEl && headerVariantDescriptions[variantNum]) {
-        descEl.textContent = headerVariantDescriptions[variantNum];
-      }
-      try {
-        localStorage.setItem('ozuqadon_header_variant', variantNum);
-      } catch (e) {}
-      renderCartUI();
-    }
-
-    function toggleMobileMenuVariant(variantNum) {
-      const menu = document.getElementById(`mobileMenuVar${variantNum}`);
-      if (menu) {
-        menu.classList.toggle('hidden');
-      }
-    }
-
     // Render all cart elements in DOM
     function renderCartUI() {
       const totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
       const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-      // 1. Update Badges across all header variants and floating cart
-      const badges = document.querySelectorAll('.nav-cart-badge-count, #navCartBadge, #mobileNavCartBadge, #floatingCartBadge');
+      // 1. Update Badges
+      const badges = [
+        document.getElementById('navCartBadge'),
+        document.getElementById('mobileNavCartBadge'),
+        document.getElementById('floatingCartBadge')
+      ];
       badges.forEach(badge => {
         if (badge) {
           badge.textContent = totalCount;
@@ -3005,11 +2471,10 @@
         }
       });
 
-      document.querySelectorAll('.mobile-menu-cart-count, #mobileMenuCartCount').forEach(badge => {
-        if (badge) {
-          badge.textContent = `${totalCount} ta`;
-        }
-      });
+      const mobileMenuCount = document.getElementById('mobileMenuCartCount');
+      if (mobileMenuCount) {
+        mobileMenuCount.textContent = `${totalCount} ta`;
+      }
 
       const drawerItemCountText = document.getElementById('drawerItemCountText');
       if (drawerItemCountText) {
@@ -3165,12 +2630,7 @@
 
     document.querySelectorAll('.mobile-link').forEach(link => {
       link.addEventListener('click', () => {
-        for (let i = 1; i <= 5; i++) {
-          const menu = document.getElementById(`mobileMenuVar${i}`);
-          if (menu) menu.classList.add('hidden');
-        }
-        const defaultMenu = document.getElementById('mobileMenu');
-        if (defaultMenu) defaultMenu.classList.add('hidden');
+        mobileMenu.classList.add('hidden');
       });
     });
 
@@ -3446,14 +2906,6 @@
       loadStoreProducts(); 
       showHeroBirdSlide(0);
       resetHeroSlideTimer();
-
-      // Initialize saved header variant
-      try {
-        const savedVar = parseInt(localStorage.getItem('ozuqadon_header_variant')) || 1;
-        switchHeaderVariant(savedVar);
-      } catch (e) {
-        switchHeaderVariant(1);
-      }
     });
   </script>
 
